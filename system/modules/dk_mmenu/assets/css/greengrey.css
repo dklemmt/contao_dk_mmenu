@@ -1,0 +1,31 @@
+.mmenu
+{
+	background: #2C3832;
+}
+.mmenu li
+{
+	border-top-color: #3A4942;
+	border-bottom-color: #202824;
+}
+.mmenu li > a,
+.mmenu li > span,
+.mmenu li > a:hover
+{
+	color: #CED6D2;
+}
+.mmenu li.mmenu-selected > a,
+.mmenu li.mmenu-selected > span,
+.mmenu a.mmenu-subclose
+{
+	background: #202824;
+}
+.mmenu a.mmenu-subopen
+{
+	border-left-color: #202824;
+}
+.mmenu li.mmenu-label,
+.mmenu em.mmenu-counter
+{
+	background: #3A4942;
+	color: #fff;
+}

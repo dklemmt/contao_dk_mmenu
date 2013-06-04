@@ -1,0 +1,85 @@
+<script type="text/javascript">
+/* <![CDATA[ */
+(function($) {
+	$(document).ready(function() {
+		$("#<?php echo $this->cssIDonly; ?>").mmenu({
+<?php
+	$oComma = $iComma = false; // o(uter)/i(nner) comma after option needed?
+
+	if ($this->position) {		
+		echo ($oComma == true ? ', ' : '') . $this->position;
+		$oComma = true;
+	}
+	if ($this->slidingSubmenus) {		
+		echo ($oComma == true ? ', ' : '') . $this->slidingSubmenus;
+		$oComma = true;
+	}
+
+	// subobject 'counters' options
+	if ($this->countersAdd) {
+		echo ($oComma == true ? ', ' : '') . 'counters: { ';
+		if ($this->countersAdd) {
+			echo ($iComma == true ? ', ' : '') . $this->countersAdd;
+			$iComma = true;
+		}
+		echo ' }'; // end of subobject 'counters' options
+		$iComma = false; // reset inside subobject comma flag
+		$oComma = true;
+	}
+
+	// subobject 'searchfield' options
+	if ($this->searchfieldAdd) {
+		echo ($oComma == true ? ', ' : '') . 'searchfield: { ';
+		if ($this->searchfieldAdd) {
+			echo ($iComma == true ? ', ' : '') . $this->searchfieldAdd;
+			$iComma = true;
+		}
+		echo ($iComma == true ? ', ' : '') . $this->searchfieldPlaceholder;
+		$iComma = true;
+		echo ($iComma == true ? ', ' : '') . $this->searchfieldNoResults;
+		$iComma = true;
+		echo ' }'; // end of subobject 'searchfield' options
+		$iComma = false; // reset inside subobject comma flag
+		$oComma = true;
+	}
+
+	// subobject 'onClick' options
+	if ($this->onClickClose || $this->onClickDelayPageLoad || $this->onClickBlockUI) {
+		echo ($oComma == true ? ', ' : '') . 'onClick: { ';
+		if ($this->onClickClose) {
+			echo ($iComma == true ? ', ' : '') . $this->onClickClose;
+			$iComma = true;
+		}
+		if ($this->onClickDelayPageLoad) {
+			echo ($iComma == true ? ', ' : '') . $this->onClickDelayPageLoad;
+			$iComma = true;
+		}
+		if ($this->onClickBlockUI) {
+			echo ($iComma == true ? ', ' : '') . $this->onClickBlockUI;
+			$iComma = true;
+		}
+		echo ' }'; // end of subobject 'onClick' options
+		$iComma = false; // reset inside subobject comma flag
+		$oComma = true;
+	}
+?>
+		});
+	});
+})(jQuery);
+/* ]]> */
+</script>
+
+<!-- indexer::stop -->
+<nav class="<?php echo $this->class; ?> block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+<?php if ($this->headline): ?>
+
+<<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+<?php endif; ?>
+
+<a href="<?php echo $this->request; ?>#<?php echo $this->skipId; ?>" class="invisible"><?php echo $this->skipNavigation; ?></a>
+<?php echo $this->items; ?>
+
+<a id="<?php echo $this->skipId; ?>" class="invisible">&nbsp;</a>
+
+</nav>
+<!-- indexer::continue -->
