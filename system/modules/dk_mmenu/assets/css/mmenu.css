@@ -2,6 +2,7 @@
 	Menu
 		- positioning and sizing
 */
+/* html/body */
 html.mmenu-opened,
 html.mmenu-opened body
 {
@@ -13,6 +14,15 @@ html.mmenu-opened body
 {
 	position: relative;
 }
+
+/* menu */
+.mmenu,
+.mmenu *
+{
+	-webkit-text-size-adjust: none;
+	font-family: Arial, Helvetica, Garuda, sans-serif;
+	font-size: 14px;
+}
 .mmenu
 {
 	display: none;
@@ -22,18 +32,22 @@ html.mmenu-opened body
 	top: 0;
 	left: 0;
 	z-index: 0;
-	overflow: auto;
+	overflow: scroll;
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 }
-.mmenu,
-.mmenu *
+.mmenu.mmenu-opened
 {
-	-webkit-text-size-adjust: none;
-	font-family: Arial, Helvetica, Garuda, sans-serif;
-	font-size: 14px;
+	display: block;
 }
+.mmenu.mmenu-opened + .mmenu.mmenu-opened,
+.mmenu.mmenu-opened ~ .mmenu.mmenu-opened
+{
+	display: none;
+}
+
+/* ul/li */
 .mmenu ul,
 .mmenu li
 {
@@ -57,18 +71,16 @@ html.mmenu-opened body
 	background-color: inherit;
 	padding: 10px 0 40px 0;
 }
-html.mmenu-left .mmenu > ul > li
+.mmenu.mmenu-left > ul > li
 {
 	padding-right: 65px;
 }
-html.mmenu-right .mmenu > ul > li
+.mmenu.mmenu-right > ul > li
 {
 	padding-left: 65px;
 }
-html.mmenu-opened .mmenu.mmenu-opened
-{
-	display: block;
-}
+
+/* page + blocker */
 html.mmenu-opened .mmenu-page
 {
 	box-shadow: 0 0 20px rgba( 0, 0, 0, 0.8 );
@@ -81,6 +93,7 @@ html.mmenu-opened .mmenu-page
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
 #mmenu-blocker
 {
 	display: none;
@@ -203,13 +216,14 @@ html.mmenu-right.mmenu-opening #mmenu-blocker
 	top: 0;
 	z-index: 2;
 }
-html.mmenu-right .mmenu a.mmenu-subopen,
+.mmenu.mmenu-right a.mmenu-subopen,
 .mmenu ul ul a.mmenu-subopen
 {
 	right: 0;
 }
 .mmenu a.mmenu-subopen.mmenu-fullsubopen
 {
+	border-left: none;
 	width: 100%;
 }
 .mmenu a.mmenu-subopen + a,
@@ -257,11 +271,11 @@ html.mmenu-right .mmenu a.mmenu-subopen,
 */
 .mmenu.mmenu-horizontal
 {
-	width: 1000%;
+	width: 500%;
 }
 .mmenu.mmenu-horizontal ul
 {
-	width: 10%;
+	width: 20%;
 	margin-left: 0%;
 	float: left;
 
@@ -290,7 +304,7 @@ html.mmenu-accelerated .mmenu.mmenu-horizontal ul
 }
 .mmenu.mmenu-horizontal ul.mmenu-subopened
 {
-	margin-left: -10%;
+	margin-left: -20%;
 	height: 100%;
 	overflow: hidden;
 }
@@ -350,7 +364,7 @@ html.mmenu-accelerated .mmenu.mmenu-horizontal ul
 }
 
 /* at right or subsub */
-html.mmenu-right .mmenu em.mmenu-counter,
+.mmenu.mmenu-right em.mmenu-counter,
 .mmenu.mmenu-vertical ul ul em.mmenu-counter
 {
 	right: 40px;
@@ -391,7 +405,7 @@ html.mmenu-right .mmenu em.mmenu-counter,
 	-webkit-transform: rotate( 45deg );
 	transform: rotate( 45deg );
 }
-html.mmenu-right .mmenu a.mmenu-subclose:before
+.mmenu.mmenu-right a.mmenu-subclose:before
 {
 	left: 85px;
 }
@@ -404,10 +418,10 @@ html.mmenu-right .mmenu a.mmenu-subclose:before
 {
 	background: #222;
 	border-bottom: 1px solid #444;
-	width: 100%;
+	width: 20%;
 	height: 50px;
-	padding: 5px 75px 5px 10px !important;
-	position: fixed;
+	padding: 10px;
+	position: absolute;
 	top: 0;
 	z-index: 1;
 	
@@ -415,9 +429,13 @@ html.mmenu-right .mmenu a.mmenu-subclose:before
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-html.mmenu-right .mmenu div.mmenu-search
+.mmenu.mmenu-left div.mmenu-search
 {
-	padding: 5px 10px 5px 75px !important;
+	padding-right: 75px;
+}
+.mmenu.mmenu-right div.mmenu-search
+{
+	padding-left: 75px;
 }
 .mmenu div.mmenu-search input
 {
@@ -429,7 +447,7 @@ html.mmenu-right .mmenu div.mmenu-search
 	display: block;
 	width: 100%;
 	height: 30px;
-	margin: 5px 0;
+	margin: 0;
 	padding: 0 0 0 10px;
 	
 	-webkit-box-sizing: border-box;
@@ -477,7 +495,7 @@ html.mmenu-right .mmenu div.mmenu-search
 	{
 		width: 500px;
 	}
-	html.mmenu-right .mmenu.mmenu-vertical
+	.mmenu.mmenu-right.mmenu-vertical
 	{
 		left: auto;
 		right: 0;
@@ -485,12 +503,12 @@ html.mmenu-right .mmenu div.mmenu-search
 
 	.mmenu.mmenu-horizontal
 	{
-		width: 5000px;
+		width: 2500px;
 	}
-	html.mmenu-right .mmenu.mmenu-horizontal
+	.mmenu.mmenu-right.mmenu-horizontal
 	{
 		left: auto;
-		right: -4500px;
+		right: -2000px;
 	}
 
 	html.mmenu-left.mmenu-opening .mmenu-page,
