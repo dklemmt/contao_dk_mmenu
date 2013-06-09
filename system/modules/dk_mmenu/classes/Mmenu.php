@@ -83,12 +83,12 @@ class Mmenu extends \Frontend
 		}
 
 		// ... global css style file
-		$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/mmenu.css';
+		$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/mmenu.css||static';
 
 		// ... theme css style file
 		if ($objMmenu->dk_mmenuTheme != 'default')
 		{
-			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/' . $objTemplate->dk_mmenuTheme . '.css';
+			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/' . $objTemplate->dk_mmenuTheme . '.css||static';
 		}
 
 		// ... the mmenu javascript
