@@ -87,7 +87,6 @@ html.mmenu-opened .mmenu-page
 	background-color: inherit;
 	min-height: 100%;
 	position: absolute;
-	z-index: 1;
 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -108,7 +107,7 @@ html.mmenu-blocking #mmenu-blocker
 	height: 100%;
 	position: absolute;
 	top: 0;
-	z-index: 2;
+	z-index: 9999;
 }
 html.mmenu-opened .mmenu-page,
 html.mmenu-opened #mmenu-blocker
