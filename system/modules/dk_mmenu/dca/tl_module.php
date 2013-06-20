@@ -28,7 +28,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuPosition'] = array
 	'exclude'			=> true,
 	'inputType'			=> 'select',
 	'default'			=> 'left',
-	'options'			=> array('left', 'right'),
+	'options'			=> array('left', 'right', 'top', 'bottom'),
 	'reference'			=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuPosition'],
 	'eval'				=> array('tl_class' => 'w50'),
 	'sql'				=> "varchar(32) NOT NULL default ''"
@@ -40,7 +40,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuTheme'] = array
 	'exclude'			=> true,
 	'inputType'			=> 'select',
 	'default'			=> 'default',
-	'options'			=> array('default', 'white', 'bluegrey', 'greengrey', 'lightgrey', 'redgrey'),
+	'options'			=> array('default', 'light', 'lighter', 'lightest', 'army', 'bordeaux', 'navy'),
 	'reference'			=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuTheme'],
 	'eval'				=> array('tl_class' => 'w50'),
 	'sql'				=> "varchar(32) NOT NULL default ''"
