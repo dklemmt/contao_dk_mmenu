@@ -13,6 +13,12 @@
 
 
 /**
+ * Back end modules
+ */
+$GLOBALS['TL_LANG']['MOD']['dk_mmenu'][0] = 'mmenu - Mobile Navigation';
+
+
+/**
  * Front end modules
  */
 $GLOBALS['TL_LANG']['FMD']['mmenu'][0] = 'mmenu - Navigationsmenü';
