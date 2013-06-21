@@ -100,7 +100,6 @@ html.mmenu-left.mmenu-opening #mmenu-blocker
 	Menu, submenus, items
 	- Sizing and positioning
 */
-
 html.mmenu-opened .mmenu-page,
 .mmenu.mmenu-horizontal ul,
 .mmenu div.mmenu-search,
@@ -241,7 +240,7 @@ html.mmenu-opened body
 /* page + blocker */
 html.mmenu-opened .mmenu-page
 {
-	background-color: inherit;
+	background: inherit;
 	height: 100%;
 	overflow: hidden;
 	position: absolute;
@@ -266,7 +265,7 @@ html.mmenu-blocking #mmenu-blocker
 .mmenu.mmenu-vertical ul ul
 {
 	display: none;
-	padding: 10px 20px;
+	padding: 10px 0 10px 10px;
 }
 .mmenu.mmenu-vertical li.mmenu-opened > ul
 {
