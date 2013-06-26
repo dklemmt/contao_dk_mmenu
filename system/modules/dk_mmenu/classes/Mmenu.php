@@ -60,8 +60,14 @@ class Mmenu extends \Frontend
 		if ($objMmenu->dk_mmenuSearchfieldAdd)
 		{
 			$objTemplate->searchfieldAdd = 'add: true';
-			$objTemplate->searchfieldPlaceholder = 'placeholder: "' . $GLOBALS['TL_LANG']['DK_MMENU']['placeholder'] . '"';
-			$objTemplate->searchfieldNoResults = 'noResults: "' . $GLOBALS['TL_LANG']['DK_MMENU']['noresult'] . '"';
+			if (isset($GLOBALS['TL_LANG']['DK_MMENU']['placeholder']) && $GLOBALS['TL_LANG']['DK_MMENU']['placeholder'] != '')
+			{
+				$objTemplate->searchfieldPlaceholder = 'placeholder: "' . $GLOBALS['TL_LANG']['DK_MMENU']['placeholder'] . '"';
+			}
+			if (isset($GLOBALS['TL_LANG']['DK_MMENU']['noresult']) && $GLOBALS['TL_LANG']['DK_MMENU']['noresult'] != '')
+			{
+				$objTemplate->searchfieldNoResults = 'noResults: "' . $GLOBALS['TL_LANG']['DK_MMENU']['noresult'] . '"';
+			}
 		}
 
 		// mmenu option 'onClick.close': default value is 'true'
