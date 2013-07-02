@@ -12,8 +12,11 @@
 }
 .mmenu li
 {
-	border-top: 1px solid rgba( 255, 255, 255, 0.7 );
-	border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
+	border-bottom-color: rgba( 255, 255, 255, 0.7 );
+}
+.mmenu li:after
+{
+	border-bottom-color: rgba( 0, 0, 0, 0.1 );
 }
 .mmenu li,
 .mmenu li > a,
@@ -27,10 +30,6 @@
 .mmenu li.mmenu-selected > span
 {
 	background: rgba( 255, 255, 255, 0.6 );
-}
-.mmenu li.mmenu-selected > a.mmenu-subopen
-{
-	background: transparent;
 }
 
 /* subopen/close */

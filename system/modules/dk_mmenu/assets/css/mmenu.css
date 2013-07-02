@@ -30,9 +30,9 @@ html.mmenu-accelerated.mmenu-opening .mmenu-page,
 html.mmenu-accelerated.mmenu-opening #mmenu-blocker,
 html.mmenu-accelerated.mmenu-opening .mmenu.mmenu-horizontal ul
 {
-	-webkit-transform: translate3d(0,0,0);
-	-moz-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d( 0, 0, 0 );
+	-moz-transform: translate3d( 0, 0, 0 );
+	transform: translate3d( 0, 0, 0 );
 }
 
 /* top */
@@ -147,7 +147,6 @@ html.mmenu-opened body
 {
 	display: block;
 }
-.mmenu.mmenu-opened + .mmenu.mmenu-opened,
 .mmenu.mmenu-opened ~ .mmenu.mmenu-opened
 {
 	display: none;
@@ -163,6 +162,12 @@ html.mmenu-opened body
 {
 	position: relative;
 }
+.mmenu li:after
+{
+	content: '';
+	display: block;
+	width: 100%;
+}
 .mmenu ul,
 .mmenu li,
 .mmenu li > a,
@@ -172,10 +177,14 @@ html.mmenu-opened body
 	padding: 0;
 	margin: 0;
 }
+.mmenu a
+{
+	background: transparent;
+}
 .mmenu > ul
 {
-	background-color: inherit;
-	padding: 10px 0 40px 0;
+	background: inherit;
+	padding: 20px 0 40px 0;
 }
 .mmenu.mmenu-top > ul
 {
@@ -187,7 +196,7 @@ html.mmenu-opened body
 }
 .mmenu.mmenu-bottom > ul
 {
-	padding-top: 75px;
+	padding-top: 85px;
 }
 .mmenu.mmenu-left > ul
 {
@@ -205,12 +214,14 @@ html.mmenu-opened body
 	overflow: hidden;
 	padding-right: 5px;
 }
+.mmenu a:active
+{
+	background: none;
+}
 
 /* subopen/close */
 .mmenu a.mmenu-subopen
 {
-	border-left-width: 1px;
-	border-left-style: solid;
 	width: 40px;
 	height: 40px;
 	padding: 0;
@@ -226,10 +237,9 @@ html.mmenu-opened body
 }
 .mmenu a.mmenu-subclose
 {
-	background: rgba( 0, 0, 0, 0.2 );
 	text-indent: 40px;
-	padding-top: 10px;
-	margin-top: -10px;
+	padding-top: 20px;
+	margin-top: -20px;
 }
 .mmenu a.mmenu-subopen + a,
 .mmenu a.mmenu-subopen + span
@@ -322,29 +332,24 @@ html.mmenu-blocking #mmenu-blocker
 {
 	background: #333;
 }
-.mmenu,
 .mmenu *
 {
 	-webkit-text-size-adjust: none;
+	text-shadow: 0 1px 2px rgba( 0, 0, 0, 0.4 );
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 }
-.mmenu *
-{
-	text-shadow: 0 1px 1px rgba( 0, 0, 0, 0.4 );
-}
 .mmenu li
 {
-	border-top: 1px solid rgba( 255, 255, 255, 0.1 );
+	border-bottom: 1px solid rgba( 255, 255, 255, 0.1 );
+}
+.mmenu li:after
+{
 	border-bottom: 1px solid rgba( 0, 0, 0, 0.3 );
 }
-.mmenu li:first-child
-{
-	border-top-width: 0;
-}
+
 .mmenu li,
 .mmenu li > a,
-.mmenu li > a:hover,
 .mmenu li > span
 {
 	color: rgba( 255, 255, 255, 0.6 );
@@ -363,7 +368,7 @@ html.mmenu-blocking #mmenu-blocker
 /* subopen/close */
 .mmenu a.mmenu-subopen
 {
-	border-left-color: rgba( 0, 0, 0, 0.3 );
+	border-left: 1px solid rgba( 0, 0, 0, 0.3 );
 }
 .mmenu a.mmenu-subclose
 {
@@ -374,7 +379,7 @@ html.mmenu-blocking #mmenu-blocker
 .mmenu.mmenu-vertical li.mmenu-opened > a.mmenu-subopen,
 .mmenu.mmenu-vertical li.mmenu-opened > ul
 {
-	background: rgba( 255, 255, 255, 0.05 );
+	background: rgba( 255, 255, 255, 0.06 );
 }
 
 /* page + blocker */
@@ -488,7 +493,7 @@ html.mmenu-opened .mmenu-page
 	border-right: none;
 	border-bottom: none;
 	left: 20px;
-	top: 25px;
+	top: 35px;
 }
 .mmenu.mmenu-vertical li.mmenu-opened > a.mmenu-subopen:after
 {
@@ -561,7 +566,7 @@ html.mmenu-opened .mmenu-page
 }
 .mmenu div.mmenu-search ~ ul
 {
-	margin-top: 50px;
+	padding-top: 60px;
 }
 
 .mmenu .mmenu-noresult,
