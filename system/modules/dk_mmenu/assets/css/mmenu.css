@@ -281,7 +281,8 @@ html.mmenu-blocking #mmenu-blocker
 {
 	display: block;
 }
-.mmenu.mmenu-vertical ul ul li:last-child
+.mmenu.mmenu-vertical ul ul li:last-child,
+.mmenu.mmenu-vertical ul ul li:last-child:after
 {
 	border-bottom-width: 0;
 }
@@ -559,6 +560,10 @@ html.mmenu-opened .mmenu-page
 	border: none;
 	display: none;
 	padding-top: 30px;
+}
+.mmenu li.mmenu-noresults:after
+{
+	border: none;
 }
 .mmenu.mmenu-noresults li.mmenu-noresults
 {

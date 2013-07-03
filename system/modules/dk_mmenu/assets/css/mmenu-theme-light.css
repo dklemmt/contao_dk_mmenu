@@ -1,4 +1,8 @@
 /*
+	CSS for a menu with light colors.
+*/
+
+/*
 	Menu, submenus, items
 	- Styling (light background)
 */
@@ -97,7 +101,7 @@ html.mmenu-opened .mmenu-page
 .mmenu div.mmenu-search
 {
 	background: rgba( 0, 0, 0, 0.2 );
-	border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
+	border-bottom-color: rgba( 0, 0, 0, 0.1 );
 }
 .mmenu div.mmenu-search input
 {
