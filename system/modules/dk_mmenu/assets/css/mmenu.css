@@ -7,10 +7,12 @@ html.mmenu-opened #mmenu-blocker,
 {
 	-webkit-transition-duration: 0.5s;
 	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
 	transition-duration: 0.5s;
 	
 	-webkit-transition-timing-function: ease;
 	-moz-transition-timing-function: ease;
+	-o-transition-timing-function: ease;
 	transition-timing-function: ease;
 }
 html.mmenu-opened .mmenu-page,
@@ -18,12 +20,14 @@ html.mmenu-opened #mmenu-blocker
 {
 	-webkit-transition-property: top, right, bottom, left, margin;
 	-moz-transition-property: top, right, bottom, left, margin;
+	-o-transition-property: top, right, bottom, left, margin;
 	transition-property: top, right, bottom, left, margin;
 }
 .mmenu.mmenu-horizontal ul
 {
 	-webkit-transition-property: margin-left;
 	-moz-transition-property: margin-left;
+	-o-transition-property: margin-left;
 	transition-property: margin-left;
 }
 html.mmenu-accelerated.mmenu-opening .mmenu-page,
@@ -32,6 +36,7 @@ html.mmenu-accelerated.mmenu-opening .mmenu.mmenu-horizontal ul
 {
 	-webkit-transform: translate3d( 0, 0, 0 );
 	-moz-transform: translate3d( 0, 0, 0 );
+	-o-transform: translate3d( 0, 0, 0 );
 	transform: translate3d( 0, 0, 0 );
 }
 
@@ -107,6 +112,7 @@ html.mmenu-opened .mmenu-page,
 {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -480,6 +486,8 @@ html.mmenu-opened .mmenu-page
 	position: absolute;
 
 	-webkit-transform: rotate( -45deg );
+	-moz-transform: rotate( -45deg );
+	-o-transform: rotate( -45deg );
 	transform: rotate( -45deg );
 }
 .mmenu a.mmenu-subopen:after
@@ -499,6 +507,8 @@ html.mmenu-opened .mmenu-page
 .mmenu.mmenu-vertical li.mmenu-opened > a.mmenu-subopen:after
 {
 	-webkit-transform: rotate( 45deg );
+	-moz-transform: rotate( 45deg );
+	-o-transform: rotate( 45deg );
 	transform: rotate( 45deg );
 }
 
