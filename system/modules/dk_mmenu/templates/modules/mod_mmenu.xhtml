@@ -43,15 +43,29 @@
 		$oComma = true;
 	}
 
+	// subobject 'dragOpen' options
+	if ($this->dragOpenOpen) {
+		echo ($oComma == true ? ', ' : '') . 'dragOpen: { ';
+		echo ($iComma == true ? ', ' : '') . $this->dragOpenOpen;
+		$iComma = true;
+		if ($this->dragOpenThreshold) {
+			echo ($iComma == true ? ', ' : '') . $this->dragOpenThreshold;
+			$iComma = true;
+		}
+		echo ' }'; // end of subobject 'dragOpen' options
+		$iComma = false; // reset inside subobject comma flag
+		$oComma = true;
+	}
+
 	// subobject 'onClick' options
-	if ($this->onClickClose || $this->onClickDelayPageLoad || $this->onClickBlockUI) {
+	if ($this->onClickClose || $this->onClickDelayLocationHref || $this->onClickBlockUI) {
 		echo ($oComma == true ? ', ' : '') . 'onClick: { ';
 		if ($this->onClickClose) {
 			echo ($iComma == true ? ', ' : '') . $this->onClickClose;
 			$iComma = true;
 		}
-		if ($this->onClickDelayPageLoad) {
-			echo ($iComma == true ? ', ' : '') . $this->onClickDelayPageLoad;
+		if ($this->onClickDelayLocationHref) {
+			echo ($iComma == true ? ', ' : '') . $this->onClickDelayLocationHref;
 			$iComma = true;
 		}
 		if ($this->onClickBlockUI) {
@@ -62,6 +76,14 @@
 		$iComma = false; // reset inside subobject comma flag
 		$oComma = true;
 	}
+
+	// subobject 'configuration' options
+	echo ($oComma == true ? ', ' : '') . 'configuration: { ';
+	echo ($iComma == true ? ', ' : '') . 'selectedClass: "active"';
+	$iComma = true;
+	echo ' }'; // end of subobject 'configuration' options
+	$iComma = false; // reset inside subobject comma flag
+	$oComma = true;
 ?>
 		}).removeClass('invisible');
 	});

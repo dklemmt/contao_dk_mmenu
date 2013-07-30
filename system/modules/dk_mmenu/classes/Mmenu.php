@@ -45,7 +45,7 @@ class Mmenu extends \Frontend
 		}
 
 		// mmenu option 'slidingSubmenus': default value is 'true'
-		if (!$objMmenu->dk_mmenuSlidingSubmenus)
+		if ($objMmenu->dk_mmenuSlidingSubmenus != 'horizontal')
 		{
 			$objTemplate->slidingSubmenus = 'slidingSubmenus: false';
 		}
@@ -70,16 +70,26 @@ class Mmenu extends \Frontend
 			}
 		}
 
+		// mmenu option 'dragOpen.open': default value is 'false'
+		if ($objMmenu->dk_mmenuDragOpenOpen)
+		{
+			$objTemplate->dragOpenOpen = 'open: true';
+			if (isset($objMmenu->dk_mmenuDragOpenThreshold) && $objMmenu->dk_mmenuDragOpenThreshold != '50')
+			{
+				$objTemplate->dragOpenThreshold = 'threshold: ' . $objMmenu->dk_mmenuDragOpenThreshold;
+			}
+		}
+
 		// mmenu option 'onClick.close': default value is 'true'
 		if (!$objMmenu->dk_mmenuOnClickClose)
 		{
 			$objTemplate->onClickClose = 'close: false';
 		}
 
-		// mmenu option 'onClick.delayPageload': default value is 'true'
-		if (!$objMmenu->dk_mmenuOnClickDelayPageLoad)
+		// mmenu option 'onClick.delayLocationHref': default value is 'true'
+		if (!$objMmenu->dk_mmenuOnClickDelayLocationHref)
 		{
-			$objTemplate->onClickDelayPageLoad = 'delayPageload: false';
+			$objTemplate->onClickDelayLocationHref = 'delayLocationHref: false';
 		}
 
 		// mmenu option 'onClick.blockUI': default value is 'false'
@@ -97,11 +107,18 @@ class Mmenu extends \Frontend
 			if ($objMmenu->dk_mmenuTheme == 'light' || $objMmenu->dk_mmenuTheme == 'lighter' || $objMmenu->dk_mmenuTheme == 'lightest')
 			{
 				$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/mmenu-theme-light.css||static';
+				if ($objMmenu->dk_mmenuTheme != 'lightest')
+				{
+					$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/' . $objTemplate->dk_mmenuTheme . '.css||static';
+				}
 			}
-			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/' . $objTemplate->dk_mmenuTheme . '.css||static';
 		}
 
 		// ... the mmenu javascript
 		$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/jquery.mmenu.min.js|static';
+		if ($objMmenu->dk_mmenuDragOpenOpen)
+		{
+			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/jquery.hammer.min.js|static';
+		}
 	}
 }
