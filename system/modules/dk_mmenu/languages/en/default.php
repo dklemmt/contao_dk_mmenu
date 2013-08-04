@@ -12,5 +12,5 @@
  */
 
 
-/*$GLOBALS['TL_LANG']['DK_MMENU']['placeholder'] = 'Suchen';
-$GLOBALS['TL_LANG']['DK_MMENU']['noresult'] = 'Keine Ergebnisse gefunden.';*/
+$GLOBALS['TL_LANG']['DK_MMENU']['placeholder'] = 'Search';
+$GLOBALS['TL_LANG']['DK_MMENU']['noresult'] = 'No results found.';
