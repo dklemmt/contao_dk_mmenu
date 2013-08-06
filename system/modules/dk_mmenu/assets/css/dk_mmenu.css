@@ -1,0 +1,30 @@
+@media (max-width: 767px)
+{
+	/* top */
+	html.mm-top.mm-opening .mm-page,
+	html.mm-top.mm-opening #mm-blocker
+	{
+		margin-top: -65px !important;
+	}
+	
+	/* right */
+	html.mm-right.mm-opening .mm-page,
+	html.mm-right.mm-opening #mm-blocker
+	{
+		margin-right: -65px !important;
+	}
+	
+	/* bottom */
+	html.mm-bottom.mm-opening .mm-page,
+	html.mm-bottom.mm-opening #mm-blocker
+	{
+		margin-bottom: -65px !important;
+	}
+	
+	/* left */
+	html.mm-left.mm-opening .mm-page,
+	html.mm-left.mm-opening #mm-blocker
+	{
+		margin-left: -65px !important;
+	}
+}

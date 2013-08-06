@@ -108,6 +108,9 @@ class Mmenu extends \Frontend
 			}
 		}
 
+		// ... fix for 'contao mobile viewport' css style file
+		$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/dk_mmenu.css||static';
+
 		// ... the mmenu javascript
 		$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/jquery.mmenu.min.js|static';
 		if ($objMmenu->dk_mmenuDragOpenOpen)
