@@ -55,8 +55,8 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuTheme'] = array
 	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuTheme'],
 	'exclude'			=> true,
 	'inputType'			=> 'select',
-	'default'			=> 'default',
-	'options'			=> array('default', 'light', 'lighter', 'lightest', 'army', 'bordeaux', 'navy'),
+	'default'			=> 'standard',
+	'options'			=> array('standard', 'light', 'lighter', 'lightest', 'army', 'bordeaux', 'navy'),
 	'reference'			=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuTheme'],
 	'eval'				=> array('tl_class' => 'w50'),
 	'sql'				=> "varchar(32) NOT NULL default ''"

@@ -96,15 +96,15 @@ class Mmenu extends \Frontend
 		$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/mmenu.css||static';
 
 		// ... theme css style file
-		if ($objMmenu->dk_mmenuTheme != 'default')
+		if ($objMmenu->dk_mmenuTheme != 'standard')
 		{
 			if ($objMmenu->dk_mmenuTheme == 'light' || $objMmenu->dk_mmenuTheme == 'lighter' || $objMmenu->dk_mmenuTheme == 'lightest')
 			{
 				$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/mmenu-theme-light.css||static';
-				if ($objMmenu->dk_mmenuTheme != 'lightest')
-				{
-					$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/' . $objTemplate->dk_mmenuTheme . '.css||static';
-				}
+			}
+			if ($objMmenu->dk_mmenuTheme != 'lightest')
+			{
+				$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/' . $objTemplate->dk_mmenuTheme . '.css||static';
 			}
 		}
 

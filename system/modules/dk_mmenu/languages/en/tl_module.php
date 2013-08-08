@@ -60,3 +60,5 @@ $GLOBALS['TL_LANG']['tl_module']['dk_mmenuTheme']['lightest'] = 'light';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuTheme']['army'] = 'army (dark)';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuTheme']['bordeaux'] = 'bordeaux (dark)';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuTheme']['navy'] = 'navy (dark)';
+$GLOBALS['TL_LANG']['tl_module']['dk_mmenuSlidingSubmenus']['horizontal'] = 'horizontal';
+$GLOBALS['TL_LANG']['tl_module']['dk_mmenuSlidingSubmenus']['vertical'] = 'vertical';
