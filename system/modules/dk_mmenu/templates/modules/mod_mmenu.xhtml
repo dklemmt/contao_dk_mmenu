@@ -6,11 +6,23 @@
 <?php
 	$oComma = $iComma = false; // o(uter)/i(nner) comma after option needed?
 
-	if ($this->position) {		
+	if ($this->isMenu) {		
+		echo ($oComma == true ? ', ' : '') . $this->isMenu;
+		$oComma = true;
+	}
+	if ($this->modal) {		
+		echo ($oComma == true ? ', ' : '') . $this->modal;
+		$oComma = true;
+	}
+	if ($this->position) {
 		echo ($oComma == true ? ', ' : '') . $this->position;
 		$oComma = true;
 	}
-	if ($this->slidingSubmenus) {		
+	if ($this->zposition) {
+		echo ($oComma == true ? ', ' : '') . $this->zposition;
+		$oComma = true;
+	}
+	if ($this->slidingSubmenus) {
 		echo ($oComma == true ? ', ' : '') . $this->slidingSubmenus;
 		$oComma = true;
 	}
@@ -72,6 +84,7 @@
 			echo ($iComma == true ? ', ' : '') . $this->onClickBlockUI;
 			$iComma = true;
 		}
+//		echo ($iComma == true ? ', ' : '') . 'callback: function() { }';
 		echo ' }'; // end of subobject 'onClick' options
 		$iComma = false; // reset inside subobject comma flag
 		$oComma = true;
@@ -97,11 +110,14 @@
 
 <<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
 <?php endif; ?>
-
+<?php if ($this->type == 'mmenu_article'): ?>
+<?php echo implode('', $this->elements); ?>
+<?php else: ?>
 <a href="<?php echo $this->request; ?>#<?php echo $this->skipId; ?>" class="invisible"><?php echo $this->skipNavigation; ?></a>
 <?php echo $this->items; ?>
 
 <a id="<?php echo $this->skipId; ?>" class="invisible">&nbsp;</a>
+<?php endif; ?>
 
 </nav>
 <!-- indexer::continue -->

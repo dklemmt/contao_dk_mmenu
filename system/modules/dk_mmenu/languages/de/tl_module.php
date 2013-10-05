@@ -15,8 +15,9 @@
 /**
  * Legends
  */
-$GLOBALS['TL_LANG']['tl_module']['mmenu_legend_appearance'] = 'mmenu-Aussehen';
-$GLOBALS['TL_LANG']['tl_module']['mmenu_legend_behaviour'] = 'mmenu-Verhalten';
+$GLOBALS['TL_LANG']['tl_module']['mmenu_appearance_legend'] = 'mmenu-Aussehen';
+$GLOBALS['TL_LANG']['tl_module']['mmenu_behaviour_legend'] = 'mmenu-Verhalten';
+$GLOBALS['TL_LANG']['tl_module']['mmenu_legend'] = 'mmenu-Einstellungen';
 
 
 /**
@@ -24,6 +25,8 @@ $GLOBALS['TL_LANG']['tl_module']['mmenu_legend_behaviour'] = 'mmenu-Verhalten';
  */
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuPosition'][0] = 'Position des Menüs';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuPosition'][1] = 'Bestimmt auf welcher Seite das Menü erscheinen soll.';
+$GLOBALS['TL_LANG']['tl_module']['dk_mmenuZposition'][0] = 'Z-Position des Menüs';
+$GLOBALS['TL_LANG']['tl_module']['dk_mmenuZposition'][1] = 'Hier können sie die z-Position bestimmen.';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuTheme'][0] = 'Theme des Menüs';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuTheme'][1] = 'Hier können Sie das mmenu-Theme auswählen mit dem die Navigation angezeigt wird.';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuSlidingSubmenus'][0] = 'Art des Menüs';
@@ -42,6 +45,10 @@ $GLOBALS['TL_LANG']['tl_module']['dk_mmenuOnClickDelayLocationHref'][0] = 'verz�
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuOnClickDelayLocationHref'][1] = 'Bestimmt, ob die neue Seite erst dann geladen wird, nachdem das Navigationsmenüs geschlossen wurde.';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuOnClickBlockUI'][0] = 'Benutzeroberfläche blockieren';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuOnClickBlockUI'][1] = 'Bestimmt, ob beim Laden der neuen Seite die Benutzeroberfläche gesperrt wird. Nur bei mobilen Geräten.';
+$GLOBALS['TL_LANG']['tl_module']['dk_mmenuModal'][0] = 'modales Menü';
+$GLOBALS['TL_LANG']['tl_module']['dk_mmenuModal'][1] = 'Das Menü wird modal dargestellt. Geschlossen werden kann es nur über einen anzugebenden Schließen-Button.';
+$GLOBALS['TL_LANG']['tl_module']['dk_mmenuArticle'][0] = 'mmenu-Artikel';
+$GLOBALS['TL_LANG']['tl_module']['dk_mmenuArticle'][1] = 'Hier können Sie den Artikel auswählen, der durch mmenu dargestellt werden soll.';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuTpl'][0] = 'mmenu-Template';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuTpl'][1] = 'Hier können Sie das mmenu-Template auswählen.';
 
@@ -53,6 +60,9 @@ $GLOBALS['TL_LANG']['tl_module']['dk_mmenuPosition']['left'] = 'links';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuPosition']['right'] = 'rechts';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuPosition']['top'] = 'oben';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuPosition']['bottom'] = 'unten';
+$GLOBALS['TL_LANG']['tl_module']['dk_mmenuZposition']['back'] = 'hinten';
+$GLOBALS['TL_LANG']['tl_module']['dk_mmenuZposition']['front'] = 'vorne';
+$GLOBALS['TL_LANG']['tl_module']['dk_mmenuZposition']['next'] = 'gleiche Ebene';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuTheme']['standard'] = 'dunkel';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuTheme']['light'] = 'mittelgrau (hell)';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuTheme']['lighter'] = 'hellgrau (hell)';
