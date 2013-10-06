@@ -38,10 +38,24 @@ class Mmenu extends \Frontend
 
 		// only none default values will be send to template
 
+		$objTemplate->isMenu = 'isMenu: ' . ($objMmenu->type != 'mmenu_article' ? 'true' : 'false');
+
+		// mmenu option 'modal': default value is 'false'
+		if ($objMmenu->dk_mmenuModal)
+		{
+			$objTemplate->modal = 'modal: true';
+		}
+
 		// mmenu option 'position': default value is 'left'
 		if ($objMmenu->dk_mmenuPosition != 'left')
 		{
 			$objTemplate->position = 'position: "' . $objMmenu->dk_mmenuPosition . '"';
+		}
+
+		// mmenu option 'zposition': default value is 'back'
+		if ($objMmenu->dk_mmenuZposition != 'back')
+		{
+			$objTemplate->zposition = 'zposition: "' . $objMmenu->dk_mmenuZposition . '"';
 		}
 
 		// mmenu option 'slidingSubmenus': default value is 'true'
@@ -94,6 +108,9 @@ class Mmenu extends \Frontend
 
 		// ... global css style file
 		$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/mmenu.css||static';
+
+		// ... positioning css style file
+		$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/mmenu-positioning.css||static';
 
 		// ... theme css style file
 		if ($objMmenu->dk_mmenuTheme != 'standard')

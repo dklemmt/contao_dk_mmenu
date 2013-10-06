@@ -91,12 +91,14 @@
 	}
 
 	// subobject 'configuration' options
-	echo ($oComma == true ? ', ' : '') . 'configuration: { ';
-	echo ($iComma == true ? ', ' : '') . 'selectedClass: "active"';
-	$iComma = true;
-	echo ' }'; // end of subobject 'configuration' options
-	$iComma = false; // reset inside subobject comma flag
-	$oComma = true;
+	if ($this->type != 'mmenu_article') {
+		echo ($oComma == true ? ', ' : '') . 'configuration: { ';
+		echo ($iComma == true ? ', ' : '') . 'selectedClass: "active"';
+		$iComma = true;
+		echo ' }'; // end of subobject 'configuration' options
+		$iComma = false; // reset inside subobject comma flag
+		$oComma = true;
+	}
 ?>
 		}).removeClass('invisible');
 	});

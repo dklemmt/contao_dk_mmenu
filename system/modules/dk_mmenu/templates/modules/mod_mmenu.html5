@@ -1,4 +1,3 @@
-<?php //echo '<pre>' . $this->showTemplateVars() . '</pre>'; ?>
 <script>
 (function($) {
 	$(document).ready(function() {
@@ -10,7 +9,7 @@
 		echo ($oComma == true ? ', ' : '') . $this->isMenu;
 		$oComma = true;
 	}
-	if ($this->modal) {		
+	if ($this->modal) {
 		echo ($oComma == true ? ', ' : '') . $this->modal;
 		$oComma = true;
 	}
@@ -68,7 +67,7 @@
 		$iComma = false; // reset inside subobject comma flag
 		$oComma = true;
 	}
-	
+
 	// subobject 'onClick' options
 	if ($this->onClickClose || $this->onClickDelayLocationHref || $this->onClickBlockUI) {
 		echo ($oComma == true ? ', ' : '') . 'onClick: { ';
@@ -93,8 +92,8 @@
 	// subobject 'configuration' options
 	if ($this->type != 'mmenu_article') {
 		echo ($oComma == true ? ', ' : '') . 'configuration: { ';
-			echo ($iComma == true ? ', ' : '') . 'selectedClass: "active"';
-			$iComma = true;
+		echo ($iComma == true ? ', ' : '') . 'selectedClass: "active"';
+		$iComma = true;
 		echo ' }'; // end of subobject 'configuration' options
 		$iComma = false; // reset inside subobject comma flag
 		$oComma = true;
