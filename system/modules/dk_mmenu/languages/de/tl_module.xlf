@@ -1,0 +1,324 @@
+<?xml version="1.0" ?><xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="php" date="2014-01-03T20:50:50+01:00" original="tl_module" source-language="en" target-language="en">
+    <body>
+      <trans-unit id="tl_module.mmenu_appearance_legend">
+        <source>mmenu appearance</source>
+        <target>mmenu-Aussehen</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.mmenu_behaviour_legend">
+        <source>mmenu behaviour</source>
+        <target>mmenu-Verhalten</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.mmenu_effects_legend">
+        <source>mmenu effects</source>
+        <target>mmenu-Effekte</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.mmenu_legend">
+        <source>mmenu settings</source>
+        <target>mmenu-Einstellungen</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuPosition.0">
+        <source>Position of menu</source>
+        <target>Position des Menüs</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuPosition.1">
+        <source>Choose the position of the menu.</source>
+        <target>Bestimmt auf welcher Seite das Menü erscheinen soll.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuZposition.0">
+        <source>Z-position of menu</source>
+        <target>Z-Position des Menüs</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuZposition.1">
+        <source>Choose the z-position of the menu.</source>
+        <target>Hier können sie die z-Position bestimmen.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuSlidingSubmenus.0">
+        <source>Kind of menu</source>
+        <target>Art des Menüs</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuSlidingSubmenus.1">
+        <source>Determines whether submenus should come sliding in from the right or to expand below.</source>
+        <target>Bestimmt, ob Untermenüs von rechts hineingleiten oder nach unten aufklappen.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuTheme.0">
+        <source>Theme of menu</source>
+        <target>Theme des Menüs</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuTheme.1">
+        <source>Choose a theme for the menu.</source>
+        <target>Hier können Sie das mmenu-Theme auswählen mit dem die Navigation angezeigt wird.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuMoveBackground.0">
+        <source>Move background</source>
+        <target>Hintergrund verschieben</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuMoveBackground.1">
+        <source>Determines whether or not the page should inherit the background of the body when the menu opens.</source>
+        <target>Bestimmt, ob der Hintergrund von body an das Menü vererbt wird wenn dieses öffnet oder mit der Seite verschoben wird.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuFullscreen.0">
+        <source>Fullscreen</source>
+        <target>komplette Seite</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuFullscreen.1">
+        <source>Determines whether the menu will fill up 80% (default) of the available width/height or 100% (fullscreen).</source>
+        <target>Bestimmt, ob das Menü 80% (Standard) der zur Verfügung stehenden Breite/Höhe einnehmen soll oder 100% (komplette Seite).</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuCountersAdd.0">
+        <source>Show submenu counter</source>
+        <target>Zähler für Untermenüs anzeigen</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuCountersAdd.1">
+        <source>Determines whether or not to append a counter to each menu item if it has a submenu and automatically counting the number of items inside.</source>
+        <target>Bestimmt, ob ein Menü um einen Zähler erweitert wird falls es Untermenüs enthält. Die Zahl zeigt die Anzahl dieser an.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuCountersUpdate.0">
+        <source>Update submenu counter</source>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuCountersUpdate.1">
+        <source>Determines whether or not to automatically count the number of items in the submenu, updates when typing in the search field.</source>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuSearchfieldAdd.0">
+        <source>Show searchfield</source>
+        <target>Suchfeld anzeigen</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuSearchfieldAdd.1">
+        <source>Determines whether or not to automatically prepend a searchfield to the menu.</source>
+        <target>Bestimmt, ob ein Suchfeld oberhalb der Navigation angezeigt wird.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuEffectSlide.0">
+        <source>Slide in</source>
+        <target>Menü hineingleiten</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuEffectSlide.1">
+        <source>Makes the menu slide in from the side.</source>
+        <target>Das Menü gleitet von der Seite hinein.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuEffectZoomMenu.0">
+        <source>Zoom menu</source>
+        <target>Menü vergrößern</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuEffectZoomMenu.1">
+        <source>Makes the menu zoom in.</source>
+        <target>Vergrößert das Menü beim Öffnen.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuEffectZoomPage.0">
+        <source>Zoom page</source>
+        <target>Seite vergrößern</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuEffectZoomPage.1">
+        <source>Makes the page zoom in while opening the menu, works great in combination with the mm-zoom-menu effect.</source>
+        <target>Vergrößert die Seite während des Öffnen des Menüs. Funktioniert gut in Kombination mit Effekt 'Menü vergrößern'.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuEffectZoomPanels.0">
+        <source>Zoom panels</source>
+        <target>Elemente vergrößern</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuEffectZoomPanels.1">
+        <source>Makes the panels zoom out while opening a submenu.</source>
+        <target>Vergrößert die Elemente während das Untermenü geöffnet wird.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuDragOpenOpen.0">
+        <source>Drag page to open menu</source>
+        <target>Menü durch Ziehen der Seite öffnen</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuDragOpenOpen.1">
+        <source>Determines whether or not the menu should open when dragging the page.</source>
+        <target>Bestimmt, ob das Menü auch durch Ziehen der Seite geöffnet werden kann.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuDragOpenThreshold.0">
+        <source>Amount of pixels to drag</source>
+        <target>Anzahl von gezogenen Pixeln</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuDragOpenThreshold.1">
+        <source>Determines the minimum amount of pixels to drag before actually opening the menu, less than 50 is not advised.</source>
+        <target>Bestimmt die minimale Anzahl von Pixeln, die die Seite gezogen werden muß bis sich das Menü öffnet. Weniger als 50 Pixel werden nicht empfohlen.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuOnClickClose.0">
+        <source>Menu closes after click</source>
+        <target>Menü nach Klick schließen</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuOnClickClose.1">
+        <source>Determines whether or not the menu should close after clicking a link inside it.</source>
+        <target>Bestimmt, ob nach Auswahl eines Navigationspunkts das Navigationsmenü geschlossen wird.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuOnClickBlockUI.0">
+        <source>Block user interface</source>
+        <target>Benutzeroberfläche blockieren</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuOnClickBlockUI.1">
+        <source>Determines whether or not to block the user interface while loading the new page.</source>
+        <target>Bestimmt, ob beim Laden der neuen Seite die Benutzeroberfläche gesperrt wird. Nur bei mobilen Geräten.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuModal.0">
+        <source>modal menu</source>
+        <target>modales Menü</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuModal.1">
+        <source>Determines whether or not the menu should be modal. A close button has to be provided.</source>
+        <target>Das Menü wird modal dargestellt. Geschlossen werden kann es nur über einen anzugebenden Schließen-Button.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuArticle.0">
+        <source>mmenu article</source>
+        <target>mmenu-Artikel</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuArticle.1">
+        <source>Choose the article.</source>
+        <target>Hier können Sie den Artikel auswählen, der durch mmenu dargestellt werden soll.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuHtmlTpl.0">
+        <source>HTML template</source>
+        <target>HTML-Template</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuHtmlTpl.1">
+        <source>Choose the HTML template.</source>
+        <target>Hier können Sie das HTML-Template auswählen.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuJsTpl.0">
+        <source>JavaScript template</source>
+        <target>JavaScript-Template</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuJsTpl.1">
+        <source>Choose the JavaScript template.</source>
+        <target>Hier können Sie das JavaScript-Template auswählen.</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuPosition.left">
+        <source>left</source>
+        <target>links</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuPosition.right">
+        <source>right</source>
+        <target>rechts</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuPosition.top">
+        <source>top</source>
+        <target>oben</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuPosition.bottom">
+        <source>bottom</source>
+        <target>unten</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuZposition.back">
+        <source>back</source>
+        <target>dahinter</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuZposition.front">
+        <source>front</source>
+        <target>davor</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuZposition.next">
+        <source>next</source>
+        <target>gleiche Ebene</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuTheme.black">
+        <source>black</source>
+        <target>schwarz</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuTheme.standard">
+        <source>dark</source>
+        <target>dunkel</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuTheme.light">
+        <source>medium grey (light)</source>
+        <target>mittelgrau (hell)</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuTheme.lighter">
+        <source>light grey (light)</source>
+        <target>hellgrau (hell)</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuTheme.lightest">
+        <source>light</source>
+        <target>hell</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuTheme.white">
+        <source>white</source>
+        <target>weiß</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuTheme.army">
+        <source>army (dark)</source>
+        <target>army (dunkel)</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuTheme.bordeaux">
+        <source>bordeaux (dark)</source>
+        <target>bordeaux (dunkel)</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuTheme.navy">
+        <source>navy (dark)</source>
+        <target>navy (dunkel)</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuSlidingSubmenus.horizontal">
+        <source>horizontal</source>
+        <target>horizontal</target>
+        
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuSlidingSubmenus.vertical">
+        <source>vertical</source>
+        <target>vertikal</target>
+        
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

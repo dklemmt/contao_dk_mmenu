@@ -1,0 +1,16 @@
+<?xml version="1.0" ?><xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="php" date="2013-08-05T00:46:20+02:00" original="default" source-language="en" target-language="en">
+    <body>
+      <trans-unit id="DK_MMENU.placeholder">
+        <source>Search</source>
+        <target>Suchen</target>
+        
+      </trans-unit>
+      <trans-unit id="DK_MMENU.noresult">
+        <source>No results found.</source>
+        <target>Keine Ergebnisse gefunden.</target>
+        
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

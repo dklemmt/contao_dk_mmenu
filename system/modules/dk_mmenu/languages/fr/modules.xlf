@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="php" date="2013-07-29T12:38:03+02:00" original="modules" source-language="en" target-language="en">
+    <body>
+      <trans-unit id="MOD.dk_mmenu.0">
+        <source>mmenu - Mobile Navigation</source>
+        <target>mmenu - Mobile navigation</target>
+        
+      </trans-unit>
+      <trans-unit id="FMD.mmenu.0">
+        <source>mmenu - navigation menu</source>
+        <target>mmenu - menu de navigation</target>
+        
+      </trans-unit>
+      <trans-unit id="FMD.mmenu.1">
+        <source>Generates an alternative navigation menu from the site structure - not only - for mobile Sites.</source>
+        <target>Génère un menu de navigation alternatif à partir de la structure du site pour les sites adaptés aux mobiles (mais pas uniquement).</target>
+        
+      </trans-unit>
+      <trans-unit id="FMD.custommmenu.0">
+        <source>mmenu - custom navigation</source>
+        <target>mmenu - navigation personnalisée</target>
+        
+      </trans-unit>
+      <trans-unit id="FMD.custommmenu.1">
+        <source>Generates an alternative custom navigation - not only - for mobile Sites.</source>
+        <target>Génère un menu de navigation alternatif pour les sites adaptés aux mobiles (mais pas uniquement).</target>
+        
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

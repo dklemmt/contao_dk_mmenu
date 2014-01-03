@@ -1,0 +1,106 @@
+<script>
+(function($) {
+	var $mmenu = $('#<?php echo $this->cssIDonly; ?>');
+	$(document).ready(function() {
+		$mmenu.mmenu({
+<?php
+	$oComma = $iComma = false; // o(uter)/i(nner) comma after option needed?
+
+	if ($this->isMenu) {		
+		echo ($oComma == true ? ', ' : '') . $this->isMenu;
+		$oComma = true;
+	}
+	if ($this->modal) {
+		echo ($oComma == true ? ', ' : '') . $this->modal;
+		$oComma = true;
+	}
+	if ($this->classes) {
+		echo ($oComma == true ? ', ' : '') . 'classes: "' . $this->classes . '"';
+		$oComma = true;
+	}
+	if ($this->position) {
+		echo ($oComma == true ? ', ' : '') . $this->position;
+		$oComma = true;
+	}
+	if ($this->zposition) {
+		echo ($oComma == true ? ', ' : '') . $this->zposition;
+		$oComma = true;
+	}
+	if ($this->slidingSubmenus) {
+		echo ($oComma == true ? ', ' : '') . $this->slidingSubmenus;
+		$oComma = true;
+	}
+	if ($this->moveBackground) {
+		echo ($oComma == true ? ', ' : '') . $this->moveBackground;
+		$oComma = true;
+	}
+
+	// subobject 'counters' options
+	if ($this->countersAdd) {
+		if ($this->countersUpdate) {
+			echo ($oComma == true ? ', ' : '') . 'counters: { ';
+			echo $this->countersAdd;
+			echo ', ' . $this->countersUpdate;
+			echo ' }'; // end of subobject 'counters' options
+		} else {
+			echo ($oComma == true ? ', ' : '') . 'counters: true';
+		}
+		$oComma = true;
+	}
+
+	// subobject 'searchfield' options
+	if ($this->searchfieldAdd) {
+		echo ($oComma == true ? ', ' : '') . 'searchfield: { ';
+		echo $this->searchfieldAdd;
+		if ($this->searchfieldSearch) {
+			echo ', ' . $this->searchfieldSearch;
+		}
+		if ($this->searchfieldPlaceholder) {
+			echo ', ' . $this->searchfieldPlaceholder;
+		}
+		if ($this->searchfieldNoResults) {
+			echo ', ' . $this->searchfieldNoResults;
+		}
+		if ($this->searchfieldShowLinksOnly) {
+			echo ', ' . $this->searchfieldShowLinksOnly;
+		}
+		echo ' }'; // end of subobject 'searchfield' options
+		$oComma = true;
+	}
+
+	// subobject 'dragOpen' options
+	if ($this->dragOpenOpen) {
+		echo ($oComma == true ? ', ' : '') . 'dragOpen: { ';
+		echo $this->dragOpenOpen;
+		if ($this->dragOpenThreshold) {
+			echo ', ' . $this->dragOpenThreshold;
+		}
+		if ($this->dragOpenMaxStartPos) {
+			echo ', ' . $this->dragOpenMaxStartPos;
+		}
+		echo ' }'; // end of subobject 'dragOpen' options
+		$oComma = true;
+	}
+
+	// subobject 'onClick' options
+	if ($this->onClickClose || $this->onClickDelayLocationHref || $this->onClickBlockUI) {
+		echo ($oComma == true ? ', ' : '') . 'onClick: { ';
+		if ($this->onClickClose) {
+			echo ($iComma == true ? ', ' : '') . $this->onClickClose;
+			$iComma = true;
+		}
+		if ($this->onClickBlockUI) {
+			echo ($iComma == true ? ', ' : '') . $this->onClickBlockUI;
+			$iComma = true;
+		}
+		echo ' }'; // end of subobject 'onClick' options
+		$iComma = false; // reset inside subobject comma flag
+		$oComma = true;
+	}
+?>
+		}, {
+			selectedClass: "active"
+		}).removeClass('invisible');
+	});
+})(jQuery);
+</script>

@@ -3,12 +3,12 @@
 /**
  * Contao Open Source CMS
  * 
- * Copyright (C) 2005-2013 Leo Feyer
+ * Copyright (C) 2005-2014 Leo Feyer
  * 
  * @package   mmenu
  * @author    Dirk Klemmt
  * @license   MIT/GPL
- * @copyright Dirk Klemmt 2013
+ * @copyright Dirk Klemmt 2013-2014
  */
 
 
@@ -41,5 +41,6 @@ ClassLoader::addClasses(array
  */
 TemplateLoader::addFiles(array
 (
-	'mod_mmenu'							=> 'system/modules/dk_mmenu/templates/modules'
+	'mod_mmenu'							=> 'system/modules/dk_mmenu/templates/modules',
+	'js_mmenu'							=> 'system/modules/dk_mmenu/templates/jquery'
 ));

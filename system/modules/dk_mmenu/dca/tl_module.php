@@ -3,25 +3,27 @@
 /**
  * Contao Open Source CMS
  * 
- * Copyright (C) 2005-2013 Leo Feyer
+ * Copyright (C) 2005-2014 Leo Feyer
  * 
  * @package   mmenu
  * @author    Dirk Klemmt
  * @license   MIT/GPL
- * @copyright Dirk Klemmt 2013
+ * @copyright Dirk Klemmt 2013-2014
  */
 
 
 /**
  * Add palettes to tl_module
  */
-$GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__']	[] = 'dk_mmenuDragOpenOpen';
+//$GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'dk_mmenuCountersAdd';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'dk_mmenuDragOpenOpen';
 
-$GLOBALS['TL_DCA']['tl_module']['palettes']['mmenu'] = '{title_legend},name,headline,type;{nav_legend},levelOffset,showLevel,hardLimit,showProtected;{reference_legend:hide},defineRoot;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition,dk_mmenuSlidingSubmenus,dk_mmenuTheme,dk_mmenuCountersAdd,dk_mmenuSearchfieldAdd;{mmenu_behaviour_legend},dk_mmenuDragOpenOpen,dk_mmenuOnClickClose,dk_mmenuOnClickDelayLocationHref,dk_mmenuOnClickBlockUI;{template_legend:hide},navigationTpl,dk_mmenuTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
-$GLOBALS['TL_DCA']['tl_module']['palettes']['custommmenu'] = '{title_legend},name,headline,type;{nav_legend},pages,showProtected;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition,dk_mmenuSlidingSubmenus,dk_mmenuTheme,dk_mmenuCountersAdd,dk_mmenuSearchfieldAdd;{mmenu_behaviour_legend},dk_mmenuDragOpenOpen,dk_mmenuOnClickClose,dk_mmenuOnClickDelayLocationHref,dk_mmenuOnClickBlockUI;{template_legend:hide},navigationTpl,dk_mmenuTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
-$GLOBALS['TL_DCA']['tl_module']['palettes']['mmenu_article'] = '{title_legend},name,headline,type;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition;{mmenu_behaviour_legend},dk_mmenuDragOpenOpen,dk_mmenuModal;{mmenu_legend},dk_mmenuArticle,dk_mmenuTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['mmenu'] = '{title_legend},name,type;{nav_legend},levelOffset,showLevel,hardLimit,showProtected;{reference_legend:hide},defineRoot;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition,dk_mmenuSlidingSubmenus,dk_mmenuTheme,dk_mmenuMoveBackground,dk_mmenuFullscreen,dk_mmenuCountersAdd,dk_mmenuSearchfieldAdd;{mmenu_effects_legend},dk_mmenuEffectSlide,dk_mmenuEffectZoomMenu,dk_mmenuEffectZoomPage,dk_mmenuEffectZoomPanels;{mmenu_behaviour_legend},dk_mmenuDragOpenOpen,dk_mmenuOnClickClose,dk_mmenuOnClickBlockUI;{template_legend:hide},navigationTpl,dk_mmenuHtmlTpl,dk_mmenuJsTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['custommmenu'] = '{title_legend},name,type;{nav_legend},pages,showProtected;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition,dk_mmenuSlidingSubmenus,dk_mmenuTheme,dk_mmenuMoveBackground,dk_mmenuFullscreen,dk_mmenuCountersAdd,dk_mmenuSearchfieldAdd;{mmenu_effects_legend},dk_mmenuEffectSlide,dk_mmenuEffectZoomMenu,dk_mmenuEffectZoomPage,dk_mmenuEffectZoomPanels;{mmenu_behaviour_legend},dk_mmenuDragOpenOpen,dk_mmenuOnClickClose,dk_mmenuOnClickBlockUI;{template_legend:hide},navigationTpl,dk_mmenuHtmlTpl,dk_mmenuJsTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['mmenu_article'] = '{title_legend},name,headline,type;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition;{mmenu_effects_legend},dk_mmenuEffectSlide,dk_mmenuEffectZoomMenu,dk_mmenuEffectZoomPage,dk_mmenuEffectZoomPanels;{mmenu_behaviour_legend},dk_mmenuDragOpenOpen,dk_mmenuModal;{mmenu_legend},dk_mmenuArticle,dk_mmenuHtmlTpl,dk_mmenuJsTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
 
-$GLOBALS['TL_DCA']['tl_module']['subpalettes']['dk_mmenuDragOpenOpen']	= 'dk_mmenuDragOpenThreshold';
+//$GLOBALS['TL_DCA']['tl_module']['subpalettes']['dk_mmenuCountersAdd'] = 'dk_mmenuCountersUpdate';
+$GLOBALS['TL_DCA']['tl_module']['subpalettes']['dk_mmenuDragOpenOpen'] = 'dk_mmenuDragOpenThreshold';
 
 
 /**
@@ -69,10 +71,28 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuTheme'] = array
 	'exclude'			=> true,
 	'inputType'			=> 'select',
 	'default'			=> 'standard',
-	'options'			=> array('standard', 'light', 'lighter', 'lightest', 'army', 'bordeaux', 'navy'),
+	'options'			=> array('black', 'standard', 'light', 'lighter', 'lightest', 'white', 'army', 'bordeaux', 'navy'),
 	'reference'			=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuTheme'],
 	'eval'				=> array('tl_class' => 'w50'),
 	'sql'				=> "varchar(32) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuMoveBackground'] = array
+(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuMoveBackground'],
+	'exclude'			=> true,
+	'inputType'			=> 'checkbox',
+	'eval'				=> array('tl_class' => 'w50'),
+	'sql'				=> "char(1) NOT NULL default '1'"
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuFullscreen'] = array
+(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuFullscreen'],
+	'exclude'			=> true,
+	'inputType'			=> 'checkbox',
+	'eval'				=> array('tl_class' => 'w50'),
+	'sql'				=> "char(1) NOT NULL default ''"
 );
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuCountersAdd'] = array
@@ -80,7 +100,16 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuCountersAdd'] = array
 	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuCountersAdd'],
 	'exclude'			=> true,
 	'inputType'			=> 'checkbox',
-	'eval'				=> array('tl_class' => 'clr w50'),
+	'eval'				=> array(/*'submitOnChange' => true,*/ 'tl_class' => 'clr w50'),
+	'sql'				=> "char(1) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuCountersUpdate'] = array
+(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuCountersUpdate'],
+	'exclude'			=> true,
+	'inputType'			=> 'checkbox',
+	'eval'				=> array('tl_class' => 'w50'),
 	'sql'				=> "char(1) NOT NULL default ''"
 );
 
@@ -93,12 +122,48 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuSearchfieldAdd'] = array
 	'sql'				=> "char(1) NOT NULL default ''"
 );
 
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuEffectSlide'] = array
+(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuEffectSlide'],
+	'exclude'			=> true,
+	'inputType'			=> 'checkbox',
+	'eval'				=> array('tl_class' => 'w50'),
+	'sql'				=> "char(1) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuEffectZoomMenu'] = array
+(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuEffectZoomMenu'],
+	'exclude'			=> true,
+	'inputType'			=> 'checkbox',
+	'eval'				=> array('tl_class' => 'w50'),
+	'sql'				=> "char(1) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuEffectZoomPage'] = array
+(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuEffectZoomPage'],
+	'exclude'			=> true,
+	'inputType'			=> 'checkbox',
+	'eval'				=> array('tl_class' => 'w50'),
+	'sql'				=> "char(1) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuEffectZoomPanels'] = array
+(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuEffectZoomPanels'],
+	'exclude'			=> true,
+	'inputType'			=> 'checkbox',
+	'eval'				=> array('tl_class' => 'w50'),
+	'sql'				=> "char(1) NOT NULL default ''"
+);
+
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuDragOpenOpen'] = array
 (
 	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuDragOpenOpen'],
 	'exclude'			=> true,
 	'inputType'			=> 'checkbox',
-	'eval'				=> array('submitOnChange' => true, 'tl_class' => 'w50'),
+	'eval'				=> array('submitOnChange' => true),
 	'sql'				=> "char(1) NOT NULL default ''"
 );
 
@@ -111,6 +176,15 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuDragOpenThreshold'] = array
 	'sql'				=> "smallint(5) NOT NULL default '50'"
 );
 
+/*$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuDragOpenMaxStartPos'] = array
+(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuDragOpenMaxStartPos'],
+	'exclude'			=> true,
+	'inputType'			=> 'text',
+	'eval'				=> array('maxlength' => 3, 'rgxp' => 'digit', 'tl_class' => 'w50'),
+	'sql'				=> "smallint(5) NOT NULL default '150'"
+);*/
+
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuOnClickClose'] = array
 (
 	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuOnClickClose'],
@@ -120,21 +194,12 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuOnClickClose'] = array
 	'sql'				=> "char(1) NOT NULL default '1'"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuOnClickDelayLocationHref'] = array
-(
-	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuOnClickDelayLocationHref'],
-	'exclude'			=> true,
-	'inputType'			=> 'checkbox',
-	'eval'				=> array('tl_class' => 'w50'),
-	'sql'				=> "char(1) NOT NULL default '1'"
-);
-
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuOnClickBlockUI'] = array
 (
 	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuOnClickBlockUI'],
 	'exclude'			=> true,
 	'inputType'			=> 'checkbox',
-	'eval'				=> array('tl_class' => 'clr'),
+	'eval'				=> array('tl_class' => 'w50'),
 	'sql'				=> "char(1) NOT NULL default ''"
 );
 
@@ -164,6 +229,26 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuTpl'] = array
 	'exclude'			=> true,
 	'inputType'			=> 'select',
 	'options_callback'	=> array('tl_module_dk_mmenu', 'getTemplates'),
+	'eval'				=> array('maxlength' => 255, 'tl_class' => 'w50'),
+	'sql'				=> "varchar(255) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuHtmlTpl'] = array
+(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuHtmlTpl'],
+	'exclude'			=> true,
+	'inputType'			=> 'select',
+	'options_callback'	=> array('tl_module_dk_mmenu', 'getHtmlTemplates'),
+	'eval'				=> array('maxlength' => 255, 'tl_class' => 'w50 clr'),
+	'sql'				=> "varchar(255) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuJsTpl'] = array
+(
+	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuJsTpl'],
+	'exclude'			=> true,
+	'inputType'			=> 'select',
+	'options_callback'	=> array('tl_module_dk_mmenu', 'getJsTemplates'),
 	'eval'				=> array('maxlength' => 255, 'tl_class' => 'w50'),
 	'sql'				=> "varchar(255) NOT NULL default ''"
 );
@@ -265,12 +350,23 @@ class tl_module_dk_mmenu extends tl_module
 
 
 	/**
-	 * Return all mmenu templates as array
+	 * Return all mmenu module templates as array
 	 *
 	 * @return array
 	 */
-	public function getTemplates()
+	public function getHtmlTemplates()
 	{
 		return $this->getTemplateGroup('mod_mmenu');
+	}
+
+
+	/**
+	 * Return all mmenu JavaScript templates as array
+	 *
+	 * @return array
+	 */
+	public function getJsTemplates()
+	{
+		return $this->getTemplateGroup('js_mmenu');
 	}
 }

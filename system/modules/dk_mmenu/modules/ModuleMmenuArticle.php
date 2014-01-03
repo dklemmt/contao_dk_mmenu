@@ -3,12 +3,12 @@
 /**
  * Contao Open Source CMS
  * 
- * Copyright (C) 2005-2013 Leo Feyer
+ * Copyright (C) 2005-2014 Leo Feyer
  * 
  * @package   mmenu
  * @author    Dirk Klemmt
  * @license   MIT/GPL
- * @copyright Dirk Klemmt 2013
+ * @copyright Dirk Klemmt 2013-2014
  */
 
 
@@ -21,7 +21,7 @@ namespace Dirch\mmenu;
 /**
  * Class ModuleMmenu
  *
- * @copyright  Dirk Klemmt 2013
+ * @copyright  Dirk Klemmt 2013-2014
  * @author     Dirk Klemmt
  * @package    mmenu
  */
@@ -33,6 +33,13 @@ class ModuleMmenuArticle extends \Module
 	 * @var string
 	 */
 	protected $strTemplate = 'mod_mmenu';
+
+
+	/**
+	 * Template
+	 * @var string
+	 */
+	protected $strTemplateJs = 'js_mmenu';
 
 
 	/**
@@ -56,10 +63,16 @@ class ModuleMmenuArticle extends \Module
 			return $objTemplate->parse();
 		}
 
-		// replace default template with chosen one
-		if ($this->dk_mmenuTpl)
+		// replace default (HTML) template with chosen one
+		if ($this->dk_mmenuHtmlTpl)
 		{
-			$this->strTemplate = $this->dk_mmenuTpl;
+			$this->strTemplate = $this->dk_mmenuHtmlTpl;
+		}
+
+		// replace default (JS) template with chosen one
+		if ($this->dk_mmenuJsTpl)
+		{
+			$this->strTemplateJs = $this->dk_mmenuJsTpl;
 		}
 
 		return parent::generate();
@@ -71,19 +84,23 @@ class ModuleMmenuArticle extends \Module
 	 */
 	protected function compile()
 	{
-		$this->Template->cssIDonly = $this->cssID[0];
-
-		$objCte = \ContentModel::findPublishedByPidAndTable($this->dk_mmenuArticle, 'tl_article');
-		if ($objCte !== null)
+		// get content of article
+		$objElements = \ContentModel::findPublishedByPidAndTable($this->dk_mmenuArticle, 'tl_article');
+		if ($objElements !== null)
 		{
-			while ($objCte->next())
+			while ($objElements->next())
 			{
-				$arrElements[] = $this->getContentElement($objCte);
+				$arrElements[] = $this->getContentElement($objElements->id);
 			}
 		}
 		$this->Template->elements = $arrElements;
 
+		// --- create FE template for javascript caller
+		$objTemplateJs = new \FrontendTemplate($this->strTemplateJs);
+		$objTemplateJs->id = $this->id;
+		$objTemplateJs->cssIDonly = $this->cssID[0];
+
 		$objMmenu = new Mmenu();
-		$objMmenu->createTemplateData($this->id, $this->Template);
+		$objMmenu->createTemplateData($this->Template, $objTemplateJs);
 	}
 }
