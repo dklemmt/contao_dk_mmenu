@@ -37,7 +37,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuPosition'] = array
 	'default'			=> 'left',
 	'options'			=> array('left', 'right', 'top', 'bottom'),
 	'reference'			=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuPosition'],
-	'eval'				=> array('tl_class' => 'w50'),
+	'eval'				=> array('submitOnChange' => true, 'tl_class' => 'w50'),
 	'sql'				=> "varchar(32) NOT NULL default ''"
 );
 
@@ -46,8 +46,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuZposition'] = array
 	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuZposition'],
 	'exclude'			=> true,
 	'inputType'			=> 'select',
-	'default'			=> 'back',
-	'options'			=> array('back', 'front', 'next'),
+	'options_callback'	=> array('tl_module_dk_mmenu', 'getZpositionOptions'),
 	'reference'			=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuZposition'],
 	'eval'				=> array('tl_class' => 'w50'),
 	'sql'				=> "varchar(32) NOT NULL default ''"
@@ -368,5 +367,34 @@ class tl_module_dk_mmenu extends tl_module
 	public function getJsTemplates()
 	{
 		return $this->getTemplateGroup('js_mmenu');
+	}
+	
+	
+	/**
+	 * Return all possible z-position options for selected menu position as array
+	 *
+	 * @param \DataContainer
+	 * @return array
+	 */
+	public function getZpositionOptions(DataContainer $dc)
+	{
+		$zpositionOptions = array('front');
+
+		// check if menu position is 'top' or 'bottom'...
+		$obj = $this->Database
+				->prepare("SELECT dk_mmenuPosition
+						   FROM   tl_module
+						   WHERE  id = ?
+						   AND    dk_mmenuPosition = 'top' or dk_mmenuPosition = 'bottom'")
+				->limit(1)
+				->execute($dc->id);
+
+		// ...if not every position is allowed
+		if (!$obj->numRows)
+		{
+			$zpositionOptions = array('back', 'front', 'next');
+		}
+
+		return $zpositionOptions;
 	}
 }
