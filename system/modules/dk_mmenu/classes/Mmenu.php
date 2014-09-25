@@ -48,23 +48,32 @@ class Mmenu extends \Frontend
 
 		$objTemplateJs->isMenu = 'isMenu: ' . ($objMmenu->type != 'mmenu_article' ? 'true' : 'false');
 
-		// mmenu option 'modal': default value is 'false'
+		// mmenu offCanvas add-on
+		$objTemplateJs->offCanvas = true;
+
+		// offCanvas option 'modal': default value is 'false'
 		if ($objMmenu->dk_mmenuModal)
 		{
-			$objTemplateJs->modal = 'modal: true';
+			$objTemplateJs->offCanvasModal = 'modal: true';
 		}
 
-		// mmenu option 'position': default value is 'left'
+		// offCanvas option 'moveBackground': default value is 'true'
+		if ($objMmenu->dk_mmenuMoveBackground)
+		{
+			$objTemplateJs->offCanvasMoveBackground = 'moveBackground: false';
+		}
+	
+		// offCanvas option 'position': default value is 'left'
 		if ($objMmenu->dk_mmenuPosition != 'left')
 		{
-			$objTemplateJs->position = 'position: "' . $objMmenu->dk_mmenuPosition . '"';
+			$objTemplateJs->offCanvasPosition = 'position: "' . $objMmenu->dk_mmenuPosition . '"';
 			$addPositioningCssFile = true;
 		}
 
-		// mmenu option 'zposition': default value is 'back'
+		// offCanvas option 'zposition': default value is 'back'
 		if ($objMmenu->dk_mmenuZposition != 'back')
 		{
-			$objTemplateJs->zposition = 'zposition: "' . $objMmenu->dk_mmenuZposition . '"';
+			$objTemplateJs->offCanvasZposition = 'zposition: "' . $objMmenu->dk_mmenuZposition . '"';
 			$addPositioningCssFile = true;
 		}
 
@@ -78,12 +87,6 @@ class Mmenu extends \Frontend
 		if ($objMmenu->dk_mmenuSlidingSubmenus != 'horizontal')
 		{
 			$objTemplateJs->slidingSubmenus = 'slidingSubmenus: false';
-		}
-
-		// mmenu option 'moveBackground': default value is 'true'
-		if ($objMmenu->dk_mmenuMoveBackground)
-		{
-			$objTemplateJs->moveBackground = 'moveBackground: false';
 		}
 
 		// mmenu extension 'fullscreen'
