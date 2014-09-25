@@ -129,7 +129,7 @@ class Mmenu extends \Frontend
 			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/addons/jquery.mmenu.searchfield.min.js|static';
 		}
 
-		if ($objMmenu->dk_mmenuEffectSlide || $objMmenu->dk_mmenuEffectZoomMenu || $objMmenu->dk_mmenuEffectZoomPage || $objMmenu->dk_mmenuEffectZoomPanels)
+		if ($objMmenu->dk_mmenuEffectSlide || $objMmenu->dk_mmenuEffectZoomMenu || $objMmenu->dk_mmenuEffectZoomPanels)
 		{
 			if ($objMmenu->dk_mmenuEffectSlide)
 			{
@@ -139,11 +139,6 @@ class Mmenu extends \Frontend
 			if ($objMmenu->dk_mmenuEffectZoomMenu)
 			{
 				$objTemplateJs->classes .= 'mm-zoom-menu ';
-			}
-
-			if ($objMmenu->dk_mmenuEffectZoomPage)
-			{
-				$objTemplateJs->classes .= 'mm-zoom-page ';
 			}
 
 			if ($objMmenu->dk_mmenuEffectZoomPanels)
