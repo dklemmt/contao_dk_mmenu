@@ -83,7 +83,7 @@
 	}
 
 	// subobject 'onClick' options
-	if ($this->onClickClose || $this->onClickDelayLocationHref || $this->onClickBlockUI) {
+	if ($this->onClickClose || $this->onClickBlockUI) {
 		echo ($oComma == true ? ', ' : '') . 'onClick: { ';
 		if ($this->onClickClose) {
 			echo ($iComma == true ? ', ' : '') . $this->onClickClose;
