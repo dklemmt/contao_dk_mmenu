@@ -172,10 +172,13 @@ class Mmenu extends \Frontend
 				$objTemplateJs->dragOpenMaxStartPos = 'maxStartPos: ' . $objMmenu->dk_mmenuDragOpenMaxStartPos;
 			}
 
+			// add mmenu dragopen css style file
+			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/extensions/jquery.mmenu.dragopen.css||static';
+
 			// add hammer library file
 			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/hammer.min.js|static';
 
-			// add mmenu hammer jquery file
+			// add mmenu dragopen jquery file
 			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/addons/jquery.mmenu.dragopen.min.js|static';
 		}
 
