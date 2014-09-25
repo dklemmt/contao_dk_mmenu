@@ -51,26 +51,26 @@ class Mmenu extends \Frontend
 		// mmenu offCanvas add-on
 		$objTemplateJs->offCanvas = true;
 
-		// offCanvas option 'modal': default value is 'false'
+		// offCanvas option 'offCanvas.modal': default value is 'false'
 		if ($objMmenu->dk_mmenuModal)
 		{
 			$objTemplateJs->offCanvasModal = 'modal: true';
 		}
 
-		// offCanvas option 'moveBackground': default value is 'true'
+		// offCanvas option 'offCanvas.moveBackground': default value is 'true'
 		if ($objMmenu->dk_mmenuMoveBackground)
 		{
 			$objTemplateJs->offCanvasMoveBackground = 'moveBackground: false';
 		}
 	
-		// offCanvas option 'position': default value is 'left'
+		// offCanvas option 'offCanvas.position': default value is 'left'
 		if ($objMmenu->dk_mmenuPosition != 'left')
 		{
 			$objTemplateJs->offCanvasPosition = 'position: "' . $objMmenu->dk_mmenuPosition . '"';
 			$addPositioningCssFile = true;
 		}
 
-		// offCanvas option 'zposition': default value is 'back'
+		// offCanvas option 'offCanvas.zposition': default value is 'back'
 		if ($objMmenu->dk_mmenuZposition != 'back')
 		{
 			$objTemplateJs->offCanvasZposition = 'zposition: "' . $objMmenu->dk_mmenuZposition . '"';
@@ -98,12 +98,13 @@ class Mmenu extends \Frontend
 			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/extensions/jquery.mmenu.fullscreen.css||static';
 		}
 
-		// mmenu option 'counters.add': default value is 'false'
+		// mmenu counters add-on
+		// counters option 'counters.add': default value is 'false'
 		if ($objMmenu->dk_mmenuCountersAdd)
 		{
 			$objTemplateJs->countersAdd = 'add: true';
 
-			// mmenu option 'counters.update': default value is 'false'
+			// counters option 'counters.update': default value is 'false'
 			if ($objMmenu->dk_mmenuCountersUpdate)
 			{
 				$objTemplateJs->countersUpdate = 'update: true';
@@ -116,6 +117,7 @@ class Mmenu extends \Frontend
 			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/addons/jquery.mmenu.counters.min.js|static';
 		}
 
+		// mmenu searchfield add-on
 		// mmenu option 'searchfield.add': default value is 'false'
 		if ($objMmenu->dk_mmenuSearchfieldAdd)
 		{
@@ -132,6 +134,7 @@ class Mmenu extends \Frontend
 			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/addons/jquery.mmenu.searchfield.min.js|static';
 		}
 
+		// mmenu extension 'effects'
 		if ($objMmenu->dk_mmenuEffectSlide || $objMmenu->dk_mmenuEffectZoomMenu || $objMmenu->dk_mmenuEffectZoomPanels)
 		{
 			if ($objMmenu->dk_mmenuEffectSlide)
@@ -153,18 +156,19 @@ class Mmenu extends \Frontend
 			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/extensions/jquery.mmenu.effects.css||static';
 		}
 
-		// mmenu option 'dragOpen.open': default value is 'false'
+		// mmenu dragOpen add-on
+		// dragOpen option 'dragOpen.open': default value is 'false'
 		if ($objMmenu->dk_mmenuDragOpenOpen)
 		{
 			$objTemplateJs->dragOpenOpen = 'open: true';
 
-			// mmenu option 'dragOpen.threshold': default value is '50'
+			// dragOpen option 'dragOpen.threshold': default value is '50'
 			if (isset($objMmenu->dk_mmenuDragOpenThreshold) && $objMmenu->dk_mmenuDragOpenThreshold != '50')
 			{
 				$objTemplateJs->dragOpenThreshold = 'threshold: ' . $objMmenu->dk_mmenuDragOpenThreshold;
 			}
 
-			// mmenu option 'dragOpen.maxStartPos': default value is '100'
+			// dragOpen option 'dragOpen.maxStartPos': default value is '100'
 			if (isset($objMmenu->dk_mmenuDragOpenMaxStartPos) && $objMmenu->dk_mmenuDragOpenMaxStartPos != '100')
 			{
 				$objTemplateJs->dragOpenMaxStartPos = 'maxStartPos: ' . $objMmenu->dk_mmenuDragOpenMaxStartPos;
@@ -192,7 +196,7 @@ class Mmenu extends \Frontend
 			$objTemplateJs->onClickBlockUI = 'blockUI: true';
 		}
 
-		// ... theme css style file
+		// mmenu extension 'themes'
 		if ($objMmenu->dk_mmenuTheme != 'standard')
 		{
 			switch ($objMmenu->dk_mmenuTheme)
