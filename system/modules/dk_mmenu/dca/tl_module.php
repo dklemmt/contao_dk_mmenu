@@ -181,7 +181,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuDragOpenThreshold'] = array
 	'exclude'			=> true,
 	'inputType'			=> 'text',
 	'eval'				=> array('maxlength' => 3, 'rgxp' => 'digit', 'tl_class' => 'w50'),
-	'sql'				=> "smallint(5) NOT NULL default '150'"
+	'sql'				=> "smallint(5) NOT NULL default '100'"
 );*/
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuOnClickClose'] = array

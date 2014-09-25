@@ -166,8 +166,8 @@ class Mmenu extends \Frontend
 				$objTemplateJs->dragOpenThreshold = 'threshold: ' . $objMmenu->dk_mmenuDragOpenThreshold;
 			}
 
-			// mmenu option 'dragOpen.maxStartPos': default value is '150'
-			if (isset($objMmenu->dk_mmenuDragOpenMaxStartPos) && $objMmenu->dk_mmenuDragOpenMaxStartPos != '150')
+			// mmenu option 'dragOpen.maxStartPos': default value is '100'
+			if (isset($objMmenu->dk_mmenuDragOpenMaxStartPos) && $objMmenu->dk_mmenuDragOpenMaxStartPos != '100')
 			{
 				$objTemplateJs->dragOpenMaxStartPos = 'maxStartPos: ' . $objMmenu->dk_mmenuDragOpenMaxStartPos;
 			}
