@@ -37,6 +37,7 @@
 	if ($this->offCanvas) {
 		if ($this->offCanvasModal || $this->offCanvasMoveBackground || $this->offCanvasPosition || $this->offCanvasZposition) {
 			echo ($oComma == true ? ', ' : '') . 'offCanvas: { ';
+            $oComma = false;
 			if ($this->offCanvasModal) {
 				echo ($oComma == true ? ', ' : '') . $this->offCanvasModal;
 				$oComma = true;
