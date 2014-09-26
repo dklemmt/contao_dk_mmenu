@@ -175,7 +175,7 @@ class Mmenu extends \Frontend
 			}
 
 			// add mmenu dragopen css style file
-			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/extensions/jquery.mmenu.dragopen.css||static';
+			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/addons/jquery.mmenu.dragopen.css||static';
 
 			// add hammer library file
 			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/hammer.min.js|static';
