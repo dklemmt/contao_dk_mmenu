@@ -10,28 +10,12 @@
 		echo ($oComma == true ? ', ' : '') . $this->isMenu;
 		$oComma = true;
 	}
-	if ($this->modal) {
-		echo ($oComma == true ? ', ' : '') . $this->modal;
-		$oComma = true;
-	}
 	if ($this->classes) {
 		echo ($oComma == true ? ', ' : '') . 'classes: "' . $this->classes . '"';
 		$oComma = true;
 	}
-	if ($this->position) {
-		echo ($oComma == true ? ', ' : '') . $this->position;
-		$oComma = true;
-	}
-	if ($this->zposition) {
-		echo ($oComma == true ? ', ' : '') . $this->zposition;
-		$oComma = true;
-	}
 	if ($this->slidingSubmenus) {
 		echo ($oComma == true ? ', ' : '') . $this->slidingSubmenus;
-		$oComma = true;
-	}
-	if ($this->moveBackground) {
-		echo ($oComma == true ? ', ' : '') . $this->moveBackground;
 		$oComma = true;
 	}
 
@@ -45,6 +29,35 @@
 		} else {
 			echo ($oComma == true ? ', ' : '') . 'counters: true';
 		}
+		$oComma = true;
+	}
+
+	// subobject 'offCanvas' options
+	if ($this->offCanvas) {
+		if ($this->offCanvasModal || $this->offCanvasMoveBackground || $this->offCanvasPosition || $this->offCanvasZposition) {
+			echo ($oComma == true ? ', ' : '') . 'offCanvas: { ';
+			if ($this->offCanvasModal) {
+				echo ($iComma == true ? ', ' : '') . $this->offCanvasModal;
+				$iComma = true;
+			}
+			if ($this->offCanvasMoveBackground) {
+				echo ($iComma == true ? ', ' : '') . $this->offCanvasMoveBackground;
+				$iComma = true;
+			}	
+			if ($this->offCanvasPosition) {
+				echo ($iComma == true ? ', ' : '') . $this->offCanvasPosition;
+				$iComma = true;
+			}
+			if ($this->offCanvasZposition) {
+				echo ($iComma == true ? ', ' : '') . $this->offCanvasZposition;
+				$iComma = true;
+			}
+			echo ' }'; // end of subobject 'offCanvas' options
+			$iComma = false; // reset inside subobject comma flag
+			$oComma = true;
+		}
+	} else {
+		echo ($oComma == true ? ', ' : '') . 'offCanvas: false';
 		$oComma = true;
 	}
 
@@ -83,7 +96,7 @@
 	}
 
 	// subobject 'onClick' options
-	if ($this->onClickClose || $this->onClickDelayLocationHref || $this->onClickBlockUI) {
+	if ($this->onClickClose || $this->onClickBlockUI) {
 		echo ($oComma == true ? ', ' : '') . 'onClick: { ';
 		if ($this->onClickClose) {
 			echo ($iComma == true ? ', ' : '') . $this->onClickClose;
@@ -99,7 +112,9 @@
 	}
 ?>
 		}, {
-			selectedClass: "active"
+			classNames: {
+				selected: "active"
+			}
 		}).removeClass('invisible');
 	});
 })(jQuery);

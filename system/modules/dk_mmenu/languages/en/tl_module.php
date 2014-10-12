@@ -49,8 +49,6 @@ $GLOBALS['TL_LANG']['tl_module']['dk_mmenuEffectSlide'][0] = 'Slide in';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuEffectSlide'][1] = 'Makes the menu slide in from the side.';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuEffectZoomMenu'][0] = 'Zoom menu';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuEffectZoomMenu'][1] = 'Makes the menu zoom in.';
-$GLOBALS['TL_LANG']['tl_module']['dk_mmenuEffectZoomPage'][0] = 'Zoom page';
-$GLOBALS['TL_LANG']['tl_module']['dk_mmenuEffectZoomPage'][1] = 'Makes the page zoom in while opening the menu, works great in combination with the mm-zoom-menu effect.';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuEffectZoomPanels'][0] = 'Zoom panels';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuEffectZoomPanels'][1] = 'Makes the panels zoom out while opening a submenu.';
 

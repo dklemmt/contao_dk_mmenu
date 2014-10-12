@@ -48,23 +48,32 @@ class Mmenu extends \Frontend
 
 		$objTemplateJs->isMenu = 'isMenu: ' . ($objMmenu->type != 'mmenu_article' ? 'true' : 'false');
 
-		// mmenu option 'modal': default value is 'false'
+		// mmenu offCanvas add-on
+		$objTemplateJs->offCanvas = true;
+
+		// offCanvas option 'offCanvas.modal': default value is 'false'
 		if ($objMmenu->dk_mmenuModal)
 		{
-			$objTemplateJs->modal = 'modal: true';
+			$objTemplateJs->offCanvasModal = 'modal: true';
 		}
 
-		// mmenu option 'position': default value is 'left'
+		// offCanvas option 'offCanvas.moveBackground': default value is 'true'
+		if ($objMmenu->dk_mmenuMoveBackground)
+		{
+			$objTemplateJs->offCanvasMoveBackground = 'moveBackground: false';
+		}
+	
+		// offCanvas option 'offCanvas.position': default value is 'left'
 		if ($objMmenu->dk_mmenuPosition != 'left')
 		{
-			$objTemplateJs->position = 'position: "' . $objMmenu->dk_mmenuPosition . '"';
+			$objTemplateJs->offCanvasPosition = 'position: "' . $objMmenu->dk_mmenuPosition . '"';
 			$addPositioningCssFile = true;
 		}
 
-		// mmenu option 'zposition': default value is 'back'
+		// offCanvas option 'offCanvas.zposition': default value is 'back'
 		if ($objMmenu->dk_mmenuZposition != 'back')
 		{
-			$objTemplateJs->zposition = 'zposition: "' . $objMmenu->dk_mmenuZposition . '"';
+			$objTemplateJs->offCanvasZposition = 'zposition: "' . $objMmenu->dk_mmenuZposition . '"';
 			$addPositioningCssFile = true;
 		}
 
@@ -80,12 +89,6 @@ class Mmenu extends \Frontend
 			$objTemplateJs->slidingSubmenus = 'slidingSubmenus: false';
 		}
 
-		// mmenu option 'moveBackground': default value is 'true'
-		if ($objMmenu->dk_mmenuMoveBackground)
-		{
-			$objTemplateJs->moveBackground = 'moveBackground: false';
-		}
-
 		// mmenu extension 'fullscreen'
 		if ($objMmenu->dk_mmenuFullscreen)
 		{
@@ -95,12 +98,13 @@ class Mmenu extends \Frontend
 			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/extensions/jquery.mmenu.fullscreen.css||static';
 		}
 
-		// mmenu option 'counters.add': default value is 'false'
+		// mmenu counters add-on
+		// counters option 'counters.add': default value is 'false'
 		if ($objMmenu->dk_mmenuCountersAdd)
 		{
 			$objTemplateJs->countersAdd = 'add: true';
 
-			// mmenu option 'counters.update': default value is 'false'
+			// counters option 'counters.update': default value is 'false'
 			if ($objMmenu->dk_mmenuCountersUpdate)
 			{
 				$objTemplateJs->countersUpdate = 'update: true';
@@ -113,6 +117,7 @@ class Mmenu extends \Frontend
 			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/addons/jquery.mmenu.counters.min.js|static';
 		}
 
+		// mmenu searchfield add-on
 		// mmenu option 'searchfield.add': default value is 'false'
 		if ($objMmenu->dk_mmenuSearchfieldAdd)
 		{
@@ -129,7 +134,8 @@ class Mmenu extends \Frontend
 			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/addons/jquery.mmenu.searchfield.min.js|static';
 		}
 
-		if ($objMmenu->dk_mmenuEffectSlide || $objMmenu->dk_mmenuEffectZoomMenu || $objMmenu->dk_mmenuEffectZoomPage || $objMmenu->dk_mmenuEffectZoomPanels)
+		// mmenu extension 'effects'
+		if ($objMmenu->dk_mmenuEffectSlide || $objMmenu->dk_mmenuEffectZoomMenu || $objMmenu->dk_mmenuEffectZoomPanels)
 		{
 			if ($objMmenu->dk_mmenuEffectSlide)
 			{
@@ -141,11 +147,6 @@ class Mmenu extends \Frontend
 				$objTemplateJs->classes .= 'mm-zoom-menu ';
 			}
 
-			if ($objMmenu->dk_mmenuEffectZoomPage)
-			{
-				$objTemplateJs->classes .= 'mm-zoom-page ';
-			}
-
 			if ($objMmenu->dk_mmenuEffectZoomPanels)
 			{
 				$objTemplateJs->classes .= 'mm-zoom-panels ';
@@ -155,27 +156,31 @@ class Mmenu extends \Frontend
 			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/extensions/jquery.mmenu.effects.css||static';
 		}
 
-		// mmenu option 'dragOpen.open': default value is 'false'
+		// mmenu dragOpen add-on
+		// dragOpen option 'dragOpen.open': default value is 'false'
 		if ($objMmenu->dk_mmenuDragOpenOpen)
 		{
 			$objTemplateJs->dragOpenOpen = 'open: true';
 
-			// mmenu option 'dragOpen.threshold': default value is '50'
+			// dragOpen option 'dragOpen.threshold': default value is '50'
 			if (isset($objMmenu->dk_mmenuDragOpenThreshold) && $objMmenu->dk_mmenuDragOpenThreshold != '50')
 			{
 				$objTemplateJs->dragOpenThreshold = 'threshold: ' . $objMmenu->dk_mmenuDragOpenThreshold;
 			}
 
-			// mmenu option 'dragOpen.maxStartPos': default value is '150'
-			if (isset($objMmenu->dk_mmenuDragOpenMaxStartPos) && $objMmenu->dk_mmenuDragOpenMaxStartPos != '150')
+			// dragOpen option 'dragOpen.maxStartPos': default value is '100'
+			if (isset($objMmenu->dk_mmenuDragOpenMaxStartPos) && $objMmenu->dk_mmenuDragOpenMaxStartPos != '100')
 			{
 				$objTemplateJs->dragOpenMaxStartPos = 'maxStartPos: ' . $objMmenu->dk_mmenuDragOpenMaxStartPos;
 			}
 
-			// add hammer jquery file
-			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/jquery.hammer.min.js|static';
+			// add mmenu dragopen css style file
+			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/addons/jquery.mmenu.dragopen.css||static';
 
-			// add mmenu hammer jquery file
+			// add hammer library file
+			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/hammer.min.js|static';
+
+			// add mmenu dragopen jquery file
 			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/addons/jquery.mmenu.dragopen.min.js|static';
 		}
 
@@ -191,7 +196,7 @@ class Mmenu extends \Frontend
 			$objTemplateJs->onClickBlockUI = 'blockUI: true';
 		}
 
-		// ... theme css style file
+		// mmenu extension 'themes'
 		if ($objMmenu->dk_mmenuTheme != 'standard')
 		{
 			switch ($objMmenu->dk_mmenuTheme)

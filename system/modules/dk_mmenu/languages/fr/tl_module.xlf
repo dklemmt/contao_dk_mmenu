@@ -33,12 +33,12 @@
       </trans-unit>
       <trans-unit id="tl_module.dk_mmenuZposition.0">
         <source>Z-position of menu</source>
-        <target>Position du menu</target>
+        <target>Z-position du menu</target>
         
       </trans-unit>
       <trans-unit id="tl_module.dk_mmenuZposition.1">
         <source>Choose the z-position of the menu.</source>
-        <target>Choisir la position du menu.</target>
+        <target>Choisir la z-position du menu.</target>
         
       </trans-unit>
       <trans-unit id="tl_module.dk_mmenuSlidingSubmenus.0">
