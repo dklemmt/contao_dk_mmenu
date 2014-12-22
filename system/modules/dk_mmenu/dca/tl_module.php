@@ -3,12 +3,12 @@
 /**
  * Contao Open Source CMS
  * 
- * Copyright (C) 2005-2014 Leo Feyer
+ * Copyright (C) 2005-2015 Leo Feyer
  * 
  * @package   mmenu
  * @author    Dirk Klemmt
  * @license   MIT/GPL
- * @copyright Dirk Klemmt 2013-2014
+ * @copyright Dirk Klemmt 2013-2015
  */
 
 
@@ -247,7 +247,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuJsTpl'] = array
 /**
  * Class tl_module_dk_mmenu
  *
- * @copyright  Dirk Klemmt 2013
+ * @copyright  Dirk Klemmt 2013-2015
  * @author     Dirk Klemmt
  * @package    mmenu
  */

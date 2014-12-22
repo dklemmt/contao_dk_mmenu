@@ -3,12 +3,12 @@
 /**
  * Contao Open Source CMS
  * 
- * Copyright (C) 2005-2014 Leo Feyer
+ * Copyright (C) 2005-2015 Leo Feyer
  * 
  * @package   mmenu
  * @author    Dirk Klemmt
  * @license   MIT/GPL
- * @copyright Dirk Klemmt 2013-2014
+ * @copyright Dirk Klemmt 2013-2015
  */
 
 
@@ -21,7 +21,7 @@ namespace Dirch\mmenu;
 /**
  * Class ModuleMmenu
  *
- * @copyright  Dirk Klemmt 2013-2014
+ * @copyright  Dirk Klemmt 2013-2015
  * @author     Dirk Klemmt
  * @package    mmenu
  */
