@@ -19,11 +19,11 @@ array_insert($GLOBALS['FE_MOD'], 3, array
 (
 	'navigationMenu' => array
 	(
-		'mmenu'			=> 'mmenu\ModuleMmenu',
-		'custommmenu'	=> 'mmenu\ModuleCustomMmenu'
+		'mmenu' => 'mmenu\ModuleMmenu',
+		'custommmenu' => 'mmenu\ModuleCustomMmenu'
 	),
 	'miscellaneous' => array
 	(
-		'mmenu_article'	=> 'mmenu\ModuleMmenuArticle'
+		'mmenu_article' => 'mmenu\ModuleMmenuArticle'
 	)
 ));
