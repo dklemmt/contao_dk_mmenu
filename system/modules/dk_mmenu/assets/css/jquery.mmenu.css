@@ -87,7 +87,8 @@
   .mm-list > li {
     position: relative; }
     .mm-list > li > a,
-    .mm-list > li > span {
+    .mm-list > li > span,
+    .mm-list > li > strong {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
@@ -133,13 +134,16 @@
       .mm-list a.mm-subopen.mm-fullsubopen:before {
         border-left: none; }
     .mm-list a.mm-subopen + a,
-    .mm-list a.mm-subopen + span {
+    .mm-list a.mm-subopen + span,
+    .mm-list a.mm-subopen + strong {
       padding-right: 5px;
       margin-right: 40px; }
   .mm-list > li.mm-selected > a.mm-subopen {
     background: transparent; }
   .mm-list > li.mm-selected > a.mm-fullsubopen + a,
-  .mm-list > li.mm-selected > a.mm-fullsubopen + span {
+  .mm-list > li.mm-selected > a.mm-fullsubopen + span,
+  .mm-list > li.mm-selected > a.mm-fullsubopen + strong
+  {
     padding-right: 45px;
     margin-right: 0; }
   .mm-list a.mm-subclose {
@@ -221,7 +225,9 @@ html.mm-opened .mm-page {
   .mm-menu .mm-list > li > a.mm-subopen:before {
     border-color: rgba(0, 0, 0, 0.15); }
   .mm-menu .mm-list > li.mm-selected > a:not(.mm-subopen),
-  .mm-menu .mm-list > li.mm-selected > span {
+  .mm-menu .mm-list > li.mm-selected > span,
+  .mm-menu .mm-list > li.mm-selected > strong
+  {
     background: rgba(0, 0, 0, 0.1); }
   .mm-menu .mm-list > li.mm-label {
     background: rgba(255, 255, 255, 0.05); }
