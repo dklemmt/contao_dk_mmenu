@@ -70,7 +70,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuTheme'] = array
 	'exclude'			=> true,
 	'inputType'			=> 'select',
 	'default'			=> 'standard',
-	'options'			=> array('black', 'standard', 'light', 'lighter', 'lightest', 'white', 'army', 'bordeaux', 'navy'),
+	'options'			=> array('standard', 'dark', 'black', 'white', 'light', 'lighter', 'army', 'bordeaux', 'navy'),
 	'reference'			=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuTheme'],
 	'eval'				=> array('tl_class' => 'w50'),
 	'sql'				=> "varchar(32) NOT NULL default ''"

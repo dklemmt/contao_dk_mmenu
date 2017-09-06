@@ -272,8 +272,8 @@
         
       </trans-unit>
       <trans-unit id="tl_module.dk_mmenuTheme.standard">
-        <source>dark</source>
-        <target>темная</target>
+        <source>light (default)</source>
+        <target>свет (по умолчанию)</target>
         
       </trans-unit>
       <trans-unit id="tl_module.dk_mmenuTheme.light">

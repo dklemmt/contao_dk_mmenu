@@ -32,7 +32,7 @@ class Mmenu extends \Frontend
 	{
 		$addPositioningCssFile = false;
 		$addThemeCssFile = false;
-		$objTemplateJs->classes = '';
+		$objTemplateJs->extensions = [];
 
 		$objMmenu = \ModuleModel::findByPk($objTemplateHtml->id);
 		if ($objMmenu === null)
@@ -41,10 +41,14 @@ class Mmenu extends \Frontend
 		}
 
 		// add main mmenu css style file
-		$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/jquery.mmenu.css||static';
+		$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/jquery.mmenu.css|static';
 
 		// add main mmenu jquery file
-		$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/jquery.mmenu.min.js|static';
+		$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/jquery.mmenu.js|static';
+
+        // add navbars addon
+        $GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/addons/navbars/jquery.mmenu.navbars.css|static';
+        $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/addons/navbars/jquery.mmenu.navbars.js|static';
 
 		$objTemplateJs->isMenu = 'isMenu: ' . ($objMmenu->type != 'mmenu_article' ? 'true' : 'false');
 
@@ -80,7 +84,7 @@ class Mmenu extends \Frontend
 		// add mmenu positioning css style file
 		if ($addPositioningCssFile)
 		{
-			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/extensions/jquery.mmenu.positioning.css||static';
+			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/extensions/positioning/jquery.mmenu.positioning.css|static';
 		}
 
 		// mmenu option 'slidingSubmenus': default value is 'true'
@@ -92,10 +96,10 @@ class Mmenu extends \Frontend
 		// mmenu extension 'fullscreen'
 		if ($objMmenu->dk_mmenuFullscreen)
 		{
-			$objTemplateJs->classes .= 'mm-fullscreen ';
+			$objTemplateJs->extensions[] = 'mm-fullscreen ';
 
 			// add mmenu fullscreen css style file
-			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/extensions/jquery.mmenu.fullscreen.css||static';
+			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/extensions/jquery.mmenu.fullscreen.css|static';
 		}
 
 		// mmenu counters add-on
@@ -111,10 +115,10 @@ class Mmenu extends \Frontend
 			}
 
 			// add mmenu counters css style file
-			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/addons/jquery.mmenu.counters.css||static';
+			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/addons/counters/jquery.mmenu.counters.css|static';
 
 			// add mmenu counters jquery file
-			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/addons/jquery.mmenu.counters.min.js|static';
+			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/addons/counters/jquery.mmenu.counters.js|static';
 		}
 
 		// mmenu searchfield add-on
@@ -128,10 +132,10 @@ class Mmenu extends \Frontend
 			$objTemplateJs->searchfieldShowLinksOnly = 'showLinksOnly: true';
 
 			// add mmenu searchfield css style file
-			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/addons/jquery.mmenu.searchfield.css||static';
+			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/addons/searchfield/jquery.mmenu.searchfield.css|static';
 
 			// add mmenu searchfield jquery file
-			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/addons/jquery.mmenu.searchfield.min.js|static';
+			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/addons/searchfield/jquery.mmenu.searchfield.js|static';
 		}
 
 		// mmenu extension 'effects'
@@ -139,21 +143,21 @@ class Mmenu extends \Frontend
 		{
 			if ($objMmenu->dk_mmenuEffectSlide)
 			{
-				$objTemplateJs->classes .= 'mm-slide ';
+				$objTemplateJs->extensions[] = 'mm-slide';
 			}
 
 			if ($objMmenu->dk_mmenuEffectZoomMenu)
 			{
-				$objTemplateJs->classes .= 'mm-zoom-menu ';
+				$objTemplateJs->extensions[] = 'mm-zoom-menu';
 			}
 
 			if ($objMmenu->dk_mmenuEffectZoomPanels)
 			{
-				$objTemplateJs->classes .= 'mm-zoom-panels ';
+				$objTemplateJs->extensions[] = 'mm-zoom-panels';
 			}
 
 			// add mmenu fullscreen css style file
-			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/extensions/jquery.mmenu.effects.css||static';
+			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/extensions/effects/jquery.mmenu.effects.css|static';
 		}
 
 		// mmenu dragOpen add-on
@@ -175,13 +179,10 @@ class Mmenu extends \Frontend
 			}
 
 			// add mmenu dragopen css style file
-			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/addons/jquery.mmenu.dragopen.css||static';
-
-			// add hammer library file
-			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/hammer.min.js|static';
+			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/addons/drag/jquery.mmenu.drag.css|static';
 
 			// add mmenu dragopen jquery file
-			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/js/addons/jquery.mmenu.dragopen.min.js|static';
+			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/addons/drag/jquery.mmenu.drag.js|static';
 		}
 
 		// mmenu option 'onClick.close': default value is 'true'
@@ -201,32 +202,30 @@ class Mmenu extends \Frontend
 		{
 			switch ($objMmenu->dk_mmenuTheme)
 			{
-				case 'light':
-				case 'lighter':
-				case 'lightest':
-					$objTemplateJs->classes .= 'mm-light ';
-					$addThemeCssFile = true;
-					break;
+                case 'dark':
+                    $objTemplateJs->extensions[] = 'theme-dark';
+                    $addThemeCssFile = true;
+                    break;
 				
 				case 'black':
-					$objTemplateJs->classes .= 'mm-black ';
+					$objTemplateJs->extensions[] = 'theme-black';
 					$addThemeCssFile = true;
 					break;
 
 				case 'white':
-					$objTemplateJs->classes .= 'mm-white ';
+					$objTemplateJs->extensions[] = 'theme-white';
 					$addThemeCssFile = true;
 					break; 
 			}
 
 			if ($addThemeCssFile)
 			{
-				$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/extensions/jquery.mmenu.themes.css||static';
+				$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/extensions/themes/jquery.mmenu.themes.css|static';
 			}
 
-			if ($objMmenu->dk_mmenuTheme != 'lightest' && $objMmenu->dk_mmenuTheme != 'black' && $objMmenu->dk_mmenuTheme != 'white')
+			if ($objMmenu->dk_mmenuTheme != 'dark' && $objMmenu->dk_mmenuTheme != 'black' && $objMmenu->dk_mmenuTheme != 'white')
 			{
-				$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/themes/' . $objMmenu->dk_mmenuTheme . '.css||static';
+				$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/themes/' . $objMmenu->dk_mmenuTheme . '.css|static';
 			}
 		}
 
