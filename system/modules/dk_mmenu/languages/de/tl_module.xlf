@@ -270,8 +270,8 @@
         
       </trans-unit>
       <trans-unit id="tl_module.dk_mmenuTheme.standard">
-        <source>dark</source>
-        <target>dunkel</target>
+        <source>light (default)</source>
+        <target>hell (standard)</target>
         
       </trans-unit>
       <trans-unit id="tl_module.dk_mmenuTheme.light">

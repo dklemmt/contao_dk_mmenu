@@ -10,8 +10,8 @@
 		echo ($oComma == true ? ', ' : '') . $this->isMenu;
 		$oComma = true;
 	}
-	if ($this->classes) {
-		echo ($oComma == true ? ', ' : '') . 'classes: "' . $this->classes . '"';
+	if (is_array($this->extensions) && !empty($this->extensions)) {
+		echo ($oComma == true ? ', ' : '') . 'classes: "' . json_encode($this->extensions) . '"';
 		$oComma = true;
 	}
 	if ($this->slidingSubmenus) {
