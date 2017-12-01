@@ -213,16 +213,6 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuArticle'] = array
 	'sql'				=> "varchar(255) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuTpl'] = array
-(
-	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuTpl'],
-	'exclude'			=> true,
-	'inputType'			=> 'select',
-	'options_callback'	=> array('tl_module_dk_mmenu', 'getTemplates'),
-	'eval'				=> array('maxlength' => 255, 'tl_class' => 'w50'),
-	'sql'				=> "varchar(255) NOT NULL default ''"
-);
-
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuHtmlTpl'] = array
 (
 	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuHtmlTpl'],
