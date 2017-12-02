@@ -221,7 +221,7 @@ class Mmenu extends \Frontend
 
 			if ($addThemeCssFile)
 			{
-				$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/extensions/themes/jquery.mmenu.themes.css';
+				$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/extensions/themes/jquery.mmenu.themes.css|static';
 			}
 			elseif (in_array($objMmenu->dk_mmenuTheme, array('army', 'bordeaux', 'light', 'lighter', 'navy')))
 			{
