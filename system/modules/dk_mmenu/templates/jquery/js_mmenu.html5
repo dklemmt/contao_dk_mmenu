@@ -11,7 +11,7 @@
 		$oComma = true;
 	}
 	if (is_array($this->extensions) && !empty($this->extensions)) {
-		echo ($oComma == true ? ', ' : '') . 'classes: "' . json_encode($this->extensions) . '"';
+		echo ($oComma == true ? ', ' : '') . 'extensions: ' . json_encode($this->extensions);
 		$oComma = true;
 	}
 	if ($this->slidingSubmenus) {

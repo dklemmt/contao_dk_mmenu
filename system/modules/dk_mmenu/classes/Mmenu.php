@@ -32,7 +32,7 @@ class Mmenu extends \Frontend
 	{
 		$addPositioningCssFile = false;
 		$addThemeCssFile = false;
-		$objTemplateJs->extensions = [];
+		$arrExtensions = array();
 
 		$objMmenu = \ModuleModel::findByPk($objTemplateHtml->id);
 		if ($objMmenu === null)
@@ -90,13 +90,13 @@ class Mmenu extends \Frontend
 		// mmenu option 'slidingSubmenus': default value is 'true'
 		if ($objMmenu->dk_mmenuSlidingSubmenus != 'horizontal')
 		{
-			$objTemplateJs->slidingSubmenus = 'slidingSubmenus: false';
+			$arrExtensions[] = 'fx-panels-slide-up';
 		}
 
 		// mmenu extension 'fullscreen'
 		if ($objMmenu->dk_mmenuFullscreen)
 		{
-			$objTemplateJs->extensions[] = 'mm-fullscreen ';
+			$arrExtensions[] = 'fullscreen';
 
 			// add mmenu fullscreen css style file
 			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/extensions/jquery.mmenu.fullscreen.css|static';
@@ -143,17 +143,18 @@ class Mmenu extends \Frontend
 		{
 			if ($objMmenu->dk_mmenuEffectSlide)
 			{
-				$objTemplateJs->extensions[] = 'mm-slide';
+				$arrExtensions[] = 'fx-menu-slide';
+				$objMmenu->dk_mmenuZposition = 'back';
 			}
 
 			if ($objMmenu->dk_mmenuEffectZoomMenu)
 			{
-				$objTemplateJs->extensions[] = 'mm-zoom-menu';
+				$arrExtensions[] = 'fx-menu-zoom';
 			}
 
 			if ($objMmenu->dk_mmenuEffectZoomPanels)
 			{
-				$objTemplateJs->extensions[] = 'mm-zoom-panels';
+				$arrExtensions[] = 'fx-panels-zoom';
 			}
 
 			// add mmenu fullscreen css style file
@@ -203,31 +204,33 @@ class Mmenu extends \Frontend
 			switch ($objMmenu->dk_mmenuTheme)
 			{
                 case 'dark':
-                    $objTemplateJs->extensions[] = 'theme-dark';
+                    $arrExtensions[] = 'theme-dark';
                     $addThemeCssFile = true;
                     break;
 				
 				case 'black':
-					$objTemplateJs->extensions[] = 'theme-black';
+					$arrExtensions[] = 'theme-black';
 					$addThemeCssFile = true;
 					break;
 
 				case 'white':
-					$objTemplateJs->extensions[] = 'theme-white';
+					$arrExtensions[] = 'theme-white';
 					$addThemeCssFile = true;
 					break; 
 			}
 
 			if ($addThemeCssFile)
 			{
-				$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/extensions/themes/jquery.mmenu.themes.css|static';
+				$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/extensions/themes/jquery.mmenu.themes.css';
 			}
-
-			if ($objMmenu->dk_mmenuTheme != 'dark' && $objMmenu->dk_mmenuTheme != 'black' && $objMmenu->dk_mmenuTheme != 'white')
+			elseif (in_array($objMmenu->dk_mmenuTheme, array('army', 'bordeaux', 'light', 'lighter', 'navy')))
 			{
 				$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/css/themes/' . $objMmenu->dk_mmenuTheme . '.css|static';
 			}
 		}
+
+		// add extensions
+		$objTemplateJs->extensions = $arrExtensions;
 
 		// ... element dependent javascript caller
 		$GLOBALS['TL_JQUERY'][] = $objTemplateJs->parse();					
