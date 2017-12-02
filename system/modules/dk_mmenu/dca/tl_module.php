@@ -7,6 +7,7 @@
  * 
  * @package   mmenu
  * @author    Dirk Klemmt
+ * @author    Fritz Michael Gschwantner <fmg@inspiredminds.at>
  * @license   MIT/GPL
  * @copyright Dirk Klemmt 2013-2015
  */

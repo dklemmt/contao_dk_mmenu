@@ -23,6 +23,7 @@ namespace Dirch\mmenu;
  *
  * @copyright  Dirk Klemmt 2013-2015
  * @author     Dirk Klemmt
+ * @author     Fritz Michael Gschwantner <fmg@inspiredminds.at>
  * @package    mmenu
  */
 class ModuleCustomMmenu extends \ModuleCustomnav
