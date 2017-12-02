@@ -84,6 +84,12 @@ class ModuleCustomMmenu extends \ModuleCustomnav
 	 */
 	protected function compile()
 	{
+		// Layout template fallback for Contao 4
+		if ($this->navigationTpl == '' && class_exists('Contao\CoreBundle\ContaoCoreBundle'))
+		{
+			$this->navigationTpl = 'nav_mmenu';
+		}
+
 		parent::compile();
 
 		// --- create FE template for javascript caller

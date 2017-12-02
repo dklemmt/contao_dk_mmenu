@@ -235,6 +235,15 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuJsTpl'] = array
 
 
 /**
+ * Set navigationTpl to nav_mmenu in Contao 4
+ */
+if (class_exists('Contao\CoreBundle\ContaoCoreBundle'))
+{
+	$GLOBALS['TL_DCA']['tl_module']['fields']['navigationTpl']['load_callback'][] = array('tl_module_dk_mmenu', 'loadNavigationTpl');
+}
+
+
+/**
  * Class tl_module_dk_mmenu
  *
  * @copyright  Dirk Klemmt 2013-2015
@@ -377,5 +386,22 @@ class tl_module_dk_mmenu extends tl_module
 		}
 
 		return $zpositionOptions;
+	}
+
+
+	/**
+	 * Sets nav_mmenu as the default template in Contao 4
+	 * @param mixed
+	 * @param \DataContainer
+	 * @return array
+	 */
+	public function loadNavigationTpl($varValue, DataContainer $dc)
+	{
+		if (!$varValue)
+		{
+			$varValue = 'nav_mmenu';
+		}
+
+		return $varValue;
 	}
 }
