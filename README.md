@@ -31,3 +31,8 @@ Tipps/Hinweise
 * Technisch bedingt wird für alle Navigationsmenüs auf der gleichen Seite das gleiche Theme benutzt.
 * Das Standard-Theme hat eine dunkle Ausgangsgestaltung. Bei den helleren Themes - *mittelgrau*, *hellgrau* und *hell* - wird eine zusätzliche CSS-Datei eingebunden, die eine hellere Ausgangsgestaltung beinhaltet. Je nachdem wie man sein Menü farblich gestalten möchte, sollte man dann ein helles oder dunkles Theme als Ausgang wählen.
 * Wird ein Artikel eingebunden, so werden für diesen keine CSS-Stile gesetzt. Dies ist so gewollt.
+
+Lizenz Hinweise
+---------------
+
+Ab Version 2.0 verwendet diese Extension die neueste Version von mmenu, die für kommerzielle Zwecke lizenzpflichtig ist. Siehe [mmenu.frebsite.nl/download.html](http://mmenu.frebsite.nl/download.html).
