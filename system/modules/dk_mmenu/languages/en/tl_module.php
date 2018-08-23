@@ -60,6 +60,8 @@ $GLOBALS['TL_LANG']['tl_module']['dk_mmenuOnClickClose'][0] = 'Menu closes after
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuOnClickClose'][1] = 'Determines whether or not the menu should close after clicking a link inside it.';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuOnClickBlockUI'][0] = 'Block user interface';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuOnClickBlockUI'][1] = 'Determines whether or not to block the user interface while loading the new page.';
+$GLOBALS['TL_LANG']['tl_module']['dk_mmenuFixedElementAdd'][0] = 'Support fixed and sticky elements';
+$GLOBALS['TL_LANG']['tl_module']['dk_mmenuFixedElementAdd'][1] = 'Adds support elements with position: fixed and position: sticky, so they don\'t disappear when opening the menu.';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuModal'][0] = 'modal menu';
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuModal'][1] = 'Determines whether or not the menu should be modal. A close button has to be provided.';
 

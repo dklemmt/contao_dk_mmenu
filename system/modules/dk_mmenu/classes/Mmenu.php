@@ -199,6 +199,13 @@ class Mmenu extends \Frontend
 			$objTemplateJs->onClickBlockUI = 'blockUI: true';
 		}
 
+		// mmenu fixedelements add-on
+		if ($objMmenu->dk_mmenuFixedElementAdd)
+        {
+            // add mmenu dragopen jquery file
+            $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/addons/fixedelements/jquery.mmenu.fixedelements.js|static';
+        }
+
 		// mmenu extension 'themes'
 		if ($objMmenu->dk_mmenuTheme != 'standard')
 		{
