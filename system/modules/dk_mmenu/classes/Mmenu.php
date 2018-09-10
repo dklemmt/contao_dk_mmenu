@@ -1,10 +1,10 @@
-<?php 
+<?php
 
 /**
  * Contao Open Source CMS
- * 
+ *
  * Copyright (C) 2005-2015 Leo Feyer
- * 
+ *
  * @package   mmenu
  * @author    Dirk Klemmt
  * @license   MIT/GPL
@@ -15,6 +15,7 @@
 /**
  * Namespace
  */
+
 namespace Dirch\mmenu;
 
 
@@ -26,7 +27,7 @@ namespace Dirch\mmenu;
  * @author     Fritz Michael Gschwantner <fmg@inspiredminds.at>
  * @package    mmenu
  */
-class Mmenu extends \Frontend 
+class Mmenu extends \Frontend
 {
 
 	public function createTemplateData(\Template $objTemplateHtml, \Template $objTemplateJs)
@@ -67,7 +68,7 @@ class Mmenu extends \Frontend
 		{
 			$objTemplateJs->offCanvasMoveBackground = 'moveBackground: false';
 		}
-	
+
 		// offCanvas option 'offCanvas.position': default value is 'left'
 		if ($objMmenu->dk_mmenuPosition != 'left')
 		{
@@ -201,10 +202,10 @@ class Mmenu extends \Frontend
 
 		// mmenu fixedelements add-on
 		if ($objMmenu->dk_mmenuFixedElementAdd)
-        {
-            // add mmenu dragopen jquery file
-            $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/addons/fixedelements/jquery.mmenu.fixedelements.js|static';
-        }
+		{
+			// add mmenu dragopen jquery file
+			$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/addons/fixedelements/jquery.mmenu.fixedelements.js|static';
+		}
 
 		// mmenu extension 'themes'
 		if ($objMmenu->dk_mmenuTheme != 'standard')
@@ -215,7 +216,7 @@ class Mmenu extends \Frontend
                     $arrExtensions[] = 'theme-dark';
                     $addThemeCssFile = true;
                     break;
-				
+
 				case 'black':
 					$arrExtensions[] = 'theme-black';
 					$addThemeCssFile = true;
@@ -224,7 +225,7 @@ class Mmenu extends \Frontend
 				case 'white':
 					$arrExtensions[] = 'theme-white';
 					$addThemeCssFile = true;
-					break; 
+					break;
 			}
 
 			if ($addThemeCssFile)
@@ -241,6 +242,6 @@ class Mmenu extends \Frontend
 		$objTemplateJs->extensions = $arrExtensions;
 
 		// ... element dependent javascript caller
-		$GLOBALS['TL_JQUERY'][] = $objTemplateJs->parse();					
+		$GLOBALS['TL_JQUERY'][] = $objTemplateJs->parse();
 	}
 }

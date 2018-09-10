@@ -196,11 +196,11 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuOnClickBlockUI'] = array
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuFixedElementAdd'] = array
 (
-    'label'				=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuFixedElementAdd'],
-    'exclude'			=> true,
-    'inputType'			=> 'checkbox',
-    'eval'				=> array('tl_class' => 'w50'),
-    'sql'				=> "char(1) NOT NULL default ''"
+	'label'     		=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuFixedElementAdd'],
+	'exclude'   		=> true,
+	'inputType' 		=> 'checkbox',
+	'eval'      		=> array('tl_class' => 'w50'),
+	'sql'       		=> "char(1) NOT NULL default ''"
 );
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuModal'] = array
