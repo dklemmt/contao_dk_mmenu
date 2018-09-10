@@ -189,6 +189,16 @@
         <target>Bestimmt, ob beim Laden der neuen Seite die Benutzeroberfläche gesperrt wird. Nur bei mobilen Geräten.</target>
         
       </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuFixedElementAdd.0">
+        <source>Support fixed and sticky elements</source>
+        <target>Unterstützung für fixed und sticky Elemente</target>
+
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuFixedElementAdd.1">
+        <source>Adds support elements with position: fixed and position: sticky, so they don't disappear when opening the menu.</source>
+        <target>Fügt die Unterstützung für Elemente mit position: fixed und position:sticky hinzu, so dass diese nicht verschwinden, wenn das Menü geöffnet wird. </target>
+
+      </trans-unit>
       <trans-unit id="tl_module.dk_mmenuModal.0">
         <source>modal menu</source>
         <target>modales Menü</target>

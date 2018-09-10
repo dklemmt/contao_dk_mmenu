@@ -19,9 +19,9 @@
 //$GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'dk_mmenuCountersAdd';
 $GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'dk_mmenuDragOpenOpen';
 
-$GLOBALS['TL_DCA']['tl_module']['palettes']['mmenu'] = '{title_legend},name,type;{nav_legend},levelOffset,showLevel,hardLimit,showProtected,showHidden;{reference_legend:hide},defineRoot;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition,dk_mmenuSlidingSubmenus,dk_mmenuTheme,dk_mmenuMoveBackground,dk_mmenuFullscreen,dk_mmenuCountersAdd,dk_mmenuSearchfieldAdd;{mmenu_effects_legend:hide},dk_mmenuEffectSlide,dk_mmenuEffectZoomMenu,dk_mmenuEffectZoomPanels;{mmenu_behaviour_legend},dk_mmenuDragOpenOpen,dk_mmenuOnClickClose,dk_mmenuOnClickBlockUI;{template_legend:hide},navigationTpl,dk_mmenuHtmlTpl,dk_mmenuJsTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
-$GLOBALS['TL_DCA']['tl_module']['palettes']['custommmenu'] = '{title_legend},name,type;{nav_legend},pages,showProtected;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition,dk_mmenuSlidingSubmenus,dk_mmenuTheme,dk_mmenuMoveBackground,dk_mmenuFullscreen,dk_mmenuCountersAdd,dk_mmenuSearchfieldAdd;{mmenu_effects_legend:hide},dk_mmenuEffectSlide,dk_mmenuEffectZoomMenu,dk_mmenuEffectZoomPanels;{mmenu_behaviour_legend},dk_mmenuDragOpenOpen,dk_mmenuOnClickClose,dk_mmenuOnClickBlockUI;{template_legend:hide},navigationTpl,dk_mmenuHtmlTpl,dk_mmenuJsTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
-$GLOBALS['TL_DCA']['tl_module']['palettes']['mmenu_article'] = '{title_legend},name,headline,type;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition;{mmenu_effects_legend:hide},dk_mmenuEffectSlide,dk_mmenuEffectZoomMenu,dk_mmenuEffectZoomPanels;{mmenu_behaviour_legend},dk_mmenuDragOpenOpen,dk_mmenuModal;{mmenu_legend},dk_mmenuArticle,dk_mmenuHtmlTpl,dk_mmenuJsTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['mmenu'] = '{title_legend},name,type;{nav_legend},levelOffset,showLevel,hardLimit,showProtected,showHidden;{reference_legend:hide},defineRoot;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition,dk_mmenuSlidingSubmenus,dk_mmenuTheme,dk_mmenuMoveBackground,dk_mmenuFullscreen,dk_mmenuCountersAdd,dk_mmenuSearchfieldAdd;{mmenu_effects_legend:hide},dk_mmenuEffectSlide,dk_mmenuEffectZoomMenu,dk_mmenuEffectZoomPanels;{mmenu_behaviour_legend},dk_mmenuDragOpenOpen,dk_mmenuOnClickClose,dk_mmenuOnClickBlockUI,dk_mmenuFixedElementAdd;{template_legend:hide},navigationTpl,dk_mmenuHtmlTpl,dk_mmenuJsTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['custommmenu'] = '{title_legend},name,type;{nav_legend},pages,showProtected;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition,dk_mmenuSlidingSubmenus,dk_mmenuTheme,dk_mmenuMoveBackground,dk_mmenuFullscreen,dk_mmenuCountersAdd,dk_mmenuSearchfieldAdd;{mmenu_effects_legend:hide},dk_mmenuEffectSlide,dk_mmenuEffectZoomMenu,dk_mmenuEffectZoomPanels;{mmenu_behaviour_legend},dk_mmenuDragOpenOpen,dk_mmenuOnClickClose,dk_mmenuOnClickBlockUI,dk_mmenuFixedElementAdd;{template_legend:hide},navigationTpl,dk_mmenuHtmlTpl,dk_mmenuJsTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['mmenu_article'] = '{title_legend},name,headline,type;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition;{mmenu_effects_legend:hide},dk_mmenuEffectSlide,dk_mmenuEffectZoomMenu,dk_mmenuEffectZoomPanels;{mmenu_behaviour_legend},dk_mmenuDragOpenOpen,dk_mmenuModal,dk_mmenuFixedElementAdd;{mmenu_legend},dk_mmenuArticle,dk_mmenuHtmlTpl,dk_mmenuJsTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
 
 //$GLOBALS['TL_DCA']['tl_module']['subpalettes']['dk_mmenuCountersAdd'] = 'dk_mmenuCountersUpdate';
 $GLOBALS['TL_DCA']['tl_module']['subpalettes']['dk_mmenuDragOpenOpen'] = 'dk_mmenuDragOpenThreshold';
@@ -192,6 +192,15 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuOnClickBlockUI'] = array
 	'inputType'			=> 'checkbox',
 	'eval'				=> array('tl_class' => 'w50'),
 	'sql'				=> "char(1) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuFixedElementAdd'] = array
+(
+	'label'     		=> &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuFixedElementAdd'],
+	'exclude'   		=> true,
+	'inputType' 		=> 'checkbox',
+	'eval'      		=> array('tl_class' => 'w50'),
+	'sql'       		=> "char(1) NOT NULL default ''"
 );
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuModal'] = array
