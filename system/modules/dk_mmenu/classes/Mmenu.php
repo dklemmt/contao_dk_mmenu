@@ -101,7 +101,7 @@ class Mmenu extends \Frontend
 			$arrExtensions[] = 'fullscreen';
 
 			// add mmenu fullscreen css style file
-			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/extensions/jquery.mmenu.fullscreen.css|static';
+			$GLOBALS['TL_CSS'][] = 'system/modules/dk_mmenu/assets/vendor/mmenu/extensions/fullscreen/jquery.mmenu.fullscreen.css|static';
 		}
 
 		// mmenu counters add-on
