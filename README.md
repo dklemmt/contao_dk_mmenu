@@ -35,4 +35,8 @@ Tipps/Hinweise
 Lizenz Hinweise
 ---------------
 
-Ab Version 2.0 verwendet diese Extension die neueste Version von mmenu, die für kommerzielle Zwecke lizenzpflichtig ist. Siehe [mmenu.frebsite.nl/download.html](http://mmenu.frebsite.nl/download.html).
+Ab Version 2.0 verwendet diese Extension die neueste Version von mmenu, die für kommerzielle Zwecke lizenzpflichtig ist. 
+
+Die Contao Academy hat hierfür am 22.12.2018 einen „Multiple websites license“ erworben und zur Verfügung gestellt, 
+wodurch die Erweiterung auch zukünftig für kommerzielle Projekte ohne eigene Lizenz verwendet werden darf. Weitere 
+Lizenz-Details siehe: https://mmenu.frebsite.nl/download.html
