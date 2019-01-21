@@ -1,5 +1,8 @@
 mmenu - Mobile Navigation für Contao
 ====================================
+[![Version](http://img.shields.io/packagist/v/dklemmt/contao_dk_mmenu.svg?style=flat-square)](https://packagist.org/packages/dklemmt/contao_dk_mmenu)
+[![License](http://img.shields.io/packagist/l/dklemmt/contao_dk_mmenu.svg?style=flat-square)](http://spdx.org/licenses/MIT.html)
+[![Downloads](http://img.shields.io/packagist/dt/dklemmt/contao_dk_mmenu.svg?style=flat-square)](https://packagist.org/packages/dklemmt/contao_dk_mmenu)
 
 ***mmenu*** ist ein jQuery-Plugin von Fred Heusschen, das ein platzsparendes Navigationsmenü erstellt. Es ist vor allem für mobile Webseiten/Layouts sinnvoll kann jedoch auch für große Layouts verwendet werden.
 
