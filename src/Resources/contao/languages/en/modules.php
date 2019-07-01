@@ -7,10 +7,10 @@ declare(strict_types=1);
  *
  * (c) inspiredminds
  *
- * @license LGPL-3.0-or-later
+ * @license MIT
  */
 
-/**
+/*
  * Back end modules.
  */
 $GLOBALS['TL_LANG']['MOD']['dk_mmenu'][0] = 'mmenu - Mobile Navigation';

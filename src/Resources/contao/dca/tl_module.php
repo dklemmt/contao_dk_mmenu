@@ -1,15 +1,25 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ * This file is part of the ContaoMmenuBundle.
+ *
+ * (c) inspiredminds
+ *
+ * @license MIT
+ */
+
 use DirkKlemmt\ContaoMmenuBundle\DataContainer\ModuleCallbacks;
 
-/**
+/*
  * Add palettes to tl_module.
  */
 $GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'dk_mmenuDragOpenOpen';
 
-$GLOBALS['TL_DCA']['tl_module']['palettes']['mmenu'] = '{title_legend},name,type;{nav_legend},levelOffset,showLevel,hardLimit,showProtected,showHidden;{reference_legend:hide},defineRoot;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition,dk_mmenuSlidingSubmenus,dk_mmenuTheme,dk_mmenuMoveBackground,dk_mmenuFullscreen,dk_mmenuCountersAdd,dk_mmenuSearchfieldAdd;{mmenu_effects_legend:hide},dk_mmenuMenuEffects,dk_mmenuPanelEffects,dk_mmenuListEffects;{mmenu_behaviour_legend},dk_mmenuDragOpenOpen,dk_mmenuOnClickClose,dk_mmenuOnClickBlockUI,dk_mmenuFixedElementAdd;{template_legend:hide},navigationTpl,customTpl,dk_mmenuJsTpl,dk_mmenuPageSelector;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
-$GLOBALS['TL_DCA']['tl_module']['palettes']['custommmenu'] = '{title_legend},name,type;{nav_legend},pages,showProtected;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition,dk_mmenuSlidingSubmenus,dk_mmenuTheme,dk_mmenuMoveBackground,dk_mmenuFullscreen,dk_mmenuCountersAdd,dk_mmenuSearchfieldAdd;{mmenu_effects_legend:hide},dk_mmenuMenuEffects,dk_mmenuPanelEffects,dk_mmenuListEffects;{mmenu_behaviour_legend},dk_mmenuDragOpenOpen,dk_mmenuOnClickClose,dk_mmenuOnClickBlockUI,dk_mmenuFixedElementAdd;{template_legend:hide},navigationTpl,customTpl,dk_mmenuJsTpl,dk_mmenuPageSelector;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
-$GLOBALS['TL_DCA']['tl_module']['palettes']['mmenu_article'] = '{title_legend},name,headline,type;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition;{mmenu_effects_legend:hide},dk_mmenuMenuEffects,dk_mmenuPanelEffects,dk_mmenuListEffects;{mmenu_behaviour_legend},dk_mmenuDragOpenOpen,dk_mmenuModal,dk_mmenuFixedElementAdd;{mmenu_legend},dk_mmenuArticle,customTpl,dk_mmenuJsTpl,dk_mmenuPageSelector;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['mmenu'] = '{title_legend},name,type;{nav_legend},levelOffset,showLevel,hardLimit,showProtected,showHidden;{reference_legend:hide},defineRoot;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition,dk_mmenuSlidingSubmenus,dk_mmenuTheme,dk_mmenuMoveBackground,dk_mmenuFullscreen,dk_mmenuCountersAdd,dk_mmenuSearchfieldAdd;{mmenu_effects_legend:hide},dk_mmenuMenuEffects,dk_mmenuPanelEffects,dk_mmenuListEffects;{mmenu_behaviour_legend:hide},dk_mmenuDragOpenOpen,dk_mmenuOnClickClose,dk_mmenuOnClickBlockUI,dk_mmenuFixedElementAdd;{template_legend:hide},navigationTpl,customTpl,dk_mmenuJsTpl,dk_mmenuPageSelector;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['custommmenu'] = '{title_legend},name,type;{nav_legend},pages,showProtected;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition,dk_mmenuSlidingSubmenus,dk_mmenuTheme,dk_mmenuMoveBackground,dk_mmenuFullscreen,dk_mmenuCountersAdd,dk_mmenuSearchfieldAdd;{mmenu_effects_legend:hide},dk_mmenuMenuEffects,dk_mmenuPanelEffects,dk_mmenuListEffects;{mmenu_behaviour_legend:hide},dk_mmenuDragOpenOpen,dk_mmenuOnClickClose,dk_mmenuOnClickBlockUI,dk_mmenuFixedElementAdd;{template_legend:hide},navigationTpl,customTpl,dk_mmenuJsTpl,dk_mmenuPageSelector;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['mmenu_article'] = '{title_legend},name,headline,type;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition;{mmenu_effects_legend:hide},dk_mmenuMenuEffects,dk_mmenuPanelEffects,dk_mmenuListEffects;{mmenu_behaviour_legend:hide},dk_mmenuDragOpenOpen,dk_mmenuModal,dk_mmenuFixedElementAdd;{mmenu_legend},dk_mmenuArticle,customTpl,dk_mmenuJsTpl,dk_mmenuPageSelector;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
 
 $GLOBALS['TL_DCA']['tl_module']['subpalettes']['dk_mmenuDragOpenOpen'] = 'dk_mmenuDragOpenThreshold';
 
@@ -100,9 +110,6 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuSearchfieldAdd'] = [
     'sql' => "char(1) NOT NULL default ''",
 ];
 
-
-
-
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuMenuEffects'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuMenuEffects'],
     'exclude' => true,
@@ -129,9 +136,6 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuListEffects'] = [
     'eval' => ['tl_class' => 'w50', 'includeBlankOption' => true],
     'sql' => "varchar(16) NOT NULL default ''",
 ];
-
-
-
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuDragOpenOpen'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuDragOpenOpen'],
@@ -296,34 +300,5 @@ class tl_module_dk_mmenu extends tl_module
     public function editArticle(DataContainer $dc)
     {
         return ($dc->value < 1) ? '' : ' <a href="contao/main.php?do=article&amp;table=tl_content&amp;id='.$dc->value.'&amp;rt='.REQUEST_TOKEN.'" title="'.sprintf(specialchars($GLOBALS['TL_LANG']['tl_content']['editalias'][1]), $dc->value).'" style="padding-left:3px">'.$this->generateImage('alias.gif', $GLOBALS['TL_LANG']['tl_content']['editalias'][0], 'style="vertical-align:top"').'</a>';
-    }
-
-    /**
-     * Return all possible z-position options for selected menu position as array.
-     *
-     * @param \DataContainer
-     *
-     * @return array
-     */
-    public function getZpositionOptions(DataContainer $dc)
-    {
-        $zpositionOptions = ['front'];
-
-        // check if menu position is 'top' or 'bottom'...
-        $obj = $this->Database
-                ->prepare("SELECT dk_mmenuPosition
-						   FROM   tl_module
-						   WHERE  id = ?
-						   AND    dk_mmenuPosition = 'top' or dk_mmenuPosition = 'bottom'")
-                ->limit(1)
-                ->execute($dc->id)
-        ;
-
-        // ...if not every position is allowed
-        if (!$obj->numRows) {
-            $zpositionOptions = ['back', 'front', 'next'];
-        }
-
-        return $zpositionOptions;
     }
 }

@@ -1,9 +1,19 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ * This file is part of the ContaoMmenuBundle.
+ *
+ * (c) inspiredminds
+ *
+ * @license MIT
+ */
+
 namespace DirkKlemmt\ContaoMmenuBundle\DataContainer;
 
-use Contao\DataContainer;
 use Contao\Controller;
+use Contao\DataContainer;
 
 class ModuleCallbacks
 {
@@ -20,7 +30,7 @@ class ModuleCallbacks
     }
 
     /**
-     * tl_module.dk_mmenuJsTpl options_callback
+     * tl_module.dk_mmenuJsTpl options_callback.
      */
     public function onMmenuJsTplOptionsCallback(): array
     {

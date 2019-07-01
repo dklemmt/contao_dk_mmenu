@@ -1,5 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ * This file is part of the ContaoMmenuBundle.
+ *
+ * (c) inspiredminds
+ *
+ * @license MIT
+ */
+
 namespace DirkKlemmt\ContaoMmenuBundle\FrontendModule;
 
 use Contao\BackendTemplate;
@@ -9,59 +19,59 @@ use Contao\StringUtil;
 class MmenuModule extends \Contao\ModuleNavigation
 {
     /**
-     * Template
+     * Template.
+     *
      * @var string
      */
     protected $strTemplate = 'mod_mmenu';
 
     /**
-     * Template
+     * Template.
+     *
      * @var string
      */
     protected $strTemplateJs = 'js_mmenu';
-    
+
     /**
-     * Display a wildcard in the back end
+     * Display a wildcard in the back end.
      */
     public function generate(): string
     {
-        if (TL_MODE == 'BE')
-        {
+        if (TL_MODE === 'BE') {
             // --- create BE template for mmenu module
             $template = new BackendTemplate('be_wildcard');
-            $template->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['mmenu'][0]) . ' ###';
+            $template->wildcard = '### '.utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['mmenu'][0]).' ###';
             $template->title = $this->headline;
             $template->id = $this->id;
             $template->link = $this->name;
-            $template->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id=' . $this->id;
+            $template->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id='.$this->id;
 
             return $template->parse();
         }
 
         // replace default (HTML) template with chosen one
-        if ($this->customTpl)
-        {
+        if ($this->customTpl) {
             $this->strTemplate = $this->customTpl;
         }
 
         // replace default (JS) template with chosen one
-        if ($this->dk_mmenuJsTpl)
-        {
+        if ($this->dk_mmenuJsTpl) {
             $this->strTemplateJs = $this->dk_mmenuJsTpl;
         }
         \Symfony\Component\VarDumper\VarDumper::dump($this->navigationTpl);
+
         return parent::generate();
     }
-    
+
     /**
-     * Generate the module
+     * Generate the module.
      */
-    protected function compile()
+    protected function compile(): void
     {
         // Navigation template fallback
-		if ($this->navigationTpl == '') {
-			$this->navigationTpl = 'nav_mmenu';
-		}
+        if ('' === $this->navigationTpl) {
+            $this->navigationTpl = 'nav_mmenu';
+        }
 
         // Build the navigation items
         parent::compile();
@@ -74,7 +84,7 @@ class MmenuModule extends \Contao\ModuleNavigation
         $options = [];
         $configuration = [
             'classNames' => [
-                'selected' => 'active'
+                'selected' => 'active',
             ],
         ];
 
@@ -122,7 +132,7 @@ class MmenuModule extends \Contao\ModuleNavigation
                 [
                     'position' => 'top',
                     'content' => [
-                        'searchfield'
+                        'searchfield',
                     ],
                 ],
             ];
@@ -145,9 +155,9 @@ class MmenuModule extends \Contao\ModuleNavigation
         $jsTemplate->options = json_encode($options);
         $jsTemplate->configuration = json_encode($configuration);
 
-		// Add CSS
+        // Add CSS
         $GLOBALS['TL_CSS'][] = 'bundles/contaommenu/mmenu/mmenu.css|static';
-        
+
         // Add JavaScript
         $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/contaommenu/mmenu/mmenu.js|static';
 

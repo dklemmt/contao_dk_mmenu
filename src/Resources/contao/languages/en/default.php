@@ -7,7 +7,7 @@ declare(strict_types=1);
  *
  * (c) inspiredminds
  *
- * @license LGPL-3.0-or-later
+ * @license MIT
  */
 
 $GLOBALS['TL_LANG']['DK_MMENU']['placeholder'] = 'Search';

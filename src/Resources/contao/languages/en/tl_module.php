@@ -7,10 +7,10 @@ declare(strict_types=1);
  *
  * (c) inspiredminds
  *
- * @license LGPL-3.0-or-later
+ * @license MIT
  */
 
-/**
+/*
  * Legends.
  */
 $GLOBALS['TL_LANG']['tl_module']['mmenu_appearance_legend'] = 'mmenu appearance';
@@ -72,6 +72,8 @@ $GLOBALS['TL_LANG']['tl_module']['dk_mmenuJsTpl'][1] = 'Choose the JavaScript te
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuMenuEffects'] = ['Menu effects', 'Available effects for the menu.'];
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuPanelEffects'] = ['Panel effects', 'Available effects for the panel.'];
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuListEffects'] = ['List items effects', 'Available effects for the list items.'];
+
+$GLOBALS['TL_LANG']['tl_module']['dk_mmenuPageSelector'] = ['Wrapper selector', 'Custom defined page wrapper selector (e.g. "#wrapper").'];
 
 /*
  * References
