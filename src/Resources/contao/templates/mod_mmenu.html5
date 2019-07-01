@@ -1,0 +1,29 @@
+
+<?php if ($this->type == 'mmenu_article'): ?>
+
+  <div class="<?= $this->class ?> invisible block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+    <div>
+
+    <?php if ($this->headline): ?>
+      <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+    <?php endif; ?>
+
+      <?= implode('', $this->elements) ?>
+    </div>
+  </div>
+
+<?php else: ?>
+
+  <!-- indexer::stop -->
+  <nav class="<?= $this->class; ?> invisible block"<?= $this->cssID; ?><?php if ($this->style): ?> style="<?= $this->style; ?>"<?php endif; ?>>
+
+    <?php if ($this->headline): ?>
+      <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+    <?php endif; ?>
+
+    <?= $this->items ?>
+
+  </nav>
+  <!-- indexer::continue -->
+
+<?php endif; ?>

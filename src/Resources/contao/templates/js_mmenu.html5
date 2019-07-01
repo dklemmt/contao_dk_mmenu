@@ -1,0 +1,7 @@
+<script>
+	document.addEventListener(
+		"DOMContentLoaded", () => {
+			new Mmenu('#<?= $this->elementId ?>', <?= $this->options ?>, <?= $this->configuration ?>);
+		}
+	);
+</script>
