@@ -1,0 +1,17 @@
+<?php
+
+$GLOBALS['TL_CSS'][] = 'bundles/contaommenu/mmenu/mmenu.css|static';
+$GLOBALS['TL_JAVASCRIPT'][] = 'bundles/contaommenu/mmenu/mmenu.js|static';
+
+if ($this->options['drag']['menu']['open']) {
+  $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/contaommenu/hammerjs/hammer.min.js|static';
+}
+
+?>
+<script>
+  document.addEventListener(
+    "DOMContentLoaded", () => {
+      new Mmenu('#<?= $this->elementId ?>', <?= json_encode($this->options) ?>, <?= json_encode($this->configuration) ?>);
+    }
+  );
+</script>
