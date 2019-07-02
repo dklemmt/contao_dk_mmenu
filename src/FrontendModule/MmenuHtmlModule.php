@@ -16,14 +16,14 @@ namespace DirkKlemmt\ContaoMmenuBundle\FrontendModule;
 use Contao\BackendTemplate;
 use DirkKlemmt\ContaoMmenuBundle\Helper\MmenuHelper;
 
-class MmenuModule extends \Contao\ModuleNavigation
+class MmenuHtmlModule extends \Contao\ModuleHtml
 {
     /**
      * Template.
      *
      * @var string
      */
-    protected $strTemplate = 'mod_mmenu';
+    protected $strTemplate = 'mod_mmenuHtml';
 
     /**
      * Template.
@@ -67,12 +67,7 @@ class MmenuModule extends \Contao\ModuleNavigation
      */
     protected function compile(): void
     {
-        // Navigation template fallback
-        if ('' === $this->navigationTpl) {
-            $this->navigationTpl = 'nav_mmenu';
-        }
-
-        // Build the navigation items
+        // Compile via the parent class
         parent::compile();
 
         // Add the JavaScript to TL_BODY

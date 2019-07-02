@@ -5,23 +5,14 @@ declare(strict_types=1);
 /*
  * This file is part of the ContaoMmenuBundle.
  *
+ * (c) Dirk Klemmt
  * (c) inspiredminds
  *
  * @license MIT
  */
 
+use Contao\CoreBundle\DataContainer\PaletteManipulator;
 use DirkKlemmt\ContaoMmenuBundle\DataContainer\ModuleCallbacks;
-
-/*
- * Add palettes to tl_module.
- */
-$GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'dk_mmenuDragOpenOpen';
-
-$GLOBALS['TL_DCA']['tl_module']['palettes']['mmenu'] = '{title_legend},name,type;{nav_legend},levelOffset,showLevel,hardLimit,showProtected,showHidden;{reference_legend:hide},defineRoot;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition,dk_mmenuSlidingSubmenus,dk_mmenuTheme,dk_mmenuMoveBackground,dk_mmenuFullscreen,dk_mmenuCountersAdd,dk_mmenuSearchfieldAdd;{mmenu_effects_legend:hide},dk_mmenuMenuEffects,dk_mmenuPanelEffects,dk_mmenuListEffects;{mmenu_behaviour_legend:hide},dk_mmenuDragOpenOpen,dk_mmenuOnClickClose,dk_mmenuOnClickBlockUI,dk_mmenuFixedElementAdd;{template_legend:hide},navigationTpl,customTpl,dk_mmenuJsTpl,dk_mmenuPageSelector;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
-$GLOBALS['TL_DCA']['tl_module']['palettes']['custommmenu'] = '{title_legend},name,type;{nav_legend},pages,showProtected;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition,dk_mmenuSlidingSubmenus,dk_mmenuTheme,dk_mmenuMoveBackground,dk_mmenuFullscreen,dk_mmenuCountersAdd,dk_mmenuSearchfieldAdd;{mmenu_effects_legend:hide},dk_mmenuMenuEffects,dk_mmenuPanelEffects,dk_mmenuListEffects;{mmenu_behaviour_legend:hide},dk_mmenuDragOpenOpen,dk_mmenuOnClickClose,dk_mmenuOnClickBlockUI,dk_mmenuFixedElementAdd;{template_legend:hide},navigationTpl,customTpl,dk_mmenuJsTpl,dk_mmenuPageSelector;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
-$GLOBALS['TL_DCA']['tl_module']['palettes']['mmenu_article'] = '{title_legend},name,headline,type;{mmenu_appearance_legend},dk_mmenuPosition,dk_mmenuZposition;{mmenu_effects_legend:hide},dk_mmenuMenuEffects,dk_mmenuPanelEffects,dk_mmenuListEffects;{mmenu_behaviour_legend:hide},dk_mmenuDragOpenOpen,dk_mmenuModal,dk_mmenuFixedElementAdd;{mmenu_legend},dk_mmenuArticle,customTpl,dk_mmenuJsTpl,dk_mmenuPageSelector;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
-
-$GLOBALS['TL_DCA']['tl_module']['subpalettes']['dk_mmenuDragOpenOpen'] = 'dk_mmenuDragOpenThreshold';
 
 /*
  * Add fields to tl_module
@@ -31,9 +22,9 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuPosition'] = [
     'exclude' => true,
     'inputType' => 'select',
     'default' => 'left',
-    'options' => ['left', 'right', 'top', 'bottom'],
+    'options' => ['left', 'right', 'top', 'bottom', 'popup'],
     'reference' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuPosition'],
-    'eval' => ['submitOnChange' => true, 'tl_class' => 'w50'],
+    'eval' => ['tl_class' => 'w50'],
     'sql' => "varchar(32) NOT NULL default ''",
 ];
 
@@ -82,7 +73,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuFullscreen'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuFullscreen'],
     'exclude' => true,
     'inputType' => 'checkbox',
-    'eval' => ['tl_class' => 'w50'],
+    'eval' => ['tl_class' => 'clr w50'],
     'sql' => "char(1) NOT NULL default ''",
 ];
 
@@ -90,7 +81,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuCountersAdd'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuCountersAdd'],
     'exclude' => true,
     'inputType' => 'checkbox',
-    'eval' => [/*'submitOnChange' => true,*/ 'tl_class' => 'clr w50'],
+    'eval' => ['tl_class' => 'w50'],
     'sql' => "char(1) NOT NULL default ''",
 ];
 
@@ -108,6 +99,16 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuSearchfieldAdd'] = [
     'inputType' => 'checkbox',
     'eval' => ['tl_class' => 'w50'],
     'sql' => "char(1) NOT NULL default ''",
+];
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuPageDim'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuPageDim'],
+    'exclude' => true,
+    'inputType' => 'select',
+    'options' => ['white', 'black'],
+    'reference' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuPageDimOptions'],
+    'eval' => ['tl_class' => 'w50', 'includeBlankOption' => true],
+    'sql' => "varchar(16) NOT NULL default ''",
 ];
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuMenuEffects'] = [
@@ -137,11 +138,11 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuListEffects'] = [
     'sql' => "varchar(16) NOT NULL default ''",
 ];
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuDragOpenOpen'] = [
-    'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuDragOpenOpen'],
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuDragOpenEnable'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuDragOpenEnable'],
     'exclude' => true,
     'inputType' => 'checkbox',
-    'eval' => ['submitOnChange' => true],
+    'eval' => ['submitOnChange' => true, 'tl_class' => 'clr'],
     'sql' => "char(1) NOT NULL default ''",
 ];
 
@@ -153,46 +154,20 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuDragOpenThreshold'] = [
     'sql' => "smallint(5) NOT NULL default '50'",
 ];
 
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuDragOpenMaxStartPos'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuDragOpenMaxStartPos'],
+    'exclude' => true,
+    'inputType' => 'text',
+    'eval' => ['maxlength' => 3, 'rgxp' => 'digit', 'tl_class' => 'w50'],
+    'sql' => "smallint(5) NOT NULL default '100'",
+];
+
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuOnClickClose'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuOnClickClose'],
     'exclude' => true,
     'inputType' => 'checkbox',
     'eval' => ['tl_class' => 'clr w50'],
-    'sql' => "char(1) NOT NULL default '1'",
-];
-
-$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuOnClickBlockUI'] = [
-    'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuOnClickBlockUI'],
-    'exclude' => true,
-    'inputType' => 'checkbox',
-    'eval' => ['tl_class' => 'w50'],
     'sql' => "char(1) NOT NULL default ''",
-];
-
-$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuFixedElementAdd'] = [
-    'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuFixedElementAdd'],
-    'exclude' => true,
-    'inputType' => 'checkbox',
-    'eval' => ['tl_class' => 'w50'],
-    'sql' => "char(1) NOT NULL default ''",
-];
-
-$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuModal'] = [
-    'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuModal'],
-    'exclude' => true,
-    'inputType' => 'checkbox',
-    'eval' => ['tl_class' => 'clr'],
-    'sql' => "char(1) NOT NULL default ''",
-];
-
-$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuArticle'] = [
-    'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuArticle'],
-    'exclude' => true,
-    'inputType' => 'select',
-    'options_callback' => ['tl_module_dk_mmenu', 'getArticles'],
-    'eval' => ['includeBlankOption' => true, 'mandatory' => true, 'chosen' => true, 'submitOnChange' => true, 'tl_class' => 'w50'],
-    'wizard' => [['tl_module_dk_mmenu', 'editArticle']],
-    'sql' => "varchar(255) NOT NULL default ''",
 ];
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuJsTpl'] = [
@@ -209,8 +184,26 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuPageSelector'] = [
     'exclude' => true,
     'default' => '#wrapper',
     'inputType' => 'text',
-    'eval' => ['maxlength' => 255, 'tl_class' => 'w50'],
+    'eval' => ['maxlength' => 255, 'tl_class' => 'clr w50'],
     'sql' => "varchar(255) NOT NULL default ''",
+];
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuIconPanels'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuIconPanels'],
+    'exclude' => true,
+    'inputType' => 'checkbox',
+    'eval' => ['tl_class' => 'w50'],
+    'sql' => "char(1) NOT NULL default ''",
+];
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuShadows'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuShadows'],
+    'exclude' => true,
+    'inputType' => 'checkbox',
+    'options' => ['menu', 'page', 'panels'],
+    'reference' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuShadowsOptions'],
+    'eval' => ['tl_class' => 'clr', 'multiple' => true],
+    'sql' => 'blob NULL',
 ];
 
 /*
@@ -218,87 +211,44 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuPageSelector'] = [
  */
 $GLOBALS['TL_DCA']['tl_module']['fields']['navigationTpl']['load_callback'][] = [ModuleCallbacks::class, 'onNavigationTplLoadCallback'];
 
-/**
- * Class tl_module_dk_mmenu.
- *
- * @copyright  Dirk Klemmt 2013-2015
+/*
+ * Add palettes to tl_module.
  */
-class tl_module_dk_mmenu extends tl_module
-{
-    /**
-     * Get all articles and return them as array (article teaser).
-     *
-     * @param \DataContainer
-     *
-     * @return array
-     */
-    public function getArticles(DataContainer $dc)
-    {
-        $arrPids = [];
-        $arrArticle = [];
-        $arrRoot = [];
-        $intPid = $dc->activeRecord->pid;
+$GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'dk_mmenuDragOpenEnable';
 
-        if ('overrideAll' === Input::get('act')) {
-            $intPid = Input::get('id');
-        }
+$GLOBALS['TL_DCA']['tl_module']['palettes']['mmenu'] = $GLOBALS['TL_DCA']['tl_module']['palettes']['navigation'];
+$GLOBALS['TL_DCA']['tl_module']['palettes']['mmenuCustom'] = $GLOBALS['TL_DCA']['tl_module']['palettes']['customnav'];
+$GLOBALS['TL_DCA']['tl_module']['palettes']['mmenuHtml'] = '{title_legend},name,headline,type;{html_legend},html;{template_legend:hide},customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID';
 
-        // Limit pages to the website root
-        $objArticle = $this->Database->prepare('SELECT pid FROM tl_article WHERE id=?')
-                                     ->limit(1)
-                                     ->execute($intPid)
-        ;
+$GLOBALS['TL_DCA']['tl_module']['subpalettes']['dk_mmenuDragOpenEnable'] = 'dk_mmenuDragOpenMaxStartPos,dk_mmenuDragOpenThreshold';
 
-        if ($objArticle->numRows) {
-            $objPage = PageModel::findWithDetails($objArticle->pid);
-            $arrRoot = $this->Database->getChildRecords($objPage->rootId, 'tl_page');
-            array_unshift($arrRoot, $objPage->rootId);
-        }
+PaletteManipulator::create()
+    ->addLegend('mmenu_appearance_legend', 'template_legend', PaletteManipulator::POSITION_BEFORE, true)
+    ->addField('dk_mmenuPosition', 'mmenu_appearance_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('dk_mmenuZposition', 'mmenu_appearance_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('dk_mmenuSlidingSubmenus', 'mmenu_appearance_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('dk_mmenuTheme', 'mmenu_appearance_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('dk_mmenuMoveBackground', 'mmenu_dk_mmenuDragOpenEnable', PaletteManipulator::POSITION_APPEND)
+    ->addField('dk_mmenuPageDim', 'mmenu_appearance_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('dk_mmenuFullscreen', 'mmenu_appearance_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('dk_mmenuCountersAdd', 'mmenu_appearance_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('dk_mmenuSearchfieldAdd', 'mmenu_appearance_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('dk_mmenuIconPanels', 'mmenu_appearance_legend', PaletteManipulator::POSITION_APPEND)
 
-        unset($objArticle);
+    ->addLegend('mmenu_effects_legend', 'template_legend', PaletteManipulator::POSITION_BEFORE, true)
+    ->addField('dk_mmenuMenuEffects', 'mmenu_effects_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('dk_mmenuPanelEffects', 'mmenu_effects_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('dk_mmenuListEffects', 'mmenu_effects_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('dk_mmenuShadows', 'mmenu_effects_legend', PaletteManipulator::POSITION_APPEND)
 
-        // Limit pages to the user's pagemounts
-        if ($this->User->isAdmin) {
-            $objArticle = $this->Database->execute('SELECT a.id, a.pid, a.title, a.inColumn, p.title AS parent FROM tl_article a LEFT JOIN tl_page p ON p.id=a.pid'.(!empty($arrRoot) ? ' WHERE a.pid IN('.implode(',', array_map('intval', array_unique($arrRoot))).')' : '').' ORDER BY parent, a.sorting');
-        } else {
-            foreach ($this->User->pagemounts as $id) {
-                if (!\in_array($id, $arrRoot, true)) {
-                    continue;
-                }
+    ->addLegend('mmenu_behaviour_legend', 'template_legend', PaletteManipulator::POSITION_BEFORE, true)
+    ->addField('dk_mmenuOnClickClose', 'mmenu_behaviour_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('dk_mmenuPageSelector', 'mmenu_behaviour_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('dk_mmenuDragOpenEnable', 'mmenu_behaviour_legend', PaletteManipulator::POSITION_APPEND)
 
-                $arrPids[] = $id;
-                $arrPids = array_merge($arrPids, $this->Database->getChildRecords($id, 'tl_page'));
-            }
+    ->addField('dk_mmenuJsTpl', 'template_legend', PaletteManipulator::POSITION_APPEND)
 
-            if (empty($arrPids)) {
-                return $arrArticle;
-            }
-
-            $objArticle = $this->Database->execute('SELECT a.id, a.pid, a.title, a.inColumn, p.title AS parent FROM tl_article a LEFT JOIN tl_page p ON p.id=a.pid WHERE a.pid IN('.implode(',', array_map('intval', array_unique($arrPids))).') ORDER BY parent, a.sorting');
-        }
-
-        // Edit the result
-        if ($objArticle->numRows) {
-            System::loadLanguageFile('tl_article');
-
-            while ($objArticle->next()) {
-                $key = $objArticle->parent.' (ID '.$objArticle->pid.')';
-                $arrArticle[$key][$objArticle->id] = $objArticle->title.' ('.($GLOBALS['TL_LANG']['tl_article'][$objArticle->inColumn] ?: $objArticle->inColumn).', ID '.$objArticle->id.')';
-            }
-        }
-
-        return $arrArticle;
-    }
-
-    /**
-     * Return the edit mmenu wizard.
-     *
-     * @param \DataContainer
-     *
-     * @return string
-     */
-    public function editArticle(DataContainer $dc)
-    {
-        return ($dc->value < 1) ? '' : ' <a href="contao/main.php?do=article&amp;table=tl_content&amp;id='.$dc->value.'&amp;rt='.REQUEST_TOKEN.'" title="'.sprintf(specialchars($GLOBALS['TL_LANG']['tl_content']['editalias'][1]), $dc->value).'" style="padding-left:3px">'.$this->generateImage('alias.gif', $GLOBALS['TL_LANG']['tl_content']['editalias'][0], 'style="vertical-align:top"').'</a>';
-    }
-}
+    ->applyToPalette('mmenu', 'tl_module')
+    ->applyToPalette('mmenuCustom', 'tl_module')
+    ->applyToPalette('mmenuHtml', 'tl_module')
+;

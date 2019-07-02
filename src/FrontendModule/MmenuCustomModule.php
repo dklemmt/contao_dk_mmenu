@@ -16,14 +16,14 @@ namespace DirkKlemmt\ContaoMmenuBundle\FrontendModule;
 use Contao\BackendTemplate;
 use DirkKlemmt\ContaoMmenuBundle\Helper\MmenuHelper;
 
-class MmenuModule extends \Contao\ModuleNavigation
+class MmenuCustomModule extends \Contao\ModuleCustomnav
 {
     /**
      * Template.
      *
      * @var string
      */
-    protected $strTemplate = 'mod_mmenu';
+    protected $strTemplate = 'mod_mmenuCustom';
 
     /**
      * Template.

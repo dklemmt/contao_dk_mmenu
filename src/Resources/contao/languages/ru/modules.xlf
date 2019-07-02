@@ -4,27 +4,22 @@
       <trans-unit id="MOD.dk_mmenu.0">
         <source>mmenu - Mobile Navigation</source>
         <target>mmenu - Мобильная навигация</target>
-        
       </trans-unit>
       <trans-unit id="FMD.mmenu.0">
         <source>mmenu - navigation menu</source>
         <target>mmenu - Mеню навигации</target>
-        
       </trans-unit>
       <trans-unit id="FMD.mmenu.1">
         <source>Generates an alternative navigation menu from the site structure - not only - for mobile Sites.</source>
         <target>Создает альтернативное меню навигации из структуры сайта - не только - для мобильных сайтов.</target>
-        
       </trans-unit>
-      <trans-unit id="FMD.custommmenu.0">
+      <trans-unit id="FMD.mmenuCustom.0">
         <source>mmenu - custom navigation</source>
         <target>mmenu - Выборочная навигация</target>
-        
       </trans-unit>
-      <trans-unit id="FMD.custommmenu.1">
+      <trans-unit id="FMD.mmenuCustom.1">
         <source>Generates an alternative custom navigation - not only - for mobile Sites.</source>
         <target>Создает альтернативную выборочную навигацию - не только - для мобильных сайтов.</target>
-        
       </trans-unit>
     </body>
   </file>

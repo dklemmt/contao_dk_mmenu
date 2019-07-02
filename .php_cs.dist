@@ -3,6 +3,7 @@
 $header = <<<EOF
 This file is part of the ContaoMmenuBundle.
 
+(c) Dirk Klemmt
 (c) inspiredminds
 
 @license MIT
