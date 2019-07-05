@@ -8,7 +8,7 @@ mmenu - Mobile Navigation für Contao
 
 Nach der Installation dieser Erweiterung stehen innerhalb von Contao zwei zusätzliche Modultypen zur Verfügung, die von den beiden Core-Navigationstypen abgeleitet wurden und diese um die neue Funktionalität erweitern. Sie heißen *mmenu - Navigationsmenü* sowie *mmenu - Individuelle Navigation*. Darüber hinaus kann mit *mmenu - HTML* beliebiger Inhalt in ein mmenu ausgegeben werden.
 
-Das Navigationsmenü ist standardmäßig versteckt. Mit Hilfe eines beliebigen Links wird der eigentliche Seiteninhalt je nach eingestellter Menü-Position verschoben. Damit dies funktioniert **muß** jedem Navigationsmenü in den Experten-Einstellungen des Moduls eine CSS-ID zugewiesen werden! Mit einer URL (`<a href="#CSS-ID"></a>`) auf diese wird das Menü bei Klick auf den Link eingeblendet.
+Das Navigationsmenü ist standardmäßig versteckt. Mit Hilfe eines beliebigen Links wird der eigentliche Seiteninhalt je nach eingestellter Menü-Position verschoben. Damit dies funktioniert **muss** jedem Navigationsmenü in den Experten-Einstellungen des Moduls eine CSS-ID zugewiesen werden! Mit einer URL (`<a href="#CSS-ID"></a>`) auf diese wird das Menü bei Klick auf den Link eingeblendet.
 
 Möglichkeiten der Erweiterung und von mmenu
 -------------------------------------------
