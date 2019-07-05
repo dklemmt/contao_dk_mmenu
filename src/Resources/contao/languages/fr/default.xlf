@@ -5,7 +5,7 @@
         <source>Search</source>
         <target>Rechercher</target>
       </trans-unit>
-      <trans-unit id="DK_MMENU.noresult">
+      <trans-unit id="DK_MMENU.noResult">
         <source>No results found.</source>
         <target>Aucun résultat trouvé.</target>
       </trans-unit>

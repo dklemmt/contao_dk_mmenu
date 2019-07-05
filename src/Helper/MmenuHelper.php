@@ -36,6 +36,10 @@ class MmenuHelper
             ],
         ];
 
+        if ('en' !== $GLOBALS['TL_LANGUAGE']) {
+            $options['navbar']['title'] = $GLOBALS['TL_LANG']['DK_MMENU']['title'];
+        }
+
         // https://mmenujs.com/documentation/extensions/positioning.html
         if ($module->dk_mmenuPageSelector) {
             $configuration['offCanvas']['page']['selector'] = StringUtil::decodeEntities($module->dk_mmenuPageSelector);
@@ -99,8 +103,10 @@ class MmenuHelper
                 ],
             ];
 
-            $options['searchfield']['noResults'] = $GLOBALS['TL_LANG']['DK_MMENU']['noresult'];
-            $options['searchfield']['placeholder'] = $GLOBALS['TL_LANG']['DK_MMENU']['placeholder'];
+            if ('en' !== $GLOBALS['TL_LANGUAGE']) {
+                $options['searchfield']['noResults'] = $GLOBALS['TL_LANG']['DK_MMENU']['noResult'];
+                $options['searchfield']['placeholder'] = $GLOBALS['TL_LANG']['DK_MMENU']['placeholder'];
+            }
         }
 
         // https://mmenujs.com/documentation/extensions/effects.html

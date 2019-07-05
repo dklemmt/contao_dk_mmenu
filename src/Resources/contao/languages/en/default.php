@@ -12,4 +12,5 @@ declare(strict_types=1);
  */
 
 $GLOBALS['TL_LANG']['DK_MMENU']['placeholder'] = 'Search';
-$GLOBALS['TL_LANG']['DK_MMENU']['noresult'] = 'No results found.';
+$GLOBALS['TL_LANG']['DK_MMENU']['noResult'] = 'No results found.';
+$GLOBALS['TL_LANG']['DK_MMENU']['title'] = 'Menu';
