@@ -24,9 +24,16 @@ class MmenuHelper
      */
     public static function processModuleSettings(Module $module, string $jsTemplateName): void
     {
+        // Check for a valid CSS ID
+        $cssID = $module->cssID;
+        if (empty($cssID[0])) {
+            $cssID[0] = $module->type.'-'.substr(md5($module->type.$module->id), 0, 8);
+            $module->cssID = $cssID;
+        }
+
         // Create the JavaScript template
         $jsTemplate = new FrontendTemplate($jsTemplateName);
-        $jsTemplate->elementId = $module->cssID[0];
+        $jsTemplate->elementId = $cssID[0];
 
         // Prepare the options and configuration for mmenu
         $options = [];
