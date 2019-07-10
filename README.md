@@ -41,3 +41,8 @@ Ab Version 2.0 verwendet diese Extension die neueste Version von mmenu, die für
 Die Contao Academy hat hierfür am 22.12.2018 einen „Multiple websites license“ erworben und zur Verfügung gestellt, 
 wodurch die Erweiterung auch zukünftig für kommerzielle Projekte ohne eigene Lizenz verwendet werden darf. Weitere 
 Lizenz-Details siehe: https://mmenujs.com/download.html
+
+Danksagungen
+---------------
+
+Die Entwicklung der Version `3.0.0` wurde von der [Agentur dreibein](https://www.agentur-dreibein.de/) finanziert.
