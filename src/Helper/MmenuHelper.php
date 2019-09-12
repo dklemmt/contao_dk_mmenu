@@ -99,6 +99,11 @@ class MmenuHelper
             $options['counters'] = true;
         }
 
+        // https://mmenujs.com/documentation/addons/columns.html
+        if ($module->dk_mmenuColumnsAdd) {
+            $options['columns'] = true;
+        }
+
         // https://mmenujs.com/documentation/addons/searchfield.html
         if ($module->dk_mmenuSearchfieldAdd) {
             $options['navbars'] = [
@@ -140,6 +145,10 @@ class MmenuHelper
             if ($module->dk_mmenuDragOpenThreshold && 50 !== (int) $module->dk_mmenuDragOpenThreshold) {
                 $options['drag']['menu']['threshold'] = (int) $module->dk_mmenuDragOpenThreshold;
             }
+        }
+
+        if ($module->dk_mmenuPolyfillEnable) {
+            $options['polyfill'] = true;
         }
 
         // https://mmenujs.com/documentation/addons/icon-panels.html
