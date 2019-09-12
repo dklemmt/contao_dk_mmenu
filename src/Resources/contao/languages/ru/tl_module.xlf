@@ -1,0 +1,150 @@
+<?xml version="1.0" ?><xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="php" date="2014-01-03T20:50:50+01:00" original="tl_module" source-language="en" target-language="en">
+    <body>
+      <trans-unit id="tl_module.mmenu_appearance_legend">
+        <source>mmenu appearance</source>
+        <target>mmenu внешний вид</target>
+      </trans-unit>
+      <trans-unit id="tl_module.mmenu_behaviour_legend">
+        <source>mmenu behaviour</source>
+        <target>mmenu поведение</target>
+      </trans-unit>
+      <trans-unit id="tl_module.mmenu_effects_legend">
+        <source>mmenu effects</source>
+        <target>mmenu эффекты</target>
+      </trans-unit>
+      <trans-unit id="tl_module.mmenu_legend">
+        <source>mmenu settings</source>
+        <target>mmenu настройки</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuPosition.0">
+        <source>Position of menu</source>
+        <target>Позиция меню</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuPosition.1">
+        <source>Choose the position of the menu.</source>
+        <target>Выберите позицию из меню.</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuZposition.0">
+        <source>Z-position of menu</source>
+        <target>Z-позиция меню</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuZposition.1">
+        <source>Choose the z-position of the menu.</source>
+        <target>Выберите Z-позицию из меню.</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuSlidingSubmenus.0">
+        <source>Kind of menu</source>
+        <target>Вид меню</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuSlidingSubmenus.1">
+        <source>Determines whether submenus should come sliding in from the right or to expand below.</source>
+        <target>Определяет, должно ли подменю скользить справа или расширяться снизу.</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuTheme.0">
+        <source>Theme of menu</source>
+        <target>Тема меню</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuTheme.1">
+        <source>Choose a theme for the menu.</source>
+        <target>Выберите тему меню.</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuMoveBackground.0">
+        <source>Move background</source>
+        <target>Переместить фон</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuMoveBackground.1">
+        <source>Determines whether or not the page should inherit the background of the body when the menu opens.</source>
+        <target>Определяет, должна ли страница наследовать фон тела, когда открывается меню.</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuFullscreen.0">
+        <source>Fullscreen</source>
+        <target>Полноэкранное</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuFullscreen.1">
+        <source>Determines whether the menu will fill up 80% (default) of the available width/height or 100% (fullscreen).</source>
+        <target>Определяет, будет ли меню заполнять 80% (по умолчанию) доступной ширины/высоты или будет 100% (полноэкранным).</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuCountersAdd.0">
+        <source>Show submenu counter</source>
+        <target>Показать счетчик подменю</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuCountersAdd.1">
+        <source>Determines whether or not to append a counter to each menu item if it has a submenu and automatically counting the number of items inside.</source>
+        <target>Определяет, следует ли добавить счетчик на каждый из пунктов меню, если он будет как подменю и автоматически посчитает количество элементов внутри.</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuCountersUpdate.0">
+        <source>Update submenu counter</source>
+        <target>Обновить счетчик подменю</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuCountersUpdate.1">
+        <source>Determines whether or not to automatically count the number of items in the submenu, updates when typing in the search field.</source>
+        <target>Определяет, следует ли автоматически подсчитать количество элементов в подменю, обновляется при вводе в поле поиска.</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuSearchfieldAdd.0">
+        <source>Show searchfield</source>
+        <target>Показать поле поиска</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuSearchfieldAdd.1">
+        <source>Determines whether or not to automatically prepend a searchfield to the menu.</source>
+        <target>Определяет, следует ли автоматически вставлять поле поиска в меню.</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuDragOpenEnable.0">
+        <source>Drag page to open menu</source>
+        <target>Перетаскивание страницы, для открытия меню</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuDragOpenEnable.1">
+        <source>Determines whether or not the menu should open when dragging the page.</source>
+        <target>Определяет, следует ли открывать меню при перетаскивании страницы.</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuDragOpenThreshold.0">
+        <source>Amount of pixels to drag</source>
+        <target>Количество пикселей для перетаскивания</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuDragOpenThreshold.1">
+        <source>Determines the minimum amount of pixels to drag before actually opening the menu, less than 50 is not advised.</source>
+        <target>Определяет минимальное количество пикселей для перетаскивания, перед фактическим открытием меню. Ставить менее 50 не рекомендуется.</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuOnClickClose.0">
+        <source>Menu closes after click</source>
+        <target>Закрывать меню после нажатия</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuOnClickClose.1">
+        <source>Determines whether or not the menu should close after clicking a link inside it.</source>
+        <target>Определяет, следует ли закрывать меню после нажатия на ссылку внутри него.</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuPosition.left">
+        <source>left</source>
+        <target>слева</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuPosition.right">
+        <source>right</source>
+        <target>справа</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuPosition.top">
+        <source>top</source>
+        <target>сверху</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuPosition.bottom">
+        <source>bottom</source>
+        <target>снизу</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuZposition.back">
+        <source>back</source>
+        <target>сзади</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuZposition.front">
+        <source>front</source>
+        <target>спереди</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuSlidingSubmenus.horizontal">
+        <source>horizontal</source>
+        <target>горизонтальное</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuSlidingSubmenus.vertical">
+        <source>vertical</source>
+        <target>вертикальное</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

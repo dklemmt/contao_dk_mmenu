@@ -1,13 +1,18 @@
 {
 	"name": "dklemmt/contao_dk_mmenu",
-	"description": "Implementation of mmenu as extension for Contao Open Source CMS",
+	"description": "Implementation of mmenu as an extension for the Contao Open Source CMS.",
 	"keywords": ["contao", "navigation", "menu", "mobile"],
-	"type": "contao-module",
-	"license": ["MIT", "GPL"],
+	"type": "contao-bundle",
+	"license": ["MIT"],
 	"authors": [
 		{
 			"name": "Dirk Klemmt",
 			"email": "dirch@quantentunnel.de",
+			"role": "Developer"
+		},
+		{
+			"name": "Fritz Michael Gschwantner",
+			"email": "fmg@inspiredminds.at",
 			"role": "Developer"
 		}
 	],
@@ -19,18 +24,15 @@
 		"source": "https://github.com/dklemmt/contao_dk_mmenu"
 	},
 	"require": {
-		"php": ">=5.3",
-		"contao/core-bundle": "^3.1 || ^4.3",
-		"contao-community-alliance/composer-plugin": "^2.4 || ^3.0"
+		"php": ">=7.1",
+		"contao/core-bundle": "^4.4"
 	},
-	"replace": {
-		"contao-legacy/dk_mmenu": "*"
-	},
-	"extra": {
-		"contao": {
-			"sources": {
-				"system/modules/dk_mmenu": "system/modules/dk_mmenu"
-			}
-		}
-	}
+    "autoload": {
+        "psr-4": {
+            "DirkKlemmt\\ContaoMmenuBundle\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "DirkKlemmt\\ContaoMmenuBundle\\ContaoManager\\Plugin"
+    }
 }
