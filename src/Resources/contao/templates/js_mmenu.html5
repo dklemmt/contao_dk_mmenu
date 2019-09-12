@@ -2,13 +2,11 @@
 
 $GLOBALS['TL_CSS']['contao_dk_mmenu'] = 'bundles/contaommenu/mmenu/mmenu.css|static';
 
-if ($this->options['polyfill'])
-{
+if ($this->options['polyfill']) {
     $GLOBALS['TL_JAVASCRIPT']['contao_dk_mmenu.polyfill'] = 'bundles/contaommenu/mmenu/mmenu.polyfills.js|static';
 }
 $GLOBALS['TL_JAVASCRIPT']['contao_dk_mmenu'] = 'bundles/contaommenu/mmenu/mmenu.js|static';
-if ($this->options['drag']['menu']['open'])
-{
+if ($this->options['drag']['menu']['open']) {
     $GLOBALS['TL_JAVASCRIPT']['contao_dk_mmenu.hammerjs'] = 'bundles/contaommenu/hammerjs/hammer.min.js|static';
 }
 
