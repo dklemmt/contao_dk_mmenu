@@ -93,6 +93,14 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuCountersUpdate'] = [
     'sql' => "char(1) NOT NULL default ''",
 ];
 
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuColumnsAdd'] = [
+    'label'     => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuColumnsAdd'],
+    'exclude'   => true,
+    'inputType' => 'checkbox',
+    'eval'      => ['tl_class' => 'w50'],
+    'sql'       => "char(1) NOT NULL default ''",
+];
+
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuSearchfieldAdd'] = [
     'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuSearchfieldAdd'],
     'exclude' => true,
@@ -160,6 +168,14 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuDragOpenMaxStartPos'] = [
     'inputType' => 'text',
     'eval' => ['maxlength' => 3, 'rgxp' => 'digit', 'tl_class' => 'w50'],
     'sql' => "smallint(5) NOT NULL default '100'",
+];
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuPolyfillEnable'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuPolyfillEnable'],
+    'exclude' => true,
+    'inputType' => 'checkbox',
+    'eval' => ['tl_class' => 'clr'],
+    'sql' => "char(1) NOT NULL default ''",
 ];
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuOnClickClose'] = [
@@ -232,6 +248,7 @@ PaletteManipulator::create()
     ->addField('dk_mmenuPageDim', 'mmenu_appearance_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('dk_mmenuFullscreen', 'mmenu_appearance_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('dk_mmenuCountersAdd', 'mmenu_appearance_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('dk_mmenuColumnsAdd', 'mmenu_appearance_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('dk_mmenuSearchfieldAdd', 'mmenu_appearance_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('dk_mmenuIconPanels', 'mmenu_appearance_legend', PaletteManipulator::POSITION_APPEND)
 
@@ -245,6 +262,7 @@ PaletteManipulator::create()
     ->addField('dk_mmenuOnClickClose', 'mmenu_behaviour_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('dk_mmenuPageSelector', 'mmenu_behaviour_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('dk_mmenuDragOpenEnable', 'mmenu_behaviour_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('dk_mmenuPolyfillEnable', 'mmenu_behaviour_legend', PaletteManipulator::POSITION_APPEND)
 
     ->addField('dk_mmenuJsTpl', 'template_legend', PaletteManipulator::POSITION_APPEND)
 
