@@ -30,7 +30,7 @@ class MmenuHtmlModule extends \Contao\ModuleHtml
      *
      * @var string
      */
-    protected $strTemplateJs = 'js_mmenu';
+    protected $strTemplateJs = 'mmenu_default';
 
     /**
      * Display a wildcard in the back end.

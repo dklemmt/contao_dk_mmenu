@@ -30,7 +30,7 @@ class MmenuCustomModule extends \Contao\ModuleCustomnav
      *
      * @var string
      */
-    protected $strTemplateJs = 'js_mmenu';
+    protected $strTemplateJs = 'mmenu_default';
 
     /**
      * Display a wildcard in the back end.

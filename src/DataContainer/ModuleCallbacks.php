@@ -35,6 +35,6 @@ class ModuleCallbacks
      */
     public function onMmenuJsTplOptionsCallback(): array
     {
-        return Controller::getTemplateGroup('js_mmenu');
+        return Controller::getTemplateGroup('mmenu_');
     }
 }

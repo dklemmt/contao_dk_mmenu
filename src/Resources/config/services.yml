@@ -1,7 +1,11 @@
 services:
   _defaults:
-    autowire: true
     autoconfigure: true
+    public: false
+
+  DirkKlemmt\ContaoMmenuBundle\DataContainer\ModuleCallbacks:
     public: true
 
-    DirkKlemmt\ContaoMmenuBundle\ModuleCallbacks: ~
+  DirkKlemmt\ContaoMmenuBundle\EventListener\SqlCompileCommandsListener:
+    public: true
+    arguments: ['@database_connection', '%kernel.project_dir%']
