@@ -94,11 +94,11 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuCountersUpdate'] = [
 ];
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuColumnsAdd'] = [
-    'label'     => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuColumnsAdd'],
-    'exclude'   => true,
+    'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuColumnsAdd'],
+    'exclude' => true,
     'inputType' => 'checkbox',
-    'eval'      => ['tl_class' => 'w50'],
-    'sql'       => "char(1) NOT NULL default ''",
+    'eval' => ['tl_class' => 'w50'],
+    'sql' => "char(1) NOT NULL default ''",
 ];
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuSearchfieldAdd'] = [
