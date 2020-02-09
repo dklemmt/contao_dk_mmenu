@@ -35,7 +35,13 @@ export function extend(orignl, dfault) {
 export function touchDirection(surface) {
     var direction = '';
     surface.addEventListener('touchmove', function (evnt) {
-        direction = evnt.movementY > 0 ? 'down' : 'up';
+        direction = '';
+        if (evnt.movementY > 0) {
+            direction = 'down';
+        }
+        else if (evnt.movementY < 0) {
+            direction = 'up';
+        }
     });
     return {
         get: function () { return direction; }

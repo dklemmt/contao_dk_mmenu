@@ -46,12 +46,12 @@ export default function () {
             //      we can simple preventDefault and stopPropagation.
             if (panel.scrollHeight === panel.offsetHeight) {
                 stop(evnt);
-                //  When dragging a scrollable panel,
-                //      that is fully scrolled up (or down).
-                //      It will not trigger the scroll event when dragging down (or up) (because you can't scroll up (or down)),
-                //      so we need to match the dragging direction with the scroll position before preventDefault and stopPropagation,
-                //      otherwise the panel would not scroll at all in any direction.
             }
+            //  When dragging a scrollable panel,
+            //      that is fully scrolled up (or down).
+            //      It will not trigger the scroll event when dragging down (or up) (because you can't scroll up (or down)),
+            //      so we need to match the dragging direction with the scroll position before preventDefault and stopPropagation,
+            //      otherwise the panel would not scroll at all in any direction.
             else if (
             //  When scrolled up and dragging down
             (panel.scrollTop == 0 && touchDir.get() == 'down') ||
@@ -74,14 +74,18 @@ export default function () {
     //	Scroll the current opened panel to the top when opening the menu.
     this.bind('open:start', function () {
         var panel = DOM.children(_this.node.pnls, '.mm-panel_opened')[0];
-        panel.scrollTop = 0;
+        if (panel) {
+            panel.scrollTop = 0;
+        }
     });
     //	Fix issue after device rotation change.
     window.addEventListener('orientationchange', function (evnt) {
         var panel = DOM.children(_this.node.pnls, '.mm-panel_opened')[0];
-        panel.scrollTop = 0;
-        //	Apparently, changing the overflow-scrolling property triggers some event :)
-        panel.style['-webkit-overflow-scrolling'] = 'auto';
-        panel.style['-webkit-overflow-scrolling'] = 'touch';
+        if (panel) {
+            panel.scrollTop = 0;
+            //	Apparently, changing the overflow-scrolling property triggers some event :)
+            panel.style['-webkit-overflow-scrolling'] = 'auto';
+            panel.style['-webkit-overflow-scrolling'] = 'touch';
+        }
     });
 }
