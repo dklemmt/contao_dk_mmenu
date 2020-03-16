@@ -31,24 +31,16 @@ final class SqlCompileCommandsListener
 
     public function __invoke(array $sql): array
     {
-        $finder = $this->findTemplates();
-
-        if ($finder->count() > 0) {
-            $this->updateTemplates($finder);
-            $this->updateModules();
-            $this->updateLayouts();
-        }
+        $this->updateTemplates();
+        $this->updateModules();
+        $this->updateLayouts();
 
         return $sql;
     }
 
-    private function findTemplates(): Finder
+    private function updateTemplates(): void
     {
-        return (new Finder())->files()->name('js_mmenu*')->in($this->rootDir.'/templates');
-    }
-
-    private function updateTemplates(Finder $finder): void
-    {
+        $finder = (new Finder())->files()->name('js_mmenu*')->in($this->rootDir.'/templates');
         $filesystem = new Filesystem();
 
         /** @var \SplFileInfo $file */
