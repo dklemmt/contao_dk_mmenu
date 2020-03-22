@@ -1,5 +1,5 @@
 
-<div class="<?= $this->class ?>"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?> itemscope itemtype="http://schema.org/SiteNavigationElement>
+<div class="<?= $this->class ?>"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?> itemscope itemtype="http://schema.org/SiteNavigationElement">
   <div>
 
     <?php if ($this->headline): ?>
