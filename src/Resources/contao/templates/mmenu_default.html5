@@ -13,8 +13,8 @@ if ($this->options['drag']['menu']['open']) {
 ?>
 <script>
     document.addEventListener(
-        "DOMContentLoaded", () => {
+        "DOMContentLoaded", function () {
             new Mmenu('#<?= $this->elementId ?>', <?= json_encode($this->options) ?>, <?= json_encode($this->configuration) ?>);
-        },
+        }
     );
 </script>
