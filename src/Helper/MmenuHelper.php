@@ -164,6 +164,15 @@ class MmenuHelper
             }
         }
 
+        // https://mmenujs.com/docs/addons/keyboard-navigation.html
+        if ($module->dk_mmenuKeyboardNavigation) {
+            $options['keyboardNavigation']['enable'] = true;
+
+            if ($module->dk_mmenuKeyboardNavigationEnhance ) {
+                $options['keyboardNavigation']['enhance'] = true;
+            }
+        }
+
         // Add options and configuration to JavaScript template
         $jsTemplate->options = $options;
         $jsTemplate->configuration = $configuration;

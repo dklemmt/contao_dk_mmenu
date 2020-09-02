@@ -17,6 +17,10 @@
         <source>mmenu settings</source>
         <target>Paramètres de mmenu</target>
       </trans-unit>
+      <trans-unit id="tl_module.mmenu_keyboard_navigation_legend">
+        <source>mmenu keyboard navigation</source>
+        <target>navigation au mmenu du clavier</target>
+      </trans-unit>
       <trans-unit id="tl_module.dk_mmenuPosition.0">
         <source>Position of menu</source>
         <target>Position du menu</target>
@@ -152,6 +156,22 @@
       <trans-unit id="tl_module.dk_mmenuSlidingSubmenus.vertical">
         <source>vertical</source>
         <target>vertical</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuKeyboardNavigation.0">
+        <source>Keyboard navigation</source>
+        <target>Navigation au clavier</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuKeyboardNavigation.1">
+        <source>Enable navigating the menu with keyboard.</source>
+        <target>Activer la navigation dans le menu avec le clavier.</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuKeyboardNavigationEnhance.0">
+        <source>Enhance keyboard navigation</source>
+        <target>Améliorer la navigation au clavier</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuKeyboardNavigationEnhance.1">
+        <source>Enhance basic default keyboard navigation.</source>
+        <target>Améliorer la navigation de base par défaut au clavier.</target>
       </trans-unit>
     </body>
   </file>
