@@ -1,5 +1,9 @@
 # Changelog
 
+### 3.2.0
+
+* Added keyboard navigation to module configuration
+
 ### 3.1.0
 
 * Updated mmenu to 8.3.0

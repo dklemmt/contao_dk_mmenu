@@ -222,6 +222,22 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuShadows'] = [
     'sql' => 'blob NULL',
 ];
 
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuKeyboardNavigation'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuKeyboardNavigation'],
+    'exclude' => true,
+    'inputType' => 'checkbox',
+    'eval' => ['submitOnChange' => true, 'tl_class' => 'w50'],
+    'sql' => "char(1) NOT NULL default ''",
+];
+
+$GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuKeyboardNavigationEnhance'] = [
+    'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuKeyboardNavigationEnhance'],
+    'exclude' => true,
+    'inputType' => 'checkbox',
+    'eval' => ['tl_class' => 'w50'],
+    'sql' => "char(1) NOT NULL default ''",
+];
+
 /*
  * Set navigationTpl to nav_mmenu
  */
@@ -231,12 +247,14 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['navigationTpl']['load_callback'][] = 
  * Add palettes to tl_module.
  */
 $GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'dk_mmenuDragOpenEnable';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'dk_mmenuKeyboardNavigation';
 
 $GLOBALS['TL_DCA']['tl_module']['palettes']['mmenu'] = $GLOBALS['TL_DCA']['tl_module']['palettes']['navigation'];
 $GLOBALS['TL_DCA']['tl_module']['palettes']['mmenuCustom'] = $GLOBALS['TL_DCA']['tl_module']['palettes']['customnav'];
 $GLOBALS['TL_DCA']['tl_module']['palettes']['mmenuHtml'] = '{title_legend},name,headline,type;{html_legend},html;{template_legend:hide},customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID';
 
 $GLOBALS['TL_DCA']['tl_module']['subpalettes']['dk_mmenuDragOpenEnable'] = 'dk_mmenuDragOpenMaxStartPos,dk_mmenuDragOpenThreshold';
+$GLOBALS['TL_DCA']['tl_module']['subpalettes']['dk_mmenuKeyboardNavigation'] = 'dk_mmenuKeyboardNavigationEnhance';
 
 PaletteManipulator::create()
     ->addLegend('mmenu_appearance_legend', 'template_legend', PaletteManipulator::POSITION_BEFORE, true)
@@ -263,6 +281,9 @@ PaletteManipulator::create()
     ->addField('dk_mmenuPageSelector', 'mmenu_behaviour_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('dk_mmenuDragOpenEnable', 'mmenu_behaviour_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('dk_mmenuPolyfillEnable', 'mmenu_behaviour_legend', PaletteManipulator::POSITION_APPEND)
+
+    ->addLegend('mmenu_keyboard_navigation_legend', 'mmenu_effects_legend', PaletteManipulator::POSITION_AFTER, true)
+    ->addField('dk_mmenuKeyboardNavigation', 'mmenu_keyboard_navigation_legend', PaletteManipulator::POSITION_APPEND)
 
     ->addField('dk_mmenuJsTpl', 'template_legend', PaletteManipulator::POSITION_APPEND)
 

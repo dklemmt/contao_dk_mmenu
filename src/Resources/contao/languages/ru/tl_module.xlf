@@ -17,6 +17,10 @@
         <source>mmenu settings</source>
         <target>mmenu настройки</target>
       </trans-unit>
+      <trans-unit id="tl_module.mmenu_keyboard_navigation_legend">
+        <source>mmenu keyboard navigation</source>
+        <target>mmenu навигация клавиатурой</target>
+      </trans-unit>
       <trans-unit id="tl_module.dk_mmenuPosition.0">
         <source>Position of menu</source>
         <target>Позиция меню</target>
@@ -144,6 +148,22 @@
       <trans-unit id="tl_module.dk_mmenuSlidingSubmenus.vertical">
         <source>vertical</source>
         <target>вертикальное</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuKeyboardNavigation.0">
+        <source>Keyboard navigation</source>
+        <target>Клавиатурная навигация</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuKeyboardNavigation.1">
+        <source>Enable navigating the menu with keyboard.</source>
+        <target>Включите навигацию по меню с помощью клавиатуры.</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuKeyboardNavigationEnhance.0">
+        <source>Enhance keyboard navigation</source>
+        <target>Улучшенная навигация клавиатурой</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuKeyboardNavigationEnhance.1">
+        <source>Enhance basic default keyboard navigation.</source>
+        <target>Улучшение основной навигации клавиатурой.</target>
       </trans-unit>
     </body>
   </file>

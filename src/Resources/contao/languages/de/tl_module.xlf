@@ -17,6 +17,10 @@
         <source>mmenu settings</source>
         <target>mmenu-Einstellungen</target>
       </trans-unit>
+      <trans-unit id="tl_module.mmenu_keyboard_navigation_legend">
+        <source>mmenu keyboard navigation</source>
+        <target>mmenu-Navigation mit Tastatur</target>
+      </trans-unit>
       <trans-unit id="tl_module.dk_mmenuPosition.0">
         <source>Position of menu</source>
         <target>Position des Menüs</target>
@@ -250,6 +254,22 @@
       <trans-unit id="tl_module.dk_mmenuShadowsOptions.panels">
         <source>Panels</source>
         <target>Panele</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuKeyboardNavigation.0">
+        <source>Keyboard navigation</source>
+        <target>Navigation mit Tastatur</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuKeyboardNavigation.1">
+        <source>Enable navigating the menu with keyboard.</source>
+        <target>Aktivieren Sie die Navigation im Menü mit der Tastatur.</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuKeyboardNavigationEnhance.0">
+        <source>Enhance keyboard navigation</source>
+        <target>Verbesserte Tastaturnavigation</target>
+      </trans-unit>
+      <trans-unit id="tl_module.dk_mmenuKeyboardNavigationEnhance.1">
+        <source>Enhance basic default keyboard navigation.</source>
+        <target>Verbessern Sie die grundlegende Standard-Tastaturnavigation.</target>
       </trans-unit>
     </body>
   </file>

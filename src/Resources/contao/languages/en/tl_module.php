@@ -18,6 +18,7 @@ $GLOBALS['TL_LANG']['tl_module']['mmenu_appearance_legend'] = 'mmenu appearance'
 $GLOBALS['TL_LANG']['tl_module']['mmenu_behaviour_legend'] = 'mmenu behaviour';
 $GLOBALS['TL_LANG']['tl_module']['mmenu_effects_legend'] = 'mmenu effects';
 $GLOBALS['TL_LANG']['tl_module']['mmenu_legend'] = 'mmenu settings';
+$GLOBALS['TL_LANG']['tl_module']['mmenu_keyboard_navigation_legend'] = 'mmenu keyboard navigation';
 
 /*
  * Fields
@@ -67,6 +68,11 @@ $GLOBALS['TL_LANG']['tl_module']['dk_mmenuDragOpenMaxStartPos'] = ['Maximum star
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuPageDim'] = ['Page dim', 'Enables page dimming.'];
 
 $GLOBALS['TL_LANG']['tl_module']['dk_mmenuIconPanels'] = ['Show small part of parent panel', 'When enabled, this will show a small part of the parent panel, when opening a sub-panel.'];
+
+$GLOBALS['TL_LANG']['tl_module']['dk_mmenuKeyboardNavigation'][0] = 'Keyboard navigation';
+$GLOBALS['TL_LANG']['tl_module']['dk_mmenuKeyboardNavigation'][1] = 'Enable navigating the menu with keyboard.';
+$GLOBALS['TL_LANG']['tl_module']['dk_mmenuKeyboardNavigationEnhance'][0] = 'Enhance keyboard navigation';
+$GLOBALS['TL_LANG']['tl_module']['dk_mmenuKeyboardNavigationEnhance'][1] = 'Enhance basic default keyboard navigation.';
 
 /*
  * References
