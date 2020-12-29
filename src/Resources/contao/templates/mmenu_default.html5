@@ -14,6 +14,13 @@ if ($this->options['drag']['menu']['open']) {
 <script>
     document.addEventListener(
         "DOMContentLoaded", function () {
+            const menu = document.querySelector('#<?= $this->elementId ?>');
+            if (null !== menu && 0 === menu.querySelectorAll('li.submenu.active').length) {
+                const trails = menu.querySelectorAll('li.submenu.trail');
+                if (0 < trails.length) {
+                    trails.item(trails.length - 1).classList.add('active');
+                }
+            }
             new Mmenu('#<?= $this->elementId ?>', <?= json_encode($this->options) ?>, <?= json_encode($this->configuration) ?>);
         }
     );
