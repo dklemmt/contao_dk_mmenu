@@ -15,8 +15,8 @@ if ($this->options['drag']['menu']['open']) {
     document.addEventListener(
         "DOMContentLoaded", function () {
             const menu = document.querySelector('#<?= $this->elementId ?>');
-            if (null !== menu && 0 === menu.querySelectorAll('li.submenu.active').length) {
-                const trails = menu.querySelectorAll('li.submenu.trail');
+            if (null !== menu && 0 === menu.querySelectorAll('li.active').length) {
+                const trails = menu.querySelectorAll('li.trail');
                 if (0 < trails.length) {
                     trails.item(trails.length - 1).classList.add('active');
                 }
