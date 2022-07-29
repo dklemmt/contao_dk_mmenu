@@ -21,6 +21,14 @@
         <source>Generates an alternative custom navigation - not only - for mobile Sites.</source>
         <target>Erzeugt eine alternative Individuelle Navigation - nicht nur - für mobile Webseiten.</target>
       </trans-unit>
+      <trans-unit id="FMD.mmenuHtml.0">
+        <source>mmenu - HTML</source>
+        <target>mmenu - HTML</target>
+      </trans-unit>
+      <trans-unit id="FMD.mmenuHtml.1">
+        <source>Inserts custom HTML into mmenu.</source>
+        <target>Fügt individuelles HTML in mmenu ein.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
