@@ -11,7 +11,6 @@ declare(strict_types=1);
  * @license MIT
  */
 
-use DirkKlemmt\ContaoMmenuBundle\EventListener\SqlCompileCommandsListener;
 use DirkKlemmt\ContaoMmenuBundle\FrontendModule\MmenuCustomModule;
 use DirkKlemmt\ContaoMmenuBundle\FrontendModule\MmenuHtmlModule;
 use DirkKlemmt\ContaoMmenuBundle\FrontendModule\MmenuModule;
@@ -26,4 +25,3 @@ array_insert($GLOBALS['FE_MOD'], 3, [
     ],
 ]);
 
-$GLOBALS['TL_HOOKS']['sqlCompileCommands'][] = [SqlCompileCommandsListener::class, '__invoke'];
