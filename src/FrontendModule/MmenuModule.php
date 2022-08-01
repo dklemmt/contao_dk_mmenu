@@ -14,9 +14,10 @@ declare(strict_types=1);
 namespace DirkKlemmt\ContaoMmenuBundle\FrontendModule;
 
 use Contao\BackendTemplate;
+use Contao\ModuleNavigation;
 use DirkKlemmt\ContaoMmenuBundle\Helper\MmenuHelper;
 
-class MmenuModule extends \Contao\ModuleNavigation
+class MmenuModule extends ModuleNavigation
 {
     /**
      * Template.
@@ -27,10 +28,8 @@ class MmenuModule extends \Contao\ModuleNavigation
 
     /**
      * Template.
-     *
-     * @var string
      */
-    protected $strTemplateJs = 'mmenu_default';
+    protected string $strTemplateJs = 'mmenu_default';
 
     /**
      * Display a wildcard in the back end.
@@ -40,7 +39,7 @@ class MmenuModule extends \Contao\ModuleNavigation
         if (TL_MODE === 'BE') {
             // --- create BE template for mmenu module
             $template = new BackendTemplate('be_wildcard');
-            $template->wildcard = '### '.utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['mmenu'][0]).' ###';
+            $template->wildcard = '### '.mb_strtoupper($GLOBALS['TL_LANG']['FMD']['mmenu'][0]).' ###';
             $template->title = $this->headline;
             $template->id = $this->id;
             $template->link = $this->name;

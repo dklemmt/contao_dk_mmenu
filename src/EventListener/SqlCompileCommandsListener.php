@@ -20,8 +20,8 @@ use Symfony\Component\Finder\Finder;
 
 final class SqlCompileCommandsListener
 {
-    private $db;
-    private $rootDir;
+    private Connection $db;
+    private string $rootDir;
 
     public function __construct(Connection $db, string $rootDir)
     {
@@ -45,8 +45,7 @@ final class SqlCompileCommandsListener
 
         /** @var \SplFileInfo $file */
         foreach ($finder as $file) {
-            $newPath = str_replace('js_mmenu_', 'mmenu_', $file->getRealPath());
-            $newPath = str_replace('js_mmenu', 'mmenu_default', $newPath);
+            $newPath = str_replace(['js_mmenu_', 'js_mmenu'], ['mmenu_', 'mmenu_default'], $file->getRealPath());
             $filesystem->rename($file->getRealPath(), $newPath);
         }
     }
@@ -54,15 +53,19 @@ final class SqlCompileCommandsListener
     private function updateModules(): void
     {
         if ($this->tableExistsInDb('tl_module') && $this->columnExistsInTable('dk_mmenuJsTpl', 'tl_module')) {
-            $this->db->executeUpdate("UPDATE `tl_module` SET `dk_mmenuJsTpl` = REPLACE(`dk_mmenuJsTpl`, 'js_mmenu_', 'mmenu_')");
-            $this->db->executeUpdate("UPDATE `tl_module` SET `dk_mmenuJsTpl` = REPLACE(`dk_mmenuJsTpl`, 'js_mmenu', 'mmenu_default')");
+            $this->db->executeStatement(
+                "UPDATE `tl_module` SET `dk_mmenuJsTpl` = REPLACE(`dk_mmenuJsTpl`, 'js_mmenu_', 'mmenu_')"
+            );
+            $this->db->executeStatement(
+                "UPDATE `tl_module` SET `dk_mmenuJsTpl` = REPLACE(`dk_mmenuJsTpl`, 'js_mmenu', 'mmenu_default')"
+            );
         }
     }
 
     private function updateLayouts(): void
     {
         if ($this->tableExistsInDb('tl_layout') && $this->columnExistsInTable('scripts', 'tl_layout')) {
-            $result = $this->db->executeQuery("SELECT `id`, `scripts` FROM `tl_layout` WHERE `scripts` LIKE '%\"js_mmenu%'")->fetchAll();
+            $result = $this->db->executeQuery("SELECT `id`, `scripts` FROM `tl_layout` WHERE `scripts` LIKE '%\"js_mmenu%'")->fetchAllAssociative();
 
             if (false !== $result) {
                 foreach ($result as $layout) {
@@ -74,7 +77,10 @@ final class SqlCompileCommandsListener
                         }
                     }
 
-                    $this->db->executeUpdate('UPDATE `tl_layout` SET `scripts` = ? WHERE id = ?', [serialize($scripts), $layout['id']]);
+                    $this->db->executeStatement(
+                        'UPDATE `tl_layout` SET `scripts` = ? WHERE id = ?',
+                        [serialize($scripts), $layout['id']]
+                    );
                 }
             }
         }
@@ -82,12 +88,12 @@ final class SqlCompileCommandsListener
 
     private function tableExistsInDb(string $table): bool
     {
-        return \in_array($table, $this->db->getSchemaManager()->listTableNames(), true);
+        return \in_array($table, $this->db->createSchemaManager()->listTableNames(), true);
     }
 
     private function columnExistsInTable(string $columnName, string $tableName): bool
     {
-        $columns = $this->db->getSchemaManager()->listTableColumns($tableName);
+        $columns = $this->db->createSchemaManager()->listTableColumns($tableName);
 
         foreach ($columns as $column) {
             if ($column->getName() === $columnName) {

@@ -1,40 +1,62 @@
 {
-	"name": "dklemmt/contao_dk_mmenu",
-	"description": "Implementation of mmenu as an extension for the Contao Open Source CMS.",
-	"keywords": ["contao", "navigation", "menu", "mobile"],
-	"type": "contao-bundle",
-	"license": ["MIT"],
-	"authors": [
-		{
-			"name": "Dirk Klemmt",
-			"email": "dirch@quantentunnel.de",
-			"role": "Developer"
-		},
-		{
-			"name": "Fritz Michael Gschwantner",
-			"email": "fmg@inspiredminds.at",
-			"role": "Developer"
-		}
-	],
-	"support": {
-		"email": "dirch@quantentunnel.de",
-		"issues": "https://github.com/dklemmt/contao_dk_mmenu/issues",
-		"wiki": "https://github.com/dklemmt/contao_dk_mmenu/wiki",
-		"irc": "irc://irc.freenode.org/contao.dev",
-		"source": "https://github.com/dklemmt/contao_dk_mmenu"
-	},
-	"require": {
-		"php": "^7.1 || ^8.0",
-		"contao/core-bundle": "^4.4",
-		"symfony/finder": "^3.4 || ^4.0 || ^5.2 || ^6.0",
-		"symfony/dependency-injection": "^3.4 || ^4.0 || ^5.2 || ^6.0"
-	},
+    "name": "dklemmt/contao_dk_mmenu",
+    "description": "Implementation of mmenu as an extension for the Contao Open Source CMS.",
+    "keywords": [
+        "contao",
+        "navigation",
+        "menu",
+        "mobile"
+    ],
+    "type": "contao-bundle",
+    "license": [
+        "MIT"
+    ],
+    "authors": [
+        {
+            "name": "Dirk Klemmt",
+            "email": "dirch@quantentunnel.de",
+            "role": "Developer"
+        },
+        {
+            "name": "Fritz Michael Gschwantner",
+            "email": "fmg@inspiredminds.at",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "dirch@quantentunnel.de",
+        "issues": "https://github.com/dklemmt/contao_dk_mmenu/issues",
+        "wiki": "https://github.com/dklemmt/contao_dk_mmenu/wiki",
+        "irc": "irc://irc.freenode.org/contao.dev",
+        "source": "https://github.com/dklemmt/contao_dk_mmenu"
+    },
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "contao/core-bundle": "^4.9",
+        "doctrine/dbal": "^2.11 || ^3.0",
+        "symfony/dependency-injection": "^4.4 || ^5.4 || ^6.0",
+        "symfony/filesystem": "^4.4 || ^5.4 || ^6.0",
+        "symfony/finder": "^4.4 || ^5.4 || ^6.0",
+        "symfony/http-kernel": "^4.4 || ^5.4 || ^6.0"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0"
+    },
     "autoload": {
         "psr-4": {
             "DirkKlemmt\\ContaoMmenuBundle\\": "src/"
         }
     },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": true,
+            "contao/manager-plugin": true
+        }
+    },
     "extra": {
         "contao-manager-plugin": "DirkKlemmt\\ContaoMmenuBundle\\ContaoManager\\Plugin"
+    },
+    "scripts": {
+        "ecs": "@php tools/ecs/vendor/bin/ecs check src/ --config tools/ecs/config/default.php --fix --ansi"
     }
 }
