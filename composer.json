@@ -34,7 +34,15 @@
             "DirkKlemmt\\ContaoMmenuBundle\\": "src/"
         }
     },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": true
+        }
+    },
     "extra": {
         "contao-manager-plugin": "DirkKlemmt\\ContaoMmenuBundle\\ContaoManager\\Plugin"
+    },
+    "scripts": {
+        "ecs": "@php tools/ecs/vendor/bin/ecs check src/ --config tools/ecs/config/default.php --fix --ansi"
     }
 }
