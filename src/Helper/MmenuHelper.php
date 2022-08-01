@@ -26,6 +26,7 @@ class MmenuHelper
     {
         // Check for a valid CSS ID
         $cssID = $module->cssID;
+
         if (empty($cssID[0])) {
             $cssID[0] = $module->type.'-'.substr(md5($module->type.$module->id), 0, 8);
             $module->cssID = $cssID;
@@ -159,6 +160,7 @@ class MmenuHelper
         // https://mmenujs.com/documentation/extensions/shadows.html
         if ($module->dk_mmenuShadows) {
             $shadows = array_filter(StringUtil::deserialize($module->dk_mmenuShadows, true));
+
             foreach ($shadows as $shadow) {
                 $options['extensions'][] = 'shadow-'.$shadow;
             }
@@ -168,7 +170,7 @@ class MmenuHelper
         if ($module->dk_mmenuKeyboardNavigation) {
             $options['keyboardNavigation']['enable'] = true;
 
-            if ($module->dk_mmenuKeyboardNavigationEnhance ) {
+            if ($module->dk_mmenuKeyboardNavigationEnhance) {
                 $options['keyboardNavigation']['enhance'] = true;
             }
         }

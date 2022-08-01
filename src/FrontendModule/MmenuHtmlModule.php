@@ -14,9 +14,10 @@ declare(strict_types=1);
 namespace DirkKlemmt\ContaoMmenuBundle\FrontendModule;
 
 use Contao\BackendTemplate;
+use Contao\ModuleHtml;
 use DirkKlemmt\ContaoMmenuBundle\Helper\MmenuHelper;
 
-class MmenuHtmlModule extends \Contao\ModuleHtml
+class MmenuHtmlModule extends ModuleHtml
 {
     /**
      * Template.

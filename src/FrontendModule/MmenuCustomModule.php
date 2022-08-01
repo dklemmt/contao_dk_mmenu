@@ -14,9 +14,10 @@ declare(strict_types=1);
 namespace DirkKlemmt\ContaoMmenuBundle\FrontendModule;
 
 use Contao\BackendTemplate;
+use Contao\ModuleCustomnav;
 use DirkKlemmt\ContaoMmenuBundle\Helper\MmenuHelper;
 
-class MmenuCustomModule extends \Contao\ModuleCustomnav
+class MmenuCustomModule extends ModuleCustomnav
 {
     /**
      * Template.
