@@ -1,0 +1,233 @@
+<?xml version="1.0" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="php" date="2014-01-03T20:50:50+01:00" original="tl_dk_mmenu_config" source-language="en"
+        target-language="fr">
+    <body>
+      <trans-unit id="tl_dk_mmenu_config.title_legend">
+        <source>Title</source>
+        <target>Titre</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.appearance_legend">
+        <source>mmenu appearance</source>
+        <target>Apparence de mmenu</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.behaviour_legend">
+        <source>mmenu behaviour</source>
+        <target>Comportement de mmenu</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.effects_legend">
+        <source>mmenu effects</source>
+        <target>Effets de mmenu</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.template_legend">
+        <source>Template settings</source>
+        <target>Paramètres des modèles</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.keyboard_navigation_legend">
+        <source>mmenu keyboard navigation</source>
+        <target>navigation au mmenu du clavier</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.title.0">
+        <source>Title of the config</source>
+        <target>Titre de configuration</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.title.1">
+        <source>The title of the config is only required for internal use.</source>
+        <target>Le titre de la configuration n'est requis qu'à des fins internes.</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.position.0">
+        <source>Position of menu</source>
+        <target>Position du menu</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.position.1">
+        <source>Choose the position of the menu.</source>
+        <target>Choisir la position du menu.</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.zposition.0">
+        <source>Z-position of menu</source>
+        <target>Z-position du menu</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.zposition.1">
+        <source>Choose the z-position of the menu.</source>
+        <target>Choisir la z-position du menu.</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.slidingSubmenus.0">
+        <source>Kind of menu</source>
+        <target>Type de menu</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.slidingSubmenus.1">
+        <source>Determines whether submenus should come sliding in from the right or to expand below.</source>
+        <target>Détermine si oui ou non les sous-menus doivent apparaître sur le côté droit ou vers le bas.</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.theme.0">
+        <source>Theme of menu</source>
+        <target>Thème du menu</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.Theme.1">
+        <source>Choose a theme for the menu.</source>
+        <target>Choisir un thème pour le menu.</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.moveBackground.0">
+        <source>Move background</source>
+        <target>Déplacement du fond</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.moveBackground.1">
+        <source>Determines whether or not the page should inherit the background of the body when the menu opens.
+        </source>
+        <target>Détermine si oui ou non la page doit hériter du fond du body lorsque le menu s'ouvre.</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.fullscreen.0">
+        <source>Fullscreen</source>
+        <target>Plein écran</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.fullscreen.1">
+        <source>Determines whether the menu will fill up 80% (default) of the available width/height or 100%
+          (fullscreen).
+        </source>
+        <target>Détermine si oui ou non le menu va se remplir de 80% (par défaut) de la largeur et de la hauteur
+          disponible ou 100% (plein écran).
+        </target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.countersAdd.0">
+        <source>Show submenu counter</source>
+        <target>Afficher le nombre de sous-menus</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.countersAdd.1">
+        <source>Determines whether or not to append a counter to each menu item if it has a submenu and automatically
+          counting the number of items inside.
+        </source>
+        <target>Détermine si oui ou non un compteur est ajouté pour chaque élément de menu s'il possède un sous-menu et
+          compter automatiquement le nombre d'éléments à l'intérieur.
+        </target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.countersUpdate.0">
+        <source>Update submenu counter</source>
+        <target>Mettre à jour le compteur du sous-menu</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.countersUpdate.1">
+        <source>Determines whether or not to automatically count the number of items in the submenu, updates when typing
+          in the search field.
+        </source>
+        <target>Détermine si oui ou non le comptage automatique du nombre d'éléments dans le sous-menu, mis à jour lors
+          de la saisie dans le champ de recherche.
+        </target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.columnsAdd.0">
+        <source>Show submenu columns</source>
+        <target>Colonnes pour les sous-menus</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.columnsAdd.1">
+        <source>Determines whether the panels should be split up into multiple columns.</source>
+        <target>Détermine si un sous-menu doit être affiché dans plusieurs colonnes.</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.searchfieldAdd.0">
+        <source>Show searchfield</source>
+        <target>Afficher le champ de recherche</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.searchfieldAdd.1">
+        <source>Determines whether or not to automatically prepend a searchfield to the menu.</source>
+        <target>Détermine si oui ou non un champ de recherche est placé automatiquement dans le menu.</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.dragOpenEnable.0">
+        <source>Drag page to open menu</source>
+        <target>Faire glisser la page pour ouvrir le menu</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.dragOpenEnable.1">
+        <source>Determines whether or not the menu should open when dragging the page.</source>
+        <target>Détermine si oui ou non le menu doit s'ouvrir lorsque vous faites glisser la page.</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.dragOpenThreshold.0">
+        <source>Amount of pixels to drag</source>
+        <target>Quantité de pixels pour faire glisser</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.dragOpenThreshold.1">
+        <source>Determines the minimum amount of pixels to drag before actually opening the menu, less than 50 is not
+          advised.
+        </source>
+        <target>Détermine la quantité minimale de pixels pour faire glisser avant d'ouvrir réellement le menu, moins de
+          50 n'est pas conseillé.
+        </target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.polyfillEnable.0">
+        <source>Add JavaScript Polyfill</source>
+        <target>Ajouter un poly-remplissage JavaScript</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.polyfillEnable.1">
+        <source>Determines whether or not the IE10 and IE11 JavaScript Polyfill should be available.</source>
+        <target>Détermine si le polyfill JavaScript est disponible pour IE10 et IE11.</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.onClickClose.0">
+        <source>Menu closes after click</source>
+        <target>Le menu se ferme après un clic</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.onClickClose.1">
+        <source>Determines whether or not the menu should close after clicking a link inside it.</source>
+        <target>Détermine si oui ou non le menu doit fermer après avoir cliqué sur un lien à l'intérieur.</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.fixedElementAdd.0">
+        <source>Support fixed and sticky elements</source>
+        <target>Prise en charge des éléments fixes et collants</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.fixedElementAdd.1">
+        <source>Adds support elements with position: fixed and position: sticky, so they don't disappear when opening
+          the menu.
+        </source>
+        <target>Ajoute la prise en charge des éléments avec position: fixe et position: collant afin qu'ils ne le soient pas
+          disparaissent à l'ouverture du menu.
+        </target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.position.left">
+        <source>left</source>
+        <target>gauche</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.position.right">
+        <source>right</source>
+        <target>droite</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.position.top">
+        <source>top</source>
+        <target>en haut</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.position.bottom">
+        <source>bottom</source>
+        <target>en bas</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.position.popup">
+        <source>popup</source>
+        <target>apparaitre</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.zposition.back">
+        <source>back</source>
+        <target>en arrière</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.zposition.front">
+        <source>front</source>
+        <target>en avant</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.slidingSubmenus.horizontal">
+        <source>horizontal</source>
+        <target>horizontal</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.slidingSubmenus.vertical">
+        <source>vertical</source>
+        <target>vertical</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.keyboardNavigation.0">
+        <source>Keyboard navigation</source>
+        <target>Navigation au clavier</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.keyboardNavigation.1">
+        <source>Enable navigating the menu with keyboard.</source>
+        <target>Activer la navigation dans le menu avec le clavier.</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.keyboardNavigationEnhance.0">
+        <source>Enhance keyboard navigation</source>
+        <target>Améliorer la navigation au clavier</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.keyboardNavigationEnhance.1">
+        <source>Enhance basic default keyboard navigation.</source>
+        <target>Améliorer la navigation de base par défaut au clavier.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

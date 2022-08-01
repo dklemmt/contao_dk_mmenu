@@ -16,6 +16,7 @@ namespace DirkKlemmt\ContaoMmenuBundle\Helper;
 use Contao\FrontendTemplate;
 use Contao\Module;
 use Contao\StringUtil;
+use DirkKlemmt\ContaoMmenuBundle\Model\MmenuConfigModel;
 
 class MmenuHelper
 {
@@ -24,6 +25,11 @@ class MmenuHelper
      */
     public static function processModuleSettings(Module $module, string $jsTemplateName): void
     {
+        // Load the config
+        if (empty($module->dk_mmenuConfig) || !($config = MmenuConfigModel::findByPk($module->dk_mmenuConfig)) instanceof MmenuConfigModel) {
+            return;
+        }
+
         // Check for a valid CSS ID
         $cssID = $module->cssID;
 
@@ -49,64 +55,64 @@ class MmenuHelper
         }
 
         // https://mmenujs.com/documentation/extensions/positioning.html
-        if ($module->dk_mmenuPageSelector) {
-            $configuration['offCanvas']['page']['selector'] = StringUtil::decodeEntities($module->dk_mmenuPageSelector);
+        if ($config->pageSelector) {
+            $configuration['offCanvas']['page']['selector'] = StringUtil::decodeEntities($config->pageSelector);
         }
 
-        if ('left' !== $module->dk_mmenuPosition) {
-            if ('popup' === $module->dk_mmenuPosition) {
+        if ('left' !== $config->position) {
+            if ('popup' === $config->position) {
                 // https://mmenujs.com/documentation/extensions/popup.html
                 $options['extensions'][] = 'popup';
             } else {
-                $options['extensions'][] = 'position-'.$module->dk_mmenuPosition;
+                $options['extensions'][] = 'position-'.$config->position;
             }
         }
 
-        if ('back' !== $module->dk_mmenuZposition) {
-            $options['extensions'][] = 'position-'.$module->dk_mmenuZposition;
+        if ('back' !== $config->zposition) {
+            $options['extensions'][] = 'position-'.$config->zposition;
         }
 
         // https://mmenujs.com/documentation/extensions/page-dim.html
-        if ($module->dk_mmenuPageDim) {
-            $options['extensions'][] = 'pagedim-'.$module->dk_mmenuPageDim;
+        if ($config->pageDim) {
+            $options['extensions'][] = 'pagedim-'.$config->pageDim;
         }
 
         // https://mmenujs.com/documentation/core/options.html
-        if ('vertical' === $module->dk_mmenuSlidingSubmenus) {
+        if ('vertical' === $config->slidingSubmenus) {
             $options['slidingSubmenus'] = false;
         }
 
-        if ($module->dk_mmenuOnClickClose) {
+        if ($config->onClickClose) {
             $options['onClick']['close'] = true;
         }
 
         // https://mmenujs.com/documentation/core/off-canvas.html
-        if (!$module->dk_mmenuMoveBackground) {
+        if (!$config->moveBackground) {
             $options['offCanvas']['moveBackground'] = false;
         }
 
         // https://mmenujs.com/documentation/extensions/themes.html
-        if ('light' !== $module->dk_mmenuTheme) {
-            $options['extensions'][] = 'theme-'.$module->dk_mmenuTheme;
+        if ('light' !== $config->theme) {
+            $options['extensions'][] = 'theme-'.$config->theme;
         }
 
         // https://mmenujs.com/documentation/extensions/fullscreen.html
-        if ($module->dk_mmenuFullscreen) {
+        if ($config->fullscreen) {
             $options['extensions'][] = 'fullscreen';
         }
 
         // https://mmenujs.com/documentation/addons/counters.html
-        if ($module->dk_mmenuCountersAdd) {
+        if ($config->countersAdd) {
             $options['counters'] = true;
         }
 
         // https://mmenujs.com/documentation/addons/columns.html
-        if ($module->dk_mmenuColumnsAdd) {
+        if ($config->columnsAdd) {
             $options['columns'] = true;
         }
 
         // https://mmenujs.com/documentation/addons/searchfield.html
-        if ($module->dk_mmenuSearchfieldAdd) {
+        if ($config->searchfieldAdd) {
             $options['navbars'] = [
                 [
                     'position' => 'top',
@@ -123,43 +129,43 @@ class MmenuHelper
         }
 
         // https://mmenujs.com/documentation/extensions/effects.html
-        if ($module->dk_mmenuMenuEffects) {
-            $options['extensions'][] = 'fx-menu-'.$module->dk_mmenuMenuEffects;
+        if ($config->menuEffects) {
+            $options['extensions'][] = 'fx-menu-'.$config->menuEffects;
         }
 
-        if ($module->dk_mmenuPanelEffects) {
-            $options['extensions'][] = 'fx-panels-'.$module->dk_mmenuPanelEffects;
+        if ($config->panelEffects) {
+            $options['extensions'][] = 'fx-panels-'.$config->panelEffects;
         }
 
-        if ($module->dk_mmenuListEffects) {
-            $options['extensions'][] = 'fx-listitems-'.$module->dk_mmenuListEffects;
+        if ($config->listEffects) {
+            $options['extensions'][] = 'fx-listitems-'.$config->listEffects;
         }
 
         // https://mmenujs.com/documentation/addons/drag.html
-        if ($module->dk_mmenuDragOpenEnable) {
+        if ($config->dragOpenEnable) {
             $options['drag']['menu']['open'] = true;
 
-            if ($module->dk_mmenuDragOpenMaxStartPos && 100 !== (int) $module->dk_mmenuDragOpenMaxStartPos) {
-                $options['drag']['menu']['maxStartPos'] = (int) $module->dk_mmenuDragOpenMaxStartPos;
+            if ($config->dragOpenMaxStartPos && 100 !== (int) $config->dragOpenMaxStartPos) {
+                $options['drag']['menu']['maxStartPos'] = (int) $config->dragOpenMaxStartPos;
             }
 
-            if ($module->dk_mmenuDragOpenThreshold && 50 !== (int) $module->dk_mmenuDragOpenThreshold) {
-                $options['drag']['menu']['threshold'] = (int) $module->dk_mmenuDragOpenThreshold;
+            if ($config->dragOpenThreshold && 50 !== (int) $config->dragOpenThreshold) {
+                $options['drag']['menu']['threshold'] = (int) $config->dragOpenThreshold;
             }
         }
 
-        if ($module->dk_mmenuPolyfillEnable) {
+        if ($config->polyfillEnable) {
             $options['polyfill'] = true;
         }
 
         // https://mmenujs.com/documentation/addons/icon-panels.html
-        if ($module->dk_mmenuIconPanels) {
+        if ($config->iconPanels) {
             $options['iconPanels'] = true;
         }
 
         // https://mmenujs.com/documentation/extensions/shadows.html
-        if ($module->dk_mmenuShadows) {
-            $shadows = array_filter(StringUtil::deserialize($module->dk_mmenuShadows, true));
+        if ($config->shadows) {
+            $shadows = array_filter(StringUtil::deserialize($config->shadows, true));
 
             foreach ($shadows as $shadow) {
                 $options['extensions'][] = 'shadow-'.$shadow;
@@ -167,10 +173,10 @@ class MmenuHelper
         }
 
         // https://mmenujs.com/docs/addons/keyboard-navigation.html
-        if ($module->dk_mmenuKeyboardNavigation) {
+        if ($config->keyboardNavigation) {
             $options['keyboardNavigation']['enable'] = true;
 
-            if ($module->dk_mmenuKeyboardNavigationEnhance) {
+            if ($config->keyboardNavigationEnhance) {
                 $options['keyboardNavigation']['enhance'] = true;
             }
         }

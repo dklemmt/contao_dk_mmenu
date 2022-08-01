@@ -2,6 +2,12 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file datatype="php" date="2013-07-29T12:38:03+02:00" original="modules" source-language="en">
     <body>
+      <trans-unit id="MOD.mmenu_config.0">
+        <source>mmenu config</source>
+      </trans-unit>
+      <trans-unit id="MOD.mmenu_config.1">
+        <source>Manage mmenu configurations</source>
+      </trans-unit>
       <trans-unit id="MOD.dk_mmenu.0">
         <source>mmenu - Mobile Navigation</source>
       </trans-unit>

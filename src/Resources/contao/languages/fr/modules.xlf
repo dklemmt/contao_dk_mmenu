@@ -1,6 +1,15 @@
-<?xml version="1.0" ?><xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file datatype="php" date="2013-07-29T12:38:03+02:00" original="modules" source-language="en" target-language="en">
+<?xml version="1.0" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="php" date="2013-07-29T12:38:03+02:00" original="modules" source-language="en" target-language="fr">
     <body>
+      <trans-unit id="MOD.mmenu_config.0">
+        <source>mmenu config</source>
+        <target>mmenu configuration</target>
+      </trans-unit>
+      <trans-unit id="MOD.mmenu_config.1">
+        <source>Manage mmenu configurations</source>
+        <target>Gérer les configurations mmenu</target>
+      </trans-unit>
       <trans-unit id="MOD.dk_mmenu.0">
         <source>mmenu - Mobile Navigation</source>
         <target>mmenu - Mobile navigation</target>
@@ -11,7 +20,9 @@
       </trans-unit>
       <trans-unit id="FMD.mmenu.1">
         <source>Generates an alternative navigation menu from the site structure - not only - for mobile Sites.</source>
-        <target>Génère un menu de navigation alternatif à partir de la structure du site pour les sites adaptés aux mobiles (mais pas uniquement).</target>
+        <target>Génère un menu de navigation alternatif à partir de la structure du site pour les sites adaptés aux
+          mobiles (mais pas uniquement).
+        </target>
       </trans-unit>
       <trans-unit id="FMD.mmenuCustom.0">
         <source>mmenu - custom navigation</source>
@@ -19,7 +30,16 @@
       </trans-unit>
       <trans-unit id="FMD.mmenuCustom.1">
         <source>Generates an alternative custom navigation - not only - for mobile Sites.</source>
-        <target>Génère un menu de navigation alternatif pour les sites adaptés aux mobiles (mais pas uniquement).</target>
+        <target>Génère un menu de navigation alternatif pour les sites adaptés aux mobiles (mais pas uniquement).
+        </target>
+      </trans-unit>
+      <trans-unit id="FMD.mmenuHtml.0">
+        <source>mmenu - HTML</source>
+        <target>mmenu - HTML</target>
+      </trans-unit>
+      <trans-unit id="FMD.mmenuHtml.1">
+        <source>Inserts custom HTML into mmenu.</source>
+        <target>Insère du code HTML personnalisé dans mmenu.</target>
       </trans-unit>
     </body>
   </file>
