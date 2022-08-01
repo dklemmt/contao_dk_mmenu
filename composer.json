@@ -33,8 +33,11 @@
     "require": {
         "php": "^7.4 || ^8.0",
         "contao/core-bundle": "^4.9",
+        "doctrine/dbal": "^2.11 || ^3.0",
+        "symfony/dependency-injection": "^4.4 || ^5.4 || ^6.0",
+        "symfony/filesystem": "^4.4 || ^5.4 || ^6.0",
         "symfony/finder": "^4.4 || ^5.4 || ^6.0",
-        "symfony/dependency-injection": "^4.4 || ^5.4 || ^6.0"
+        "symfony/http-kernel": "^4.4 || ^5.4 || ^6.0"
     },
     "require-dev": {
         "contao/manager-plugin": "^2.0"
