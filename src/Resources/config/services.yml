@@ -1,11 +1,10 @@
 services:
-  _defaults:
-    autoconfigure: true
-    public: false
+    _defaults:
+        autowire: true
+        autoconfigure: true
 
-  DirkKlemmt\ContaoMmenuBundle\DataContainer\ModuleCallbacks:
-    public: true
+    DirkKlemmt\ContaoMmenuBundle\EventListener\:
+        resource: '../../EventListener/*'
 
-  DirkKlemmt\ContaoMmenuBundle\EventListener\SqlCompileCommandsListener:
-    public: true
-    arguments: ['@database_connection', '%kernel.project_dir%']
+    DirkKlemmt\ContaoMmenuBundle\Migration\:
+        resource: '../../Migration/*'
