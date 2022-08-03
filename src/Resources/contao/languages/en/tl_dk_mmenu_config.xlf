@@ -73,14 +73,6 @@
           counting the number of items inside.
         </source>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.countersUpdate.0">
-        <source>Update submenu counter</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.countersUpdate.1">
-        <source>Determines whether or not to automatically count the number of items in the submenu, updates when typing
-          in the search field.
-        </source>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.columnsAdd.0">
         <source>Show submenu columns</source>
       </trans-unit>

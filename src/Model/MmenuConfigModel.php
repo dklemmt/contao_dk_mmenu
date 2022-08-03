@@ -27,7 +27,6 @@ use Contao\Model\Collection;
  * @property bool moveBackground
  * @property bool fullscreen
  * @property bool countersAdd
- * @property bool countersUpdate
  * @property bool columnsAdd
  * @property bool searchfieldAdd
  * @property string pageDim

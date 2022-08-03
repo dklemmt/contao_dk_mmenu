@@ -102,18 +102,6 @@
           Anzahl dieser an.
         </target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.countersUpdate.0">
-        <source>Update submenu counter</source>
-        <target>Untermenüzähler aktualisieren</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.countersUpdate.1">
-        <source>Determines whether or not to automatically count the number of items in the submenu, updates when typing
-          in the search field.
-        </source>
-        <target>Bestimmt, ob die Anzahl der Elemente im Untermenü automatisch gezählt werden soll oder nicht, wird beim
-          Tippen im Suchfeld aktualisiert.
-        </target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.columnsAdd.0">
         <source>Show submenu columns</source>
         <target>Spalten für Untermenüs</target>

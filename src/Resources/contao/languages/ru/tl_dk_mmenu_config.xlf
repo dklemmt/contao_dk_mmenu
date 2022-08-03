@@ -99,18 +99,6 @@
           автоматически посчитает количество элементов внутри.
         </target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.countersUpdate.0">
-        <source>Update submenu counter</source>
-        <target>Обновить счетчик подменю</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.countersUpdate.1">
-        <source>Determines whether or not to automatically count the number of items in the submenu, updates when typing
-          in the search field.
-        </source>
-        <target>Определяет, следует ли автоматически подсчитать количество элементов в подменю, обновляется при вводе в
-          поле поиска.
-        </target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.searchfieldAdd.0">
         <source>Show searchfield</source>
         <target>Показать поле поиска</target>

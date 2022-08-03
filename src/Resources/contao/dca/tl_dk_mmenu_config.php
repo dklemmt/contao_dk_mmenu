@@ -148,12 +148,6 @@ $GLOBALS['TL_DCA']['tl_dk_mmenu_config'] = [
             'eval' => ['tl_class' => 'w50'],
             'sql' => ['type' => 'boolean', 'default' => false],
         ],
-        'countersUpdate' => [
-            'exclude' => true,
-            'inputType' => 'checkbox',
-            'eval' => ['tl_class' => 'w50'],
-            'sql' => ['type' => 'boolean', 'default' => false],
-        ],
         'columnsAdd' => [
             'exclude' => true,
             'inputType' => 'checkbox',
