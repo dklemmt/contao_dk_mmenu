@@ -8,6 +8,3 @@ services:
 
     DirkKlemmt\ContaoMmenuBundle\Migration\:
         resource: '../../Migration/*'
-
-    DirkKlemmt\ContaoMmenuBundle\DataContainer\ModuleCallbacks:
-        public: true

@@ -12,7 +12,6 @@ declare(strict_types=1);
  */
 
 use Contao\CoreBundle\DataContainer\PaletteManipulator;
-use DirkKlemmt\ContaoMmenuBundle\DataContainer\ModuleCallbacks;
 
 /*
  * Add fields to tl_module
@@ -187,10 +186,8 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuOnClickClose'] = [
 ];
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuJsTpl'] = [
-    'label' => &$GLOBALS['TL_LANG']['tl_module']['dk_mmenuJsTpl'],
     'exclude' => true,
     'inputType' => 'select',
-    'options_callback' => [ModuleCallbacks::class, 'onMmenuJsTplOptionsCallback'],
     'eval' => ['maxlength' => 255, 'tl_class' => 'w50'],
     'sql' => "varchar(255) NOT NULL default ''",
 ];
@@ -237,11 +234,6 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['dk_mmenuKeyboardNavigationEnhance'] =
     'eval' => ['tl_class' => 'w50'],
     'sql' => "char(1) NOT NULL default ''",
 ];
-
-/*
- * Set navigationTpl to nav_mmenu
- */
-$GLOBALS['TL_DCA']['tl_module']['fields']['navigationTpl']['load_callback'][] = [ModuleCallbacks::class, 'onNavigationTplLoadCallback'];
 
 /*
  * Add palettes to tl_module.
