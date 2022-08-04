@@ -14,17 +14,21 @@ declare(strict_types=1);
 namespace DirkKlemmt\ContaoMmenuBundle\EventListener\DataContainer;
 
 use Contao\Controller;
-use Contao\CoreBundle\Framework\FrameworkAwareInterface;
-use Contao\CoreBundle\Framework\FrameworkAwareTrait;
+use Contao\CoreBundle\Framework\ContaoFramework;
 use Contao\CoreBundle\ServiceAnnotation\Callback;
 use Contao\DataContainer;
 
 /**
  * @Callback(table="tl_module", target="fields.dk_mmenuJsTpl.options")
  */
-class JsTemplateOptions implements FrameworkAwareInterface
+class JsTemplateOptions
 {
-    use FrameworkAwareTrait;
+    private ContaoFramework $framework;
+
+    public function __construct(ContaoFramework $framework)
+    {
+        $this->framework = $framework;
+    }
 
     public function __invoke(?DataContainer $dc): array
     {

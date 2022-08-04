@@ -13,8 +13,7 @@ declare(strict_types=1);
 
 namespace DirkKlemmt\ContaoMmenuBundle\EventListener\DataContainer;
 
-use Contao\CoreBundle\Framework\FrameworkAwareInterface;
-use Contao\CoreBundle\Framework\FrameworkAwareTrait;
+use Contao\CoreBundle\Framework\ContaoFramework;
 use Contao\CoreBundle\ServiceAnnotation\Callback;
 use Contao\DataContainer;
 use DirkKlemmt\ContaoMmenuBundle\Model\MmenuConfigModel;
@@ -22,9 +21,14 @@ use DirkKlemmt\ContaoMmenuBundle\Model\MmenuConfigModel;
 /**
  * @Callback(table="tl_module", target="fields.dk_mmenuConfig.options")
  */
-class MmenuConfigOptions implements FrameworkAwareInterface
+class MmenuConfigOptions
 {
-    use FrameworkAwareTrait;
+    private ContaoFramework $framework;
+
+    public function __construct(ContaoFramework $framework)
+    {
+        $this->framework = $framework;
+    }
 
     public function __invoke(?DataContainer $dc): array
     {

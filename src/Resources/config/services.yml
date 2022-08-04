@@ -3,11 +3,6 @@ services:
         autowire: true
         autoconfigure: true
 
-    _instanceof:
-        Contao\CoreBundle\Framework\FrameworkAwareInterface:
-            calls:
-                - [ 'setFramework', [ '@contao.framework' ] ]
-
     DirkKlemmt\ContaoMmenuBundle\EventListener\:
         resource: '../../EventListener/*'
 
