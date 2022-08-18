@@ -13,15 +13,15 @@ declare(strict_types=1);
 
 namespace DirkKlemmt\ContaoMmenuBundle\EventListener\DataContainer;
 
-use Contao\Controller;
 use Contao\CoreBundle\Framework\ContaoFramework;
 use Contao\CoreBundle\ServiceAnnotation\Callback;
 use Contao\DataContainer;
+use DirkKlemmt\ContaoMmenuBundle\Model\MmenuConfigModel;
 
 /**
- * @Callback(table="tl_module", target="fields.dk_mmenuJsTpl.options")
+ * @Callback(table="tl_module", target="fields.dk_mmenuConfig.options")
  */
-class JsTemplateOptions
+class MmenuConfigOptions
 {
     private ContaoFramework $framework;
 
@@ -32,8 +32,19 @@ class JsTemplateOptions
 
     public function __invoke(?DataContainer $dc): array
     {
-        $controller = $this->framework->getAdapter(Controller::class);
+        $configModel = $this->framework->getAdapter(MmenuConfigModel::class);
+        $configs = $configModel->findAll();
 
-        return $controller->getTemplateGroup('mmenu_');
+        if (null === $configs) {
+            return [];
+        }
+
+        $options = [];
+
+        foreach ($configs as $config) {
+            $options[$config->id] = $config->title;
+        }
+
+        return $options;
     }
 }

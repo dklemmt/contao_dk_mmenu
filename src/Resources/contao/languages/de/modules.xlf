@@ -1,6 +1,15 @@
-<?xml version="1.0" ?><xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file datatype="php" date="2013-07-29T12:38:03+02:00" original="modules" source-language="en" target-language="en">
+<?xml version="1.0" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="php" date="2013-07-29T12:38:03+02:00" original="modules" source-language="en" target-language="de">
     <body>
+      <trans-unit id="MOD.mmenu_config.0">
+        <source>mmenu config</source>
+        <target>mmenu-Konfiguration</target>
+      </trans-unit>
+      <trans-unit id="MOD.mmenu_config.1">
+        <source>Manage mmenu configurations</source>
+        <target>mmenu-Konfigurationen verwalten</target>
+      </trans-unit>
       <trans-unit id="MOD.dk_mmenu.0">
         <source>mmenu - Mobile Navigation</source>
         <target>mmenu - Mobile Navigation</target>
@@ -11,7 +20,8 @@
       </trans-unit>
       <trans-unit id="FMD.mmenu.1">
         <source>Generates an alternative navigation menu from the site structure - not only - for mobile Sites.</source>
-        <target>Erzeugt ein alternatives Navigationsmenü aus der Seitenstruktur - nicht nur - für mobile Webseiten.</target>
+        <target>Erzeugt ein alternatives Navigationsmenü aus der Seitenstruktur - nicht nur - für mobile Webseiten.
+        </target>
       </trans-unit>
       <trans-unit id="FMD.mmenuCustom.0">
         <source>mmenu - custom navigation</source>
@@ -20,6 +30,14 @@
       <trans-unit id="FMD.mmenuCustom.1">
         <source>Generates an alternative custom navigation - not only - for mobile Sites.</source>
         <target>Erzeugt eine alternative Individuelle Navigation - nicht nur - für mobile Webseiten.</target>
+      </trans-unit>
+      <trans-unit id="FMD.mmenuHtml.0">
+        <source>mmenu - HTML</source>
+        <target>mmenu - HTML</target>
+      </trans-unit>
+      <trans-unit id="FMD.mmenuHtml.1">
+        <source>Inserts custom HTML into mmenu.</source>
+        <target>Fügt individuelles HTML in mmenu ein.</target>
       </trans-unit>
     </body>
   </file>

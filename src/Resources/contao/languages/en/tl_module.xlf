@@ -1,26 +1,21 @@
 <?xml version="1.0" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file datatype="php" date="2014-01-03T20:50:50+01:00" original="tl_module" source-language="en" target-language="de">
+  <file datatype="php" date="2014-01-03T20:50:50+01:00" original="tl_module" source-language="en">
     <body>
       <trans-unit id="tl_module.mmenu_legend">
         <source>mmenu settings</source>
-        <target>mmenu-Einstellungen</target>
       </trans-unit>
       <trans-unit id="tl_module.dk_mmenuConfig.0">
         <source>mmenu config</source>
-        <target>mmenu-Konfiguration</target>
       </trans-unit>
       <trans-unit id="tl_module.dk_mmenuConfig.1">
         <source>Choose the mmenu config.</source>
-        <target>Hier können Sie die mmenu-Konfiguration auswählen.</target>
       </trans-unit>
       <trans-unit id="tl_module.dk_mmenuJsTpl.0">
         <source>JavaScript template</source>
-        <target>JavaScript-Template</target>
       </trans-unit>
       <trans-unit id="tl_module.dk_mmenuJsTpl.1">
         <source>Choose the JavaScript template.</source>
-        <target>Hier können Sie das JavaScript-Template auswählen.</target>
       </trans-unit>
     </body>
   </file>
