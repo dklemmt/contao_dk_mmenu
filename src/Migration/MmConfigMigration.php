@@ -99,24 +99,24 @@ final class MmConfigMigration extends AbstractMigration
                     $config['slidingSubmenus'] = $module['dk_mmenuSlidingSubmenus'];
                     $config['theme'] = $module['dk_mmenuTheme'];
                     $config['moveBackground'] = (int) $module['dk_mmenuMoveBackground'];
-                    $config['pageDim'] = $module['dk_mmenuPageDim'];
+                    $config['pageDim'] = ($module['dk_mmenuPageDim'] ?? '');
                     $config['fullscreen'] = (int) $module['dk_mmenuFullscreen'];
                     $config['countersAdd'] = (int) $module['dk_mmenuCountersAdd'];
-                    $config['columnsAdd'] = (int) $module['dk_mmenuColumnsAdd'];
+                    $config['columnsAdd'] = (int) ($module['dk_mmenuColumnsAdd'] ?? 0);
                     $config['searchfieldAdd'] = (int) $module['dk_mmenuSearchfieldAdd'];
-                    $config['iconPanels'] = (int) $module['dk_mmenuIconPanels'];
-                    $config['menuEffects'] = $module['dk_mmenuMenuEffects'];
-                    $config['panelEffects'] = $module['dk_mmenuPanelEffects'];
-                    $config['listEffects'] = $module['dk_mmenuListEffects'];
-                    $config['shadows'] = (int) $module['dk_mmenuShadows'];
+                    $config['iconPanels'] = (int) ($module['dk_mmenuIconPanels'] ?? 0);
+                    $config['menuEffects'] = ($module['dk_mmenuMenuEffects'] ?? '');
+                    $config['panelEffects'] = ($module['dk_mmenuPanelEffects'] ?? '');
+                    $config['listEffects'] = ($module['dk_mmenuListEffects'] ?? '');
+                    $config['shadows'] = (int) ($module['dk_mmenuShadows'] ?? 0);
                     $config['onClickClose'] = (int) $module['dk_mmenuOnClickClose'];
-                    $config['pageSelector'] = $module['dk_mmenuPageSelector'];
-                    $config['dragOpenEnable'] = (int) $module['dk_mmenuDragOpenEnable'];
-                    $config['dragOpenMaxStartPos'] = (int) $module['dk_mmenuDragOpenMaxStartPos'];
+                    $config['pageSelector'] = ($module['dk_mmenuPageSelector'] ?? '');
+                    $config['dragOpenEnable'] = (int) ($module['dk_mmenuDragOpenEnable'] ?? 0);
+                    $config['dragOpenMaxStartPos'] = (int) ($module['dk_mmenuDragOpenMaxStartPos'] ?? 0);
                     $config['dragOpenThreshold'] = (int) $module['dk_mmenuDragOpenThreshold'];
-                    $config['polyfillEnable'] = (int) $module['dk_mmenuPolyfillEnable'];
-                    $config['keyboardNavigation'] = (int) $module['dk_mmenuKeyboardNavigation'];
-                    $config['keyboardNavigationEnhance'] = (int) $module['dk_mmenuKeyboardNavigationEnhance'];
+                    $config['polyfillEnable'] = (int) ($module['dk_mmenuPolyfillEnable'] ?? 0);
+                    $config['keyboardNavigation'] = (int) ($module['dk_mmenuKeyboardNavigation'] ?? 0);
+                    $config['keyboardNavigationEnhance'] = (int) ($module['dk_mmenuKeyboardNavigationEnhance'] ?? 0);
 
                     $stmt = $this->connection->prepare(
                         'INSERT INTO tl_dk_mmenu_config (
