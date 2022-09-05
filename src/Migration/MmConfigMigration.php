@@ -28,7 +28,10 @@ final class MmConfigMigration extends AbstractMigration
 
     public function shouldRun(): bool
     {
-        $schemaManager = $this->connection->getSchemaManager();
+        $schemaManager = method_exists($this->connection, 'createSchemaManager') ?
+            $this->connection->createSchemaManager() :
+            $this->connection->getSchemaManager()
+        ;
 
         if ($schemaManager->tablesExist(['tl_dk_mmenu_config'])) {
             return false;
@@ -85,7 +88,10 @@ final class MmConfigMigration extends AbstractMigration
             'ALTER TABLE tl_module ADD dk_mmenuConfig INT UNSIGNED DEFAULT 0 NOT NULL'
         );
 
-        $schemaManager = $this->connection->getSchemaManager();
+        $schemaManager = method_exists($this->connection, 'createSchemaManager') ?
+            $this->connection->createSchemaManager() :
+            $this->connection->getSchemaManager()
+        ;
 
         if ($schemaManager->tablesExist(['tl_dk_mmenu_config', 'tl_module'])) {
             $result = $this->connection->executeQuery("SELECT * FROM `tl_module` WHERE `type` LIKE 'mmenu%'")->fetchAllAssociative();

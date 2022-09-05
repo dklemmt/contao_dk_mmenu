@@ -28,7 +28,10 @@ final class JsTemplateModuleMigration extends AbstractMigration
 
     public function shouldRun(): bool
     {
-        $schemaManager = $this->connection->getSchemaManager();
+        $schemaManager = method_exists($this->connection, 'createSchemaManager') ?
+            $this->connection->createSchemaManager() :
+            $this->connection->getSchemaManager()
+        ;
 
         if (!$schemaManager->tablesExist(['tl_module'])) {
             return false;
@@ -47,7 +50,10 @@ final class JsTemplateModuleMigration extends AbstractMigration
 
     public function run(): MigrationResult
     {
-        $schemaManager = $this->connection->getSchemaManager();
+        $schemaManager = method_exists($this->connection, 'createSchemaManager') ?
+            $this->connection->createSchemaManager() :
+            $this->connection->getSchemaManager()
+        ;
 
         if ($schemaManager->tablesExist(['tl_module'])) {
             $this->connection->executeStatement(
