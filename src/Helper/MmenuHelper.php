@@ -72,10 +72,6 @@ class MmenuHelper
             $options['slidingSubmenus'] = false;
         }
 
-        if ($config->onClickClose) {
-            $options['onClick']['close'] = true;
-        }
-
         // https://mmenujs.com/docs/core/theme.html
         if (\in_array($config->theme, ['light', 'dark', 'white', 'black'], true)) {
             $options['theme'] = $config->theme;

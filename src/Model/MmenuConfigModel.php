@@ -27,7 +27,6 @@ use Contao\Model\Collection;
  * @property bool themeHighContrast
  * @property bool countersAdd
  * @property bool searchfieldAdd
- * @property bool onClickClose
  * @property string pageSelector
  * @property bool iconPanels
  *

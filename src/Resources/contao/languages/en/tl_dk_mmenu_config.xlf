@@ -61,12 +61,6 @@
       <trans-unit id="tl_dk_mmenu_config.searchfieldAdd.1">
         <source>Determines whether to automatically prepend a searchfield to the menu.</source>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.onClickClose.0">
-        <source>Menu closes after click</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.onClickClose.1">
-        <source>Determines whether the menu should close after clicking a link inside it.</source>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.position.left">
         <source>left</source>
       </trans-unit>

@@ -82,14 +82,6 @@
         <source>Determines whether to automatically prepend a searchfield to the menu.</source>
         <target>Определяет, следует ли автоматически вставлять поле поиска в меню.</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.onClickClose.0">
-        <source>Menu closes after click</source>
-        <target>Закрывать меню после нажатия</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.onClickClose.1">
-        <source>Determines whether or not the menu should close after clicking a link inside it.</source>
-        <target>Определяет, следует ли закрывать меню после нажатия на ссылку внутри него.</target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.position.left">
         <source>left</source>
         <target>слева</target>
