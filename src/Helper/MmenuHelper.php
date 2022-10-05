@@ -107,10 +107,6 @@ class MmenuHelper
             }
         }
 
-        if ($config->polyfillEnable) {
-            $options['polyfill'] = true;
-        }
-
         // https://mmenujs.com/documentation/addons/icon-panels.html
         if ($config->iconPanels) {
             $options['iconPanels'] = true;

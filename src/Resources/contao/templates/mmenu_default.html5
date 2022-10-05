@@ -1,11 +1,6 @@
 <?php
 
 $GLOBALS['TL_CSS']['contao_dk_mmenu'] = 'bundles/contaommenu/mmenu/mmenu.css|static';
-
-if ($this->options['polyfill'] ?? false) {
-    $GLOBALS['TL_JAVASCRIPT']['contao_dk_mmenu.polyfill'] = 'bundles/contaommenu/mmenu/mmenu.polyfills.js|static';
-}
-
 $GLOBALS['TL_JAVASCRIPT']['contao_dk_mmenu'] = 'bundles/contaommenu/mmenu/mmenu.js|static';
 
 ?>

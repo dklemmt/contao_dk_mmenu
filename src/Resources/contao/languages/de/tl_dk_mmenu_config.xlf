@@ -91,14 +91,6 @@
         <source>Determines whether or not to automatically prepend a searchfield to the menu.</source>
         <target>Bestimmt, ob ein Suchfeld oberhalb der Navigation angezeigt wird.</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.polyfillEnable.0">
-        <source>Add JavaScript Polyfill</source>
-        <target>JavaScript Polyfill hinzufügen</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.polyfillEnable.1">
-        <source>Determines whether or not the IE10 and IE11 JavaScript Polyfill should be available.</source>
-        <target>Bestimmt, ob das JavaScript Polyfill für IE10 und IE11 zur Verfügung gestellt wird.</target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.onClickClose.0">
         <source>Menu closes after click</source>
         <target>Menü nach Klick schließen</target>
