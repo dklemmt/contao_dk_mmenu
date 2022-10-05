@@ -112,7 +112,7 @@
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.slidingSubmenus.vertical">
         <source>vertical</source>
-        <target>вертикальный</target>
+        <target>вертикальное</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.pageSelector.0">
         <source>Wrapper selector</source>
