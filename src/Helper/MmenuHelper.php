@@ -115,15 +115,6 @@ class MmenuHelper
             ];
         }
 
-        // https://mmenujs.com/docs/addons/keyboard-navigation.html
-        if ($config->keyboardNavigation) {
-            $options['keyboardNavigation']['enable'] = true;
-
-            if ($config->keyboardNavigationEnhance) {
-                $options['keyboardNavigation']['enhance'] = true;
-            }
-        }
-
         // Add options and configuration to JavaScript template
         $jsTemplate->options = $options;
         $jsTemplate->configuration = $configuration;

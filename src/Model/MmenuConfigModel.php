@@ -30,8 +30,6 @@ use Contao\Model\Collection;
  * @property bool onClickClose
  * @property string pageSelector
  * @property bool iconPanels
- * @property bool keyboardNavigation
- * @property bool keyboardNavigationEnhance
  *
  * @method static MmenuConfigModel|null findById($id, array $opt=[])
  * @method static MmenuConfigModel|null findByPk($id, array $opt=[])

@@ -18,10 +18,6 @@
         <source>Template settings</source>
         <target>Настройки шаблона</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboard_navigation_legend">
-        <source>mmenu keyboard navigation</source>
-        <target>mmenu навигация клавиатурой</target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.title.0">
         <source>Title of the config</source>
         <target>Название конфига</target>
@@ -121,26 +117,6 @@
       <trans-unit id="tl_dk_mmenu_config.slidingSubmenus.horizontal">
         <source>horizontal</source>
         <target>горизонтальное</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.slidingSubmenus.vertical">
-        <source>vertical</source>
-        <target>вертикальное</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboardNavigation.0">
-        <source>Keyboard navigation</source>
-        <target>Клавиатурная навигация</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboardNavigation.1">
-        <source>Enable navigating the menu with keyboard.</source>
-        <target>Включите навигацию по меню с помощью клавиатуры.</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboardNavigationEnhance.0">
-        <source>Enhance keyboard navigation</source>
-        <target>Улучшенная навигация клавиатурой</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboardNavigationEnhance.1">
-        <source>Enhance basic default keyboard navigation.</source>
-        <target>Улучшение основной навигации клавиатурой.</target>
       </trans-unit>
     </body>
   </file>

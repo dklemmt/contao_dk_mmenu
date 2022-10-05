@@ -14,9 +14,6 @@
       <trans-unit id="tl_dk_mmenu_config.template_legend">
         <source>Template settings</source>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboard_navigation_legend">
-        <source>mmenu keyboard navigation</source>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.title.0">
         <source>Title of the config</source>
       </trans-unit>
@@ -113,18 +110,6 @@
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.iconPanels.1">
         <source>When enabled, this will show a small part of the parent panel, when opening a sub-panel.</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboardNavigation.0">
-        <source>Keyboard navigation</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboardNavigation.1">
-        <source>Enable navigating the menu with keyboard.</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboardNavigationEnhance.0">
-        <source>Enhance keyboard navigation</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboardNavigationEnhance.1">
-        <source>Enhance basic default keyboard navigation.</source>
       </trans-unit>
     </body>
   </file>

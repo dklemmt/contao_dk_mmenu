@@ -19,10 +19,6 @@
         <source>Template settings</source>
         <target>Paramètres des modèles</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboard_navigation_legend">
-        <source>mmenu keyboard navigation</source>
-        <target>navigation au mmenu du clavier</target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.title.0">
         <source>Title of the config</source>
         <target>Titre de configuration</target>
@@ -138,22 +134,6 @@
       <trans-unit id="tl_dk_mmenu_config.slidingSubmenus.vertical">
         <source>vertical</source>
         <target>vertical</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboardNavigation.0">
-        <source>Keyboard navigation</source>
-        <target>Navigation au clavier</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboardNavigation.1">
-        <source>Enable navigating the menu with keyboard.</source>
-        <target>Activer la navigation dans le menu avec le clavier.</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboardNavigationEnhance.0">
-        <source>Enhance keyboard navigation</source>
-        <target>Améliorer la navigation au clavier</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboardNavigationEnhance.1">
-        <source>Enhance basic default keyboard navigation.</source>
-        <target>Améliorer la navigation de base par défaut au clavier.</target>
       </trans-unit>
     </body>
   </file>
