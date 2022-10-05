@@ -70,15 +70,6 @@
         <source>High contrast theme</source>
         <target>тема с высокой контрастностью</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.moveBackground.0">
-        <source>Move background</source>
-        <target>Переместить фон</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.moveBackground.1">
-        <source>Determines whether or not the page should inherit the background of the body when the menu opens.
-        </source>
-        <target>Определяет, должна ли страница наследовать фон тела, когда открывается меню.</target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.countersAdd.0">
         <source>Show submenu counter</source>
         <target>Показать счетчик подменю</target>
