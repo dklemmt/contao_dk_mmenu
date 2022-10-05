@@ -100,6 +100,7 @@ final class MmConfigMigration extends AbstractMigration
                 foreach ($result as $module) {
                     $config = [];
                     $config['title'] = $module['name'];
+                    $config['tstamp'] = time();
                     $config['position'] = $module['dk_mmenuPosition'];
                     $config['zposition'] = $module['dk_mmenuZposition'];
                     $config['slidingSubmenus'] = $module['dk_mmenuSlidingSubmenus'];
@@ -127,6 +128,7 @@ final class MmConfigMigration extends AbstractMigration
                     $stmt = $this->connection->prepare(
                         'INSERT INTO tl_dk_mmenu_config (
                                 `title`,
+                                `tstamp`,
                                 `position`,
                                 `zposition`,
                                 `slidingSubmenus`,
@@ -152,6 +154,7 @@ final class MmConfigMigration extends AbstractMigration
                                 `keyboardNavigationEnhance`
                             ) VALUES (
                                 :title,
+                                :tstamp,
                                 :position,
                                 :zposition,
                                 :slidingSubmenus,
