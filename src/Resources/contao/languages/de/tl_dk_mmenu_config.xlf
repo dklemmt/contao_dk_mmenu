@@ -83,14 +83,6 @@
           Anzahl dieser an.
         </target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.columnsAdd.0">
-        <source>Show submenu columns</source>
-        <target>Spalten für Untermenüs</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.columnsAdd.1">
-        <source>Determines whether the panels should be split up into multiple columns.</source>
-        <target>Bestimmt, ob ein die Untermenüs in mehreren Spalten dargestellt werden soll.</target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.searchfieldAdd.0">
         <source>Show searchfield</source>
         <target>Suchfeld anzeigen</target>

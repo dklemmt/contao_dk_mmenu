@@ -83,14 +83,6 @@
           compter automatiquement le nombre d'éléments à l'intérieur.
         </target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.columnsAdd.0">
-        <source>Show submenu columns</source>
-        <target>Colonnes pour les sous-menus</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.columnsAdd.1">
-        <source>Determines whether the panels should be split up into multiple columns.</source>
-        <target>Détermine si un sous-menu doit être affiché dans plusieurs colonnes.</target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.searchfieldAdd.0">
         <source>Show searchfield</source>
         <target>Afficher le champ de recherche</target>

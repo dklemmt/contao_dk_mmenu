@@ -90,11 +90,6 @@ class MmenuHelper
             $options['counters']['add'] = true;
         }
 
-        // https://mmenujs.com/documentation/addons/columns.html
-        if ($config->columnsAdd) {
-            $options['columns'] = true;
-        }
-
         // https://mmenujs.com/documentation/addons/searchfield.html
         if ($config->searchfieldAdd) {
             $options['navbars'] = [

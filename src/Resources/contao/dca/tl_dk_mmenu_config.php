@@ -69,7 +69,7 @@ $GLOBALS['TL_DCA']['tl_dk_mmenu_config'] = [
     'palettes' => [
         '__selector__' => ['dragOpenEnable', 'keyboardNavigation'],
         'default' => '{title_legend},title;
-            {appearance_legend},position,zposition,slidingSubmenus,theme,themeHighContrast,countersAdd,columnsAdd,searchfieldAdd,iconPanels;
+            {appearance_legend},position,zposition,slidingSubmenus,theme,themeHighContrast,countersAdd,searchfieldAdd,iconPanels;
             {effects_legend},menuEffects,panelEffects,listEffects,shadows;
             {behaviour_legend},onClickClose,pageSelector,dragOpenEnable,polyfillEnable;
             {keyboard_navigation_legend},keyboardNavigation',
@@ -137,12 +137,6 @@ $GLOBALS['TL_DCA']['tl_dk_mmenu_config'] = [
             'sql' => ['type' => 'boolean', 'default' => false],
         ],
         'countersAdd' => [
-            'exclude' => true,
-            'inputType' => 'checkbox',
-            'eval' => ['tl_class' => 'w50'],
-            'sql' => ['type' => 'boolean', 'default' => false],
-        ],
-        'columnsAdd' => [
             'exclude' => true,
             'inputType' => 'checkbox',
             'eval' => ['tl_class' => 'w50'],

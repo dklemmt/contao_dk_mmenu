@@ -61,12 +61,6 @@
           counting the number of items inside.
         </source>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.columnsAdd.0">
-        <source>Show submenu columns</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.columnsAdd.1">
-        <source>Determines whether the panels should be split up into multiple columns.</source>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.searchfieldAdd.0">
         <source>Show searchfield</source>
       </trans-unit>
