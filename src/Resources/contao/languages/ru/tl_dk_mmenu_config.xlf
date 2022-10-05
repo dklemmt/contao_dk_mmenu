@@ -62,9 +62,13 @@
         <source>Theme of menu</source>
         <target>Тема меню</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.Theme.1">
+      <trans-unit id="tl_dk_mmenu_config.theme.1">
         <source>Choose a theme for the menu.</source>
         <target>Выберите тему меню.</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.themeHighContrast.0">
+        <source>High contrast theme</source>
+        <target>тема с высокой контрастностью</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.moveBackground.0">
         <source>Move background</source>

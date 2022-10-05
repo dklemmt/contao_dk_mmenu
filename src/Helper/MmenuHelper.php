@@ -81,9 +81,13 @@ class MmenuHelper
             $options['offCanvas']['moveBackground'] = false;
         }
 
-        // https://mmenujs.com/documentation/extensions/themes.html
-        if ('light' !== $config->theme) {
-            $options['extensions'][] = 'theme-'.$config->theme;
+        // https://mmenujs.com/docs/core/theme.html
+        if (\in_array($config->theme, ['light', 'dark', 'white', 'black'], true)) {
+            $options['theme'] = $config->theme;
+
+            if ($config->themeHighContrast) {
+                $options['theme'] = $config->theme.'-contrast';
+            }
         }
 
         // https://mmenujs.com/documentation/extensions/fullscreen.html

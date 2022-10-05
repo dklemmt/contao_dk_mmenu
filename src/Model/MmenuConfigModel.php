@@ -24,6 +24,7 @@ use Contao\Model\Collection;
  * @property string zposition
  * @property string slidingSubmenus
  * @property string theme
+ * @property bool themeHighContrast
  * @property bool moveBackground
  * @property bool fullscreen
  * @property bool countersAdd
