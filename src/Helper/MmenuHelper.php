@@ -72,7 +72,7 @@ class MmenuHelper
             $options['extensions'][] = 'pagedim-'.$config->pageDim;
         }
 
-        // https://mmenujs.com/documentation/core/options.html
+        // https://mmenujs.com/docs/core/options.html
         if ('vertical' === $config->slidingSubmenus) {
             $options['slidingSubmenus'] = false;
         }
