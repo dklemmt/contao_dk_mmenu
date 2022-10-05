@@ -14,10 +14,6 @@
         <source>mmenu behaviour</source>
         <target>mmenu поведение</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.effects_legend">
-        <source>mmenu effects</source>
-        <target>mmenu эффекты</target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.template_legend">
         <source>Template settings</source>
         <target>Настройки шаблона</target>

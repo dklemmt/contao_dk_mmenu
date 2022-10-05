@@ -70,7 +70,6 @@ $GLOBALS['TL_DCA']['tl_dk_mmenu_config'] = [
         '__selector__' => ['keyboardNavigation'],
         'default' => '{title_legend},title;
             {appearance_legend},position,zposition,slidingSubmenus,theme,themeHighContrast,countersAdd,searchfieldAdd,iconPanels;
-            {effects_legend},shadows;
             {behaviour_legend},onClickClose,pageSelector;
             {keyboard_navigation_legend},keyboardNavigation',
     ],
@@ -165,13 +164,6 @@ $GLOBALS['TL_DCA']['tl_dk_mmenu_config'] = [
             'inputType' => 'checkbox',
             'eval' => ['tl_class' => 'w50'],
             'sql' => ['type' => 'boolean', 'default' => false],
-        ],
-        'shadows' => [
-            'exclude' => true,
-            'inputType' => 'checkbox',
-            'options' => ['menu', 'page', 'panels'],
-            'eval' => ['tl_class' => 'clr', 'multiple' => true],
-            'sql' => ['type' => 'blob', 'length' => '65535', 'notnull' => false],
         ],
         'keyboardNavigation' => [
             'exclude' => true,

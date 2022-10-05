@@ -112,15 +112,6 @@ class MmenuHelper
             $options['iconPanels'] = true;
         }
 
-        // https://mmenujs.com/documentation/extensions/shadows.html
-        if ($config->shadows) {
-            $shadows = array_filter(StringUtil::deserialize($config->shadows, true));
-
-            foreach ($shadows as $shadow) {
-                $options['extensions'][] = 'shadow-'.$shadow;
-            }
-        }
-
         // https://mmenujs.com/docs/addons/keyboard-navigation.html
         if ($config->keyboardNavigation) {
             $options['keyboardNavigation']['enable'] = true;

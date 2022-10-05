@@ -15,10 +15,6 @@
         <source>mmenu behaviour</source>
         <target>mmenu-Verhalten</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.effects_legend">
-        <source>mmenu effects</source>
-        <target>mmenu-Effekte</target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.template_legend">
         <source>Template settings</source>
         <target>Template-Einstellungen</target>
@@ -159,26 +155,6 @@
         <source>When enabled, this will show a small part of the parent panel, when opening a sub-panel.</source>
         <target>Zeigt einen kleinen Teil der übergenordneten Panele an, wenn man sich in einem Unterpanel befindet.
         </target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.shadows.0">
-        <source>Shadows</source>
-        <target>Schatten</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.shadows.1">
-        <source>You can choose which elements get a shadow.</source>
-        <target>Fügt einen Schatten zu den ausgewählten Elementen hinzu.</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.shadowsOptions.menu">
-        <source>Menu</source>
-        <target>Menü</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.shadowsOptions.page">
-        <source>Page</source>
-        <target>Seite</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.shadowsOptions.panels">
-        <source>Panels</source>
-        <target>Panele</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.keyboardNavigation.0">
         <source>Keyboard navigation</source>

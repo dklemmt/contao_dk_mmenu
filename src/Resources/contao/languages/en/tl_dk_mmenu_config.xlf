@@ -11,9 +11,6 @@
       <trans-unit id="tl_dk_mmenu_config.behaviour_legend">
         <source>mmenu behaviour</source>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.effects_legend">
-        <source>mmenu effects</source>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.template_legend">
         <source>Template settings</source>
       </trans-unit>
@@ -116,21 +113,6 @@
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.iconPanels.1">
         <source>When enabled, this will show a small part of the parent panel, when opening a sub-panel.</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.shadows.0">
-        <source>Shadows</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.shadows.1">
-        <source>You can choose which elements get a shadow.</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.shadowsOptions.menu">
-        <source>Menu</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.shadowsOptions.page">
-        <source>Page</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.shadowsOptions.panels">
-        <source>Panels</source>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.keyboardNavigation.0">
         <source>Keyboard navigation</source>
