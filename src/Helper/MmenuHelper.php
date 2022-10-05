@@ -107,19 +107,6 @@ class MmenuHelper
             }
         }
 
-        // https://mmenujs.com/documentation/addons/drag.html
-        if ($config->dragOpenEnable) {
-            $options['drag']['menu']['open'] = true;
-
-            if ($config->dragOpenMaxStartPos && 100 !== (int) $config->dragOpenMaxStartPos) {
-                $options['drag']['menu']['maxStartPos'] = (int) $config->dragOpenMaxStartPos;
-            }
-
-            if ($config->dragOpenThreshold && 50 !== (int) $config->dragOpenThreshold) {
-                $options['drag']['menu']['threshold'] = (int) $config->dragOpenThreshold;
-            }
-        }
-
         if ($config->polyfillEnable) {
             $options['polyfill'] = true;
         }

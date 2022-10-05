@@ -8,10 +8,6 @@ if ($this->options['polyfill'] ?? false) {
 
 $GLOBALS['TL_JAVASCRIPT']['contao_dk_mmenu'] = 'bundles/contaommenu/mmenu/mmenu.js|static';
 
-if ($this->options['drag']['menu']['open'] ?? false) {
-    $GLOBALS['TL_JAVASCRIPT']['contao_dk_mmenu.hammerjs'] = 'bundles/contaommenu/hammerjs/hammer.min.js|static';
-}
-
 ?>
 <script>
     document.addEventListener(

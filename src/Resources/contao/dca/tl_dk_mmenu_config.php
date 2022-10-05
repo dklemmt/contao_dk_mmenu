@@ -67,16 +67,15 @@ $GLOBALS['TL_DCA']['tl_dk_mmenu_config'] = [
     ],
 
     'palettes' => [
-        '__selector__' => ['dragOpenEnable', 'keyboardNavigation'],
+        '__selector__' => ['keyboardNavigation'],
         'default' => '{title_legend},title;
             {appearance_legend},position,zposition,slidingSubmenus,theme,themeHighContrast,countersAdd,searchfieldAdd,iconPanels;
             {effects_legend},shadows;
-            {behaviour_legend},onClickClose,pageSelector,dragOpenEnable,polyfillEnable;
+            {behaviour_legend},onClickClose,pageSelector,polyfillEnable;
             {keyboard_navigation_legend},keyboardNavigation',
     ],
 
     'subpalettes' => [
-        'dragOpenEnable' => 'dragOpenMaxStartPos,dragOpenThreshold',
         'keyboardNavigation' => 'keyboardNavigationEnhance',
     ],
 
@@ -147,24 +146,6 @@ $GLOBALS['TL_DCA']['tl_dk_mmenu_config'] = [
             'inputType' => 'checkbox',
             'eval' => ['tl_class' => 'w50'],
             'sql' => ['type' => 'boolean', 'default' => false],
-        ],
-        'dragOpenEnable' => [
-            'exclude' => true,
-            'inputType' => 'checkbox',
-            'eval' => ['submitOnChange' => true, 'tl_class' => 'clr'],
-            'sql' => ['type' => 'boolean', 'default' => false],
-        ],
-        'dragOpenThreshold' => [
-            'exclude' => true,
-            'inputType' => 'text',
-            'eval' => ['maxlength' => 3, 'rgxp' => 'digit', 'tl_class' => 'w50'],
-            'sql' => ['type' => 'smallint', 'default' => 50],
-        ],
-        'dragOpenMaxStartPos' => [
-            'exclude' => true,
-            'inputType' => 'text',
-            'eval' => ['maxlength' => 3, 'rgxp' => 'digit', 'tl_class' => 'w50'],
-            'sql' => ['type' => 'smallint', 'default' => 100],
         ],
         'polyfillEnable' => [
             'exclude' => true,

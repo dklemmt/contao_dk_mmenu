@@ -67,20 +67,6 @@
       <trans-unit id="tl_dk_mmenu_config.searchfieldAdd.1">
         <source>Determines whether or not to automatically prepend a searchfield to the menu.</source>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.dragOpenEnable.0">
-        <source>Drag page to open menu</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.dragOpenEnable.1">
-        <source>Determines whether or not the menu should open when dragging the page.</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.dragOpenThreshold.0">
-        <source>Amount of pixels to drag</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.dragOpenThreshold.1">
-        <source>Determines the minimum amount of pixels to drag before actually opening the menu, less than 50 is not
-          advised.
-        </source>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.polyfillEnable.0">
         <source>Add JavaScript Polyfill</source>
       </trans-unit>

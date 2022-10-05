@@ -91,26 +91,6 @@
         <source>Determines whether or not to automatically prepend a searchfield to the menu.</source>
         <target>Détermine si oui ou non un champ de recherche est placé automatiquement dans le menu.</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.dragOpenEnable.0">
-        <source>Drag page to open menu</source>
-        <target>Faire glisser la page pour ouvrir le menu</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.dragOpenEnable.1">
-        <source>Determines whether or not the menu should open when dragging the page.</source>
-        <target>Détermine si oui ou non le menu doit s'ouvrir lorsque vous faites glisser la page.</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.dragOpenThreshold.0">
-        <source>Amount of pixels to drag</source>
-        <target>Quantité de pixels pour faire glisser</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.dragOpenThreshold.1">
-        <source>Determines the minimum amount of pixels to drag before actually opening the menu, less than 50 is not
-          advised.
-        </source>
-        <target>Détermine la quantité minimale de pixels pour faire glisser avant d'ouvrir réellement le menu, moins de
-          50 n'est pas conseillé.
-        </target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.polyfillEnable.0">
         <source>Add JavaScript Polyfill</source>
         <target>Ajouter un poly-remplissage JavaScript</target>

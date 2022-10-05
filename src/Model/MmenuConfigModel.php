@@ -27,9 +27,6 @@ use Contao\Model\Collection;
  * @property bool themeHighContrast
  * @property bool countersAdd
  * @property bool searchfieldAdd
- * @property bool dragOpenEnable
- * @property int dragOpenThreshold
- * @property int dragOpenMaxStartPos
  * @property bool polyfillEnable
  * @property bool onClickClose
  * @property string pageSelector
