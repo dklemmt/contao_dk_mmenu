@@ -131,24 +131,6 @@
       <trans-unit id="tl_dk_mmenu_config.pageSelector.1">
         <source>Custom defined page wrapper CSS selector (e.g. "#wrapper").</source>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.menuEffects.0">
-        <source>Menu effects</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.menuEffects.1">
-        <source>Available effects for the menu.</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.panelEffects.0">
-        <source>Panel effects</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.panelEffects.1">
-        <source>Available effects for the panels.</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.listEffects.0">
-        <source>List items effects</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.listEffects.1">
-        <source>Available effects for the list items.</source>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.iconPanels.0">
         <source>Show small part of parent panel</source>
       </trans-unit>

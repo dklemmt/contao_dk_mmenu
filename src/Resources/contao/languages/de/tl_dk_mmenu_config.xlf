@@ -179,30 +179,6 @@
         <source>Custom defined page wrapper CSS selector (e.g. "#wrapper").</source>
         <target>Selbst definierter "page wrapper" CSS-Selector (z.B.: "#wrapper").</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.menuEffects.0">
-        <source>Menu effects</source>
-        <target>Menü Effekte</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.menuEffects.1">
-        <source>Available effects for the menu.</source>
-        <target>Verfügbare Effekte für das Menü.</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.panelEffects.0">
-        <source>Panel effects</source>
-        <target>Panel Effekte</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.panelEffects.1">
-        <source>Available effects for the panels.</source>
-        <target>Verfügbare Effekte für die Panele.</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.listEffects.0">
-        <source>List items effects</source>
-        <target>Effekte für Listeneinträge</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.listEffects.1">
-        <source>Available effects for the list items.</source>
-        <target>Verfügbare Effekte für die Listeneinträge.</target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.iconPanels.0">
         <source>Show small part of parent panel</source>
         <target>Zeige einen kleinen Teil übergeordneter Panele</target>

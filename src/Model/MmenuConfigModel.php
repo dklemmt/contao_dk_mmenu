@@ -27,9 +27,6 @@ use Contao\Model\Collection;
  * @property bool themeHighContrast
  * @property bool countersAdd
  * @property bool searchfieldAdd
- * @property string menuEffects
- * @property string panelEffects
- * @property string listEffects
  * @property bool dragOpenEnable
  * @property int dragOpenThreshold
  * @property int dragOpenMaxStartPos

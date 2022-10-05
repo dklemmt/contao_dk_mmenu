@@ -107,19 +107,6 @@ class MmenuHelper
             }
         }
 
-        // https://mmenujs.com/documentation/extensions/effects.html
-        if ($config->menuEffects) {
-            $options['extensions'][] = 'fx-menu-'.$config->menuEffects;
-        }
-
-        if ($config->panelEffects) {
-            $options['extensions'][] = 'fx-panels-'.$config->panelEffects;
-        }
-
-        if ($config->listEffects) {
-            $options['extensions'][] = 'fx-listitems-'.$config->listEffects;
-        }
-
         // https://mmenujs.com/documentation/addons/drag.html
         if ($config->dragOpenEnable) {
             $options['drag']['menu']['open'] = true;

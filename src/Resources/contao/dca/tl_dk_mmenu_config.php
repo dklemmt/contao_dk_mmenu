@@ -70,7 +70,7 @@ $GLOBALS['TL_DCA']['tl_dk_mmenu_config'] = [
         '__selector__' => ['dragOpenEnable', 'keyboardNavigation'],
         'default' => '{title_legend},title;
             {appearance_legend},position,zposition,slidingSubmenus,theme,themeHighContrast,countersAdd,searchfieldAdd,iconPanels;
-            {effects_legend},menuEffects,panelEffects,listEffects,shadows;
+            {effects_legend},shadows;
             {behaviour_legend},onClickClose,pageSelector,dragOpenEnable,polyfillEnable;
             {keyboard_navigation_legend},keyboardNavigation',
     ],
@@ -147,27 +147,6 @@ $GLOBALS['TL_DCA']['tl_dk_mmenu_config'] = [
             'inputType' => 'checkbox',
             'eval' => ['tl_class' => 'w50'],
             'sql' => ['type' => 'boolean', 'default' => false],
-        ],
-        'menuEffects' => [
-            'exclude' => true,
-            'inputType' => 'select',
-            'options' => ['fade', 'slide', 'zoom'],
-            'eval' => ['tl_class' => 'w50', 'includeBlankOption' => true],
-            'sql' => ['type' => 'string', 'length' => 16, 'default' => ''],
-        ],
-        'panelEffects' => [
-            'exclude' => true,
-            'inputType' => 'select',
-            'options' => ['none', 'slide-0', 'slide-100', 'slide-up', 'zoom'],
-            'eval' => ['tl_class' => 'w50', 'includeBlankOption' => true],
-            'sql' => ['type' => 'string', 'length' => 16, 'default' => ''],
-        ],
-        'listEffects' => [
-            'exclude' => true,
-            'inputType' => 'select',
-            'options' => ['drop', 'fade', 'slide'],
-            'eval' => ['tl_class' => 'w50', 'includeBlankOption' => true],
-            'sql' => ['type' => 'string', 'length' => 16, 'default' => ''],
         ],
         'dragOpenEnable' => [
             'exclude' => true,
