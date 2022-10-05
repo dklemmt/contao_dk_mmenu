@@ -79,18 +79,6 @@
         </source>
         <target>Определяет, должна ли страница наследовать фон тела, когда открывается меню.</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.fullscreen.0">
-        <source>Fullscreen</source>
-        <target>Полноэкранное</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.fullscreen.1">
-        <source>Determines whether the menu will fill up 80% (default) of the available width/height or 100%
-          (fullscreen).
-        </source>
-        <target>Определяет, будет ли меню заполнять 80% (по умолчанию) доступной ширины/высоты или будет 100%
-          (полноэкранным).
-        </target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.countersAdd.0">
         <source>Show submenu counter</source>
         <target>Показать счетчик подменю</target>

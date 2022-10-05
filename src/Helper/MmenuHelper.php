@@ -90,11 +90,6 @@ class MmenuHelper
             }
         }
 
-        // https://mmenujs.com/documentation/extensions/fullscreen.html
-        if ($config->fullscreen) {
-            $options['extensions'][] = 'fullscreen';
-        }
-
         // https://mmenujs.com/documentation/addons/counters.html
         if ($config->countersAdd) {
             $options['counters'] = true;

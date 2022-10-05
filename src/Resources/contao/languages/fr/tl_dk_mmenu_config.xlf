@@ -80,18 +80,6 @@
         </source>
         <target>Détermine si oui ou non la page doit hériter du fond du body lorsque le menu s'ouvre.</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.fullscreen.0">
-        <source>Fullscreen</source>
-        <target>Plein écran</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.fullscreen.1">
-        <source>Determines whether the menu will fill up 80% (default) of the available width/height or 100%
-          (fullscreen).
-        </source>
-        <target>Détermine si oui ou non le menu va se remplir de 80% (par défaut) de la largeur et de la hauteur
-          disponible ou 100% (plein écran).
-        </target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.countersAdd.0">
         <source>Show submenu counter</source>
         <target>Afficher le nombre de sous-menus</target>

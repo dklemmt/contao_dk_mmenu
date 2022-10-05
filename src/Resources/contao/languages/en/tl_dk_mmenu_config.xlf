@@ -60,14 +60,6 @@
         <source>Determines whether or not the page should inherit the background of the body when the menu opens.
         </source>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.fullscreen.0">
-        <source>Fullscreen</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.fullscreen.1">
-        <source>Determines whether the menu will fill up 80% (default) of the available width/height or 100%
-          (fullscreen).
-        </source>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.countersAdd.0">
         <source>Show submenu counter</source>
       </trans-unit>

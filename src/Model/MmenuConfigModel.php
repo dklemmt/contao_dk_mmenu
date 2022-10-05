@@ -26,7 +26,6 @@ use Contao\Model\Collection;
  * @property string theme
  * @property bool themeHighContrast
  * @property bool moveBackground
- * @property bool fullscreen
  * @property bool countersAdd
  * @property bool columnsAdd
  * @property bool searchfieldAdd
