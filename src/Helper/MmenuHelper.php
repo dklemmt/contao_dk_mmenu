@@ -90,7 +90,7 @@ class MmenuHelper
             $options['counters']['add'] = true;
         }
 
-        // https://mmenujs.com/documentation/addons/searchfield.html
+        // https://mmenujs.com/docs/addons/searchfield.html
         if ($config->searchfieldAdd) {
             $options['navbars'] = [
                 [
