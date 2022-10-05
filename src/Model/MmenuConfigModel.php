@@ -29,7 +29,6 @@ use Contao\Model\Collection;
  * @property bool countersAdd
  * @property bool columnsAdd
  * @property bool searchfieldAdd
- * @property string pageDim
  * @property string menuEffects
  * @property string panelEffects
  * @property string listEffects

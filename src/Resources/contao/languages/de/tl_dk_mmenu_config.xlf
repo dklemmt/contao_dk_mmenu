@@ -206,22 +206,6 @@
         <source>Custom defined page wrapper CSS selector (e.g. "#wrapper").</source>
         <target>Selbst definierter "page wrapper" CSS-Selector (z.B.: "#wrapper").</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.pageDim.0">
-        <source>Page dim</source>
-        <target>Abdimmen</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.pageDim.1">
-        <source>Page dim</source>
-        <target>Abdimmen der Seite, wenn das Menü offen ist.</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.pageDimOptions.white">
-        <source>white</source>
-        <target>Weiß</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.pageDimOptions.black">
-        <source>black</source>
-        <target>Schwarz</target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.menuEffects.0">
         <source>Menu effects</source>
         <target>Menü Effekte</target>

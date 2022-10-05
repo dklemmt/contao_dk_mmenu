@@ -149,18 +149,6 @@
       <trans-unit id="tl_dk_mmenu_config.pageSelector.1">
         <source>Custom defined page wrapper CSS selector (e.g. "#wrapper").</source>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.pageDim.0">
-        <source>Page dim</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.pageDim.1">
-        <source>Page dim</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.pageDimOptions.white">
-        <source>white</source>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.pageDimOptions.black">
-        <source>black</source>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.menuEffects.0">
         <source>Menu effects</source>
       </trans-unit>

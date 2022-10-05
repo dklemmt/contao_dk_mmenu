@@ -67,11 +67,6 @@ class MmenuHelper
             $options['offCanvas']['position'] = $config->position.'-'.$config->zposition;
         }
 
-        // https://mmenujs.com/documentation/extensions/page-dim.html
-        if ($config->pageDim) {
-            $options['extensions'][] = 'pagedim-'.$config->pageDim;
-        }
-
         // https://mmenujs.com/docs/core/options.html
         if ('vertical' === $config->slidingSubmenus) {
             $options['slidingSubmenus'] = false;
