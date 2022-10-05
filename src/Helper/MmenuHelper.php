@@ -107,9 +107,12 @@ class MmenuHelper
             }
         }
 
-        // https://mmenujs.com/documentation/addons/icon-panels.html
+        // https://mmenujs.com/docs/addons/icon-panels.html
         if ($config->iconPanels) {
-            $options['iconPanels'] = true;
+            $options['iconPanels'] = [
+                'add' => true,
+                'visible' => 1,
+            ];
         }
 
         // https://mmenujs.com/docs/addons/keyboard-navigation.html
