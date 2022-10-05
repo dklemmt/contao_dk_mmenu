@@ -68,7 +68,7 @@
         <target>Afficher le nombre de sous-menus</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.countersAdd.1">
-        <source>Determines whether or not to append a counter to each menu item if it has a submenu and automatically
+        <source>Determines whether to append a counter to each menu item if it has a submenu and automatically
           counting the number of items inside.
         </source>
         <target>Détermine si oui ou non un compteur est ajouté pour chaque élément de menu s'il possède un sous-menu et
@@ -80,7 +80,7 @@
         <target>Afficher le champ de recherche</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.searchfieldAdd.1">
-        <source>Determines whether or not to automatically prepend a searchfield to the menu.</source>
+        <source>Determines whether to automatically prepend a searchfield to the menu.</source>
         <target>Détermine si oui ou non un champ de recherche est placé automatiquement dans le menu.</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.onClickClose.0">
@@ -88,20 +88,8 @@
         <target>Le menu se ferme après un clic</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.onClickClose.1">
-        <source>Determines whether or not the menu should close after clicking a link inside it.</source>
+        <source>Determines whether the menu should close after clicking a link inside it.</source>
         <target>Détermine si oui ou non le menu doit fermer après avoir cliqué sur un lien à l'intérieur.</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.fixedElementAdd.0">
-        <source>Support fixed and sticky elements</source>
-        <target>Prise en charge des éléments fixes et collants</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.fixedElementAdd.1">
-        <source>Adds support elements with position: fixed and position: sticky, so they don't disappear when opening
-          the menu.
-        </source>
-        <target>Ajoute la prise en charge des éléments avec position: fixe et position: collant afin qu'ils ne le soient pas
-          disparaissent à l'ouverture du menu.
-        </target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.position.left">
         <source>left</source>
@@ -134,6 +122,22 @@
       <trans-unit id="tl_dk_mmenu_config.slidingSubmenus.vertical">
         <source>vertical</source>
         <target>vertical</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.pageSelector.0">
+        <source>Wrapper selector</source>
+        <target>Sélecteur d'emballage</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.pageSelector.1">
+        <source>Custom defined page wrapper CSS selector (e.g. "#wrapper").</source>
+        <target>Sélecteur CSS de wrapper de page personnalisé (par exemple "#wrapper").</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.iconPanels.0">
+        <source>Show small part of parent panel</source>
+        <target>Afficher une petite partie du panneau parent</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.iconPanels.1">
+        <source>When enabled, this will show a small part of the parent panel, when opening a sub-panel.</source>
+        <target>Lorsqu'il est activé, cela affichera une petite partie du panneau parent, lors de l'ouverture d'un sous-panneau.</target>
       </trans-unit>
     </body>
   </file>

@@ -68,7 +68,7 @@
         <target>Zähler für Untermenüs</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.countersAdd.1">
-        <source>Determines whether or not to append a counter to each menu item if it has a submenu and automatically
+        <source>Determines whether to append a counter to each menu item if it has a submenu and automatically
           counting the number of items inside.
         </source>
         <target>Bestimmt, ob ein Menü um einen Zähler erweitert wird falls es Untermenüs enthält. Die Zahl zeigt die
@@ -80,7 +80,7 @@
         <target>Suchfeld anzeigen</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.searchfieldAdd.1">
-        <source>Determines whether or not to automatically prepend a searchfield to the menu.</source>
+        <source>Determines whether to automatically prepend a searchfield to the menu.</source>
         <target>Bestimmt, ob ein Suchfeld oberhalb der Navigation angezeigt wird.</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.onClickClose.0">
@@ -88,20 +88,8 @@
         <target>Menü nach Klick schließen</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.onClickClose.1">
-        <source>Determines whether or not the menu should close after clicking a link inside it.</source>
+        <source>Determines whether the menu should close after clicking a link inside it.</source>
         <target>Bestimmt, ob nach Auswahl eines Navigationspunkts das Navigationsmenü geschlossen wird.</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.fixedElementAdd.0">
-        <source>Support fixed and sticky elements</source>
-        <target>Unterstützung für fixed und sticky Elemente</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.fixedElementAdd.1">
-        <source>Adds support elements with position: fixed and position: sticky, so they don't disappear when opening
-          the menu.
-        </source>
-        <target>Fügt die Unterstützung für Elemente mit position: fixed und position:sticky hinzu, so dass diese nicht
-          verschwinden, wenn das Menü geöffnet wird.
-        </target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.position.left">
         <source>left</source>
@@ -149,7 +137,7 @@
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.iconPanels.1">
         <source>When enabled, this will show a small part of the parent panel, when opening a sub-panel.</source>
-        <target>Zeigt einen kleinen Teil der übergenordneten Panele an, wenn man sich in einem Unterpanel befindet.
+        <target>Zeigt einen kleinen Teil der übergeordneten Panele an, wenn man sich in einem Unterpanel befindet.
         </target>
       </trans-unit>
     </body>
