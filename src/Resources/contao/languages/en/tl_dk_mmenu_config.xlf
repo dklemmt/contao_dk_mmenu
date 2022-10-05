@@ -131,9 +131,6 @@
       <trans-unit id="tl_dk_mmenu_config.position.bottom">
         <source>bottom</source>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.position.popup">
-        <source>popup</source>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.zposition.back">
         <source>back</source>
       </trans-unit>

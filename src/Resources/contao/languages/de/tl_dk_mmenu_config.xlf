@@ -182,10 +182,6 @@
         <source>bottom</source>
         <target>unten</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.position.popup">
-        <source>popup</source>
-        <target>Popup</target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.zposition.back">
         <source>back</source>
         <target>dahinter</target>

@@ -98,7 +98,7 @@ $GLOBALS['TL_DCA']['tl_dk_mmenu_config'] = [
             'exclude' => true,
             'inputType' => 'select',
             'default' => 'left',
-            'options' => ['left', 'right', 'top', 'bottom', 'popup'],
+            'options' => ['left', 'right', 'top', 'bottom'],
             'reference' => &$GLOBALS['TL_LANG']['tl_dk_mmenu_config']['position'],
             'eval' => ['tl_class' => 'w50'],
             'sql' => ['type' => 'string', 'length' => 32, 'default' => ''],

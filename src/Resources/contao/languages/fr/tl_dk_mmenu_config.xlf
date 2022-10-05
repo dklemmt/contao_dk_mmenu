@@ -180,10 +180,6 @@
         <source>bottom</source>
         <target>en bas</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.position.popup">
-        <source>popup</source>
-        <target>apparaitre</target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.zposition.back">
         <source>back</source>
         <target>en arrière</target>

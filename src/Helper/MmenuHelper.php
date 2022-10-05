@@ -54,22 +54,17 @@ class MmenuHelper
             $options['navbar']['title'] = $GLOBALS['TL_LANG']['DK_MMENU']['title'];
         }
 
-        // https://mmenujs.com/documentation/extensions/positioning.html
+        // https://mmenujs.com/docs/core/off-canvas.html
         if ($config->pageSelector) {
             $configuration['offCanvas']['page']['selector'] = StringUtil::decodeEntities($config->pageSelector);
         }
 
-        if ('left' !== $config->position) {
-            if ('popup' === $config->position) {
-                // https://mmenujs.com/documentation/extensions/popup.html
-                $options['extensions'][] = 'popup';
-            } else {
-                $options['extensions'][] = 'position-'.$config->position;
-            }
+        if (\in_array($config->position, ['left', 'right', 'top', 'bottom'], true)) {
+            $options['offCanvas']['position'] = $config->position;
         }
 
-        if ('back' !== $config->zposition) {
-            $options['extensions'][] = 'position-'.$config->zposition;
+        if ('back' !== $config->zposition && \in_array($config->position, ['left', 'right'], true)) {
+            $options['offCanvas']['position'] = $config->position.'-'.$config->zposition;
         }
 
         // https://mmenujs.com/documentation/extensions/page-dim.html
