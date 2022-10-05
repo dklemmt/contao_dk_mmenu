@@ -85,9 +85,9 @@ class MmenuHelper
             }
         }
 
-        // https://mmenujs.com/documentation/addons/counters.html
+        // https://mmenujs.com/docs/addons/counters.html
         if ($config->countersAdd) {
-            $options['counters'] = true;
+            $options['counters']['add'] = true;
         }
 
         // https://mmenujs.com/documentation/addons/columns.html
