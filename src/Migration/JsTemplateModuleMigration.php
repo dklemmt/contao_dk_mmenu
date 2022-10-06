@@ -43,9 +43,9 @@ final class JsTemplateModuleMigration extends AbstractMigration
             return false;
         }
 
-        $statement = $this->connection->prepare("SELECT * FROM tl_module WHERE dk_mmenuJsTpl LIKE 'js_mmenu%'");
+        $query = "SELECT true FROM tl_module WHERE dk_mmenuJsTpl LIKE 'js_mmenu%' LIMIT 1";
 
-        return $statement->executeStatement() > 0;
+        return (bool) $this->connection->executeQuery($query)->fetchOne();
     }
 
     public function run(): MigrationResult

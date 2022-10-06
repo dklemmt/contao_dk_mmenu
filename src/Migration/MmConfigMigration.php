@@ -47,9 +47,9 @@ final class MmConfigMigration extends AbstractMigration
             return false;
         }
 
-        $statement = $this->connection->prepare("SELECT `id` FROM `tl_module` WHERE `type` LIKE 'mmenu%'");
+        $query = "SELECT true FROM `tl_module` WHERE `type` LIKE 'mmenu%' LIMIT 1";
 
-        return $statement->executeStatement() > 0;
+        return (bool) $this->connection->executeQuery($query)->fetchOne();
     }
 
     public function run(): MigrationResult
