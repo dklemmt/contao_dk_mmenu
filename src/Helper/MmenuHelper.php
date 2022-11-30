@@ -50,68 +50,45 @@ class MmenuHelper
             ],
         ];
 
-        if ('en' !== $GLOBALS['TL_LANGUAGE']) {
+        if (!empty($config->navbarTitle)) {
+            $options['navbar']['title'] = $config->navbarTitle;
+        } elseif ('en' !== $GLOBALS['TL_LANGUAGE']) {
             $options['navbar']['title'] = $GLOBALS['TL_LANG']['DK_MMENU']['title'];
         }
 
-        // https://mmenujs.com/documentation/extensions/positioning.html
+        // https://mmenujs.com/docs/core/off-canvas.html
         if ($config->pageSelector) {
             $configuration['offCanvas']['page']['selector'] = StringUtil::decodeEntities($config->pageSelector);
         }
 
-        if ('left' !== $config->position) {
-            if ('popup' === $config->position) {
-                // https://mmenujs.com/documentation/extensions/popup.html
-                $options['extensions'][] = 'popup';
-            } else {
-                $options['extensions'][] = 'position-'.$config->position;
-            }
+        if (\in_array($config->position, ['left', 'right', 'top', 'bottom'], true)) {
+            $options['offCanvas']['position'] = $config->position;
         }
 
-        if ('back' !== $config->zposition) {
-            $options['extensions'][] = 'position-'.$config->zposition;
+        if ('back' !== $config->zposition && \in_array($config->position, ['left', 'right'], true)) {
+            $options['offCanvas']['position'] = $config->position.'-'.$config->zposition;
         }
 
-        // https://mmenujs.com/documentation/extensions/page-dim.html
-        if ($config->pageDim) {
-            $options['extensions'][] = 'pagedim-'.$config->pageDim;
-        }
-
-        // https://mmenujs.com/documentation/core/options.html
+        // https://mmenujs.com/docs/core/options.html
         if ('vertical' === $config->slidingSubmenus) {
             $options['slidingSubmenus'] = false;
         }
 
-        if ($config->onClickClose) {
-            $options['onClick']['close'] = true;
+        // https://mmenujs.com/docs/core/theme.html
+        if (\in_array($config->theme, ['light', 'dark', 'white', 'black'], true)) {
+            $options['theme'] = $config->theme;
+
+            if ($config->themeHighContrast) {
+                $options['theme'] = $config->theme.'-contrast';
+            }
         }
 
-        // https://mmenujs.com/documentation/core/off-canvas.html
-        if (!$config->moveBackground) {
-            $options['offCanvas']['moveBackground'] = false;
-        }
-
-        // https://mmenujs.com/documentation/extensions/themes.html
-        if ('light' !== $config->theme) {
-            $options['extensions'][] = 'theme-'.$config->theme;
-        }
-
-        // https://mmenujs.com/documentation/extensions/fullscreen.html
-        if ($config->fullscreen) {
-            $options['extensions'][] = 'fullscreen';
-        }
-
-        // https://mmenujs.com/documentation/addons/counters.html
+        // https://mmenujs.com/docs/addons/counters.html
         if ($config->countersAdd) {
-            $options['counters'] = true;
+            $options['counters']['add'] = true;
         }
 
-        // https://mmenujs.com/documentation/addons/columns.html
-        if ($config->columnsAdd) {
-            $options['columns'] = true;
-        }
-
-        // https://mmenujs.com/documentation/addons/searchfield.html
+        // https://mmenujs.com/docs/addons/searchfield.html
         if ($config->searchfieldAdd) {
             $options['navbars'] = [
                 [
@@ -128,57 +105,12 @@ class MmenuHelper
             }
         }
 
-        // https://mmenujs.com/documentation/extensions/effects.html
-        if ($config->menuEffects) {
-            $options['extensions'][] = 'fx-menu-'.$config->menuEffects;
-        }
-
-        if ($config->panelEffects) {
-            $options['extensions'][] = 'fx-panels-'.$config->panelEffects;
-        }
-
-        if ($config->listEffects) {
-            $options['extensions'][] = 'fx-listitems-'.$config->listEffects;
-        }
-
-        // https://mmenujs.com/documentation/addons/drag.html
-        if ($config->dragOpenEnable) {
-            $options['drag']['menu']['open'] = true;
-
-            if ($config->dragOpenMaxStartPos && 100 !== (int) $config->dragOpenMaxStartPos) {
-                $options['drag']['menu']['maxStartPos'] = (int) $config->dragOpenMaxStartPos;
-            }
-
-            if ($config->dragOpenThreshold && 50 !== (int) $config->dragOpenThreshold) {
-                $options['drag']['menu']['threshold'] = (int) $config->dragOpenThreshold;
-            }
-        }
-
-        if ($config->polyfillEnable) {
-            $options['polyfill'] = true;
-        }
-
-        // https://mmenujs.com/documentation/addons/icon-panels.html
+        // https://mmenujs.com/docs/addons/icon-panels.html
         if ($config->iconPanels) {
-            $options['iconPanels'] = true;
-        }
-
-        // https://mmenujs.com/documentation/extensions/shadows.html
-        if ($config->shadows) {
-            $shadows = array_filter(StringUtil::deserialize($config->shadows, true));
-
-            foreach ($shadows as $shadow) {
-                $options['extensions'][] = 'shadow-'.$shadow;
-            }
-        }
-
-        // https://mmenujs.com/docs/addons/keyboard-navigation.html
-        if ($config->keyboardNavigation) {
-            $options['keyboardNavigation']['enable'] = true;
-
-            if ($config->keyboardNavigationEnhance) {
-                $options['keyboardNavigation']['enhance'] = true;
-            }
+            $options['iconPanels'] = [
+                'add' => true,
+                'visible' => 1,
+            ];
         }
 
         // Add options and configuration to JavaScript template

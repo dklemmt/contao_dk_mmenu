@@ -44,9 +44,9 @@ final class JsTemplateLayoutMigration extends AbstractMigration
             return false;
         }
 
-        $statement = $this->connection->prepare("SELECT `id`, `scripts` FROM `tl_layout` WHERE `scripts` LIKE '%\"js_mmenu%'");
+        $query = "SELECT true FROM `tl_layout` WHERE `scripts` LIKE '%\"js_mmenu%' LIMIT 1";
 
-        return $statement->executeStatement() > 0;
+        return (bool) $this->connection->executeQuery($query)->fetchOne();
     }
 
     public function run(): MigrationResult

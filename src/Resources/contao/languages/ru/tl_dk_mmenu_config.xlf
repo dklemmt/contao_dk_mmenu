@@ -14,17 +14,9 @@
         <source>mmenu behaviour</source>
         <target>mmenu поведение</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.effects_legend">
-        <source>mmenu effects</source>
-        <target>mmenu эффекты</target>
-      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.template_legend">
         <source>Template settings</source>
         <target>Настройки шаблона</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboard_navigation_legend">
-        <source>mmenu keyboard navigation</source>
-        <target>mmenu навигация клавиатурой</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.title.0">
         <source>Title of the config</source>
@@ -33,6 +25,14 @@
       <trans-unit id="tl_dk_mmenu_config.title.1">
         <source>The title of the config is only required for internal use.</source>
         <target>Название конфига требуется только для внутреннего использования.</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.navbarTitle.0">
+        <source>Navbar title</source>
+        <target>Название панели навигации</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.navbarTitle.1">
+        <source>The navbar title optional - the fallback will be "Menu".</source>
+        <target>Заголовок навигационной панели необязателен — запасным вариантом будет "Меню".</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.position.0">
         <source>Position of menu</source>
@@ -47,52 +47,35 @@
         <target>Z-позиция меню</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.zposition.1">
-        <source>Choose the z-position of the menu.</source>
-        <target>Выберите Z-позицию из меню.</target>
+        <source>Choose the z-position of the menu (only left/right).</source>
+        <target>Выберите Z-позицию из меню (только левый/правый).</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.slidingSubmenus.0">
         <source>Kind of menu</source>
         <target>Вид меню</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.slidingSubmenus.1">
-        <source>Determines whether submenus should come sliding in from the right or to expand below.</source>
-        <target>Определяет, должно ли подменю скользить справа или расширяться снизу.</target>
+        <source>Determines whether submenus should come sliding in from the right (horizontal) or to expand below (vertical).</source>
+        <target>Определяет, должны ли подменю скользить справа (по горизонтали) или раскрываться ниже (по вертикали).</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.theme.0">
         <source>Theme of menu</source>
         <target>Тема меню</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.Theme.1">
+      <trans-unit id="tl_dk_mmenu_config.theme.1">
         <source>Choose a theme for the menu.</source>
         <target>Выберите тему меню.</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.moveBackground.0">
-        <source>Move background</source>
-        <target>Переместить фон</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.moveBackground.1">
-        <source>Determines whether or not the page should inherit the background of the body when the menu opens.
-        </source>
-        <target>Определяет, должна ли страница наследовать фон тела, когда открывается меню.</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.fullscreen.0">
-        <source>Fullscreen</source>
-        <target>Полноэкранное</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.fullscreen.1">
-        <source>Determines whether the menu will fill up 80% (default) of the available width/height or 100%
-          (fullscreen).
-        </source>
-        <target>Определяет, будет ли меню заполнять 80% (по умолчанию) доступной ширины/высоты или будет 100%
-          (полноэкранным).
-        </target>
+      <trans-unit id="tl_dk_mmenu_config.themeHighContrast.0">
+        <source>High contrast theme</source>
+        <target>тема с высокой контрастностью</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.countersAdd.0">
         <source>Show submenu counter</source>
         <target>Показать счетчик подменю</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.countersAdd.1">
-        <source>Determines whether or not to append a counter to each menu item if it has a submenu and automatically
+        <source>Determines whether to append a counter to each menu item if it has a submenu and automatically
           counting the number of items inside.
         </source>
         <target>Определяет, следует ли добавить счетчик на каждый из пунктов меню, если он будет как подменю и
@@ -104,36 +87,8 @@
         <target>Показать поле поиска</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.searchfieldAdd.1">
-        <source>Determines whether or not to automatically prepend a searchfield to the menu.</source>
+        <source>Determines whether to automatically prepend a searchfield to the menu.</source>
         <target>Определяет, следует ли автоматически вставлять поле поиска в меню.</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.dragOpenEnable.0">
-        <source>Drag page to open menu</source>
-        <target>Перетаскивание страницы, для открытия меню</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.dragOpenEnable.1">
-        <source>Determines whether or not the menu should open when dragging the page.</source>
-        <target>Определяет, следует ли открывать меню при перетаскивании страницы.</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.dragOpenThreshold.0">
-        <source>Amount of pixels to drag</source>
-        <target>Количество пикселей для перетаскивания</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.dragOpenThreshold.1">
-        <source>Determines the minimum amount of pixels to drag before actually opening the menu, less than 50 is not
-          advised.
-        </source>
-        <target>Определяет минимальное количество пикселей для перетаскивания, перед фактическим открытием меню. Ставить
-          менее 50 не рекомендуется.
-        </target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.onClickClose.0">
-        <source>Menu closes after click</source>
-        <target>Закрывать меню после нажатия</target>
-      </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.onClickClose.1">
-        <source>Determines whether or not the menu should close after clicking a link inside it.</source>
-        <target>Определяет, следует ли закрывать меню после нажатия на ссылку внутри него.</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.position.left">
         <source>left</source>
@@ -167,21 +122,21 @@
         <source>vertical</source>
         <target>вертикальное</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboardNavigation.0">
-        <source>Keyboard navigation</source>
-        <target>Клавиатурная навигация</target>
+      <trans-unit id="tl_dk_mmenu_config.pageSelector.0">
+        <source>Wrapper selector</source>
+        <target>Селектор оболочки</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboardNavigation.1">
-        <source>Enable navigating the menu with keyboard.</source>
-        <target>Включите навигацию по меню с помощью клавиатуры.</target>
+      <trans-unit id="tl_dk_mmenu_config.pageSelector.1">
+        <source>Custom defined page wrapper CSS selector (e.g. "#wrapper").</source>
+        <target>Пользовательский CSS-селектор оболочки страницы (например, «#wrapper»).</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboardNavigationEnhance.0">
-        <source>Enhance keyboard navigation</source>
-        <target>Улучшенная навигация клавиатурой</target>
+      <trans-unit id="tl_dk_mmenu_config.iconPanels.0">
+        <source>Show small part of parent panel (only horizontal)</source>
+        <target>Показать небольшую часть родительской панели (только горизонтально)</target>
       </trans-unit>
-      <trans-unit id="tl_dk_mmenu_config.keyboardNavigationEnhance.1">
-        <source>Enhance basic default keyboard navigation.</source>
-        <target>Улучшение основной навигации клавиатурой.</target>
+      <trans-unit id="tl_dk_mmenu_config.iconPanels.1">
+        <source>When enabled, this will show a small part of the parent panel, when opening a sub-panel.</source>
+        <target>Когда эта функция включена, при открытии подпанели будет отображаться небольшая часть родительской панели.</target>
       </trans-unit>
     </body>
   </file>

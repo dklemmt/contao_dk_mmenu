@@ -20,29 +20,16 @@ use Contao\Model\Collection;
  * @property int id
  * @property int tstamp
  * @property string title
+ * @property string navbarTitle
  * @property string position
  * @property string zposition
  * @property string slidingSubmenus
  * @property string theme
- * @property bool moveBackground
- * @property bool fullscreen
+ * @property bool themeHighContrast
  * @property bool countersAdd
- * @property bool columnsAdd
  * @property bool searchfieldAdd
- * @property string pageDim
- * @property string menuEffects
- * @property string panelEffects
- * @property string listEffects
- * @property bool dragOpenEnable
- * @property int dragOpenThreshold
- * @property int dragOpenMaxStartPos
- * @property bool polyfillEnable
- * @property bool onClickClose
  * @property string pageSelector
  * @property bool iconPanels
- * @property string shadows
- * @property bool keyboardNavigation
- * @property bool keyboardNavigationEnhance
  *
  * @method static MmenuConfigModel|null findById($id, array $opt=[])
  * @method static MmenuConfigModel|null findByPk($id, array $opt=[])

@@ -67,17 +67,9 @@ $GLOBALS['TL_DCA']['tl_dk_mmenu_config'] = [
     ],
 
     'palettes' => [
-        '__selector__' => ['dragOpenEnable', 'keyboardNavigation'],
-        'default' => '{title_legend},title;
-            {appearance_legend},position,zposition,slidingSubmenus,theme,moveBackground,pageDim,fullscreen,countersAdd,columnsAdd,searchfieldAdd,iconPanels;
-            {effects_legend},menuEffects,panelEffects,listEffects,shadows;
-            {behaviour_legend},onClickClose,pageSelector,dragOpenEnable,polyfillEnable;
-            {keyboard_navigation_legend},keyboardNavigation',
-    ],
-
-    'subpalettes' => [
-        'dragOpenEnable' => 'dragOpenMaxStartPos,dragOpenThreshold',
-        'keyboardNavigation' => 'keyboardNavigationEnhance',
+        'default' => '{title_legend},title,navbarTitle;
+            {appearance_legend},position,zposition,slidingSubmenus,theme,themeHighContrast,countersAdd,searchfieldAdd,iconPanels;
+            {behaviour_legend},pageSelector',
     ],
 
     'fields' => [
@@ -94,11 +86,18 @@ $GLOBALS['TL_DCA']['tl_dk_mmenu_config'] = [
             'eval' => ['mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'],
             'sql' => ['type' => 'string', 'length' => 255, 'default' => ''],
         ],
+        'navbarTitle' => [
+            'exclude' => true,
+            'search' => true,
+            'inputType' => 'text',
+            'eval' => ['mandatory' => false, 'maxlength' => 255, 'tl_class' => 'w50'],
+            'sql' => ['type' => 'string', 'length' => 255, 'default' => ''],
+        ],
         'position' => [
             'exclude' => true,
             'inputType' => 'select',
             'default' => 'left',
-            'options' => ['left', 'right', 'top', 'bottom', 'popup'],
+            'options' => ['left', 'right', 'top', 'bottom'],
             'reference' => &$GLOBALS['TL_LANG']['tl_dk_mmenu_config']['position'],
             'eval' => ['tl_class' => 'w50'],
             'sql' => ['type' => 'string', 'length' => 32, 'default' => ''],
@@ -127,28 +126,16 @@ $GLOBALS['TL_DCA']['tl_dk_mmenu_config'] = [
             'default' => 'light',
             'options' => ['light', 'dark', 'black', 'white'],
             'reference' => &$GLOBALS['TL_LANG']['tl_dk_mmenu_config']['theme'],
-            'eval' => ['tl_class' => 'w50'],
+            'eval' => ['tl_class' => 'clr w50'],
             'sql' => ['type' => 'string', 'length' => 32, 'default' => ''],
         ],
-        'moveBackground' => [
+        'themeHighContrast' => [
             'exclude' => true,
             'inputType' => 'checkbox',
-            'eval' => ['tl_class' => 'w50'],
-            'sql' => ['type' => 'boolean', 'default' => true],
-        ],
-        'fullscreen' => [
-            'exclude' => true,
-            'inputType' => 'checkbox',
-            'eval' => ['tl_class' => 'clr w50'],
+            'eval' => ['tl_class' => 'w50 m12'],
             'sql' => ['type' => 'boolean', 'default' => false],
         ],
         'countersAdd' => [
-            'exclude' => true,
-            'inputType' => 'checkbox',
-            'eval' => ['tl_class' => 'w50'],
-            'sql' => ['type' => 'boolean', 'default' => false],
-        ],
-        'columnsAdd' => [
             'exclude' => true,
             'inputType' => 'checkbox',
             'eval' => ['tl_class' => 'w50'],
@@ -160,65 +147,6 @@ $GLOBALS['TL_DCA']['tl_dk_mmenu_config'] = [
             'eval' => ['tl_class' => 'w50'],
             'sql' => ['type' => 'boolean', 'default' => false],
         ],
-        'pageDim' => [
-            'exclude' => true,
-            'inputType' => 'select',
-            'options' => ['white', 'black'],
-            'reference' => &$GLOBALS['TL_LANG']['tl_dk_mmenu_config']['pageDimOptions'],
-            'eval' => ['tl_class' => 'w50', 'includeBlankOption' => true],
-            'sql' => ['type' => 'string', 'length' => 16, 'default' => ''],
-        ],
-        'menuEffects' => [
-            'exclude' => true,
-            'inputType' => 'select',
-            'options' => ['fade', 'slide', 'zoom'],
-            'eval' => ['tl_class' => 'w50', 'includeBlankOption' => true],
-            'sql' => ['type' => 'string', 'length' => 16, 'default' => ''],
-        ],
-        'panelEffects' => [
-            'exclude' => true,
-            'inputType' => 'select',
-            'options' => ['none', 'slide-0', 'slide-100', 'slide-up', 'zoom'],
-            'eval' => ['tl_class' => 'w50', 'includeBlankOption' => true],
-            'sql' => ['type' => 'string', 'length' => 16, 'default' => ''],
-        ],
-        'listEffects' => [
-            'exclude' => true,
-            'inputType' => 'select',
-            'options' => ['drop', 'fade', 'slide'],
-            'eval' => ['tl_class' => 'w50', 'includeBlankOption' => true],
-            'sql' => ['type' => 'string', 'length' => 16, 'default' => ''],
-        ],
-        'dragOpenEnable' => [
-            'exclude' => true,
-            'inputType' => 'checkbox',
-            'eval' => ['submitOnChange' => true, 'tl_class' => 'clr'],
-            'sql' => ['type' => 'boolean', 'default' => false],
-        ],
-        'dragOpenThreshold' => [
-            'exclude' => true,
-            'inputType' => 'text',
-            'eval' => ['maxlength' => 3, 'rgxp' => 'digit', 'tl_class' => 'w50'],
-            'sql' => ['type' => 'smallint', 'default' => 50],
-        ],
-        'dragOpenMaxStartPos' => [
-            'exclude' => true,
-            'inputType' => 'text',
-            'eval' => ['maxlength' => 3, 'rgxp' => 'digit', 'tl_class' => 'w50'],
-            'sql' => ['type' => 'smallint', 'default' => 100],
-        ],
-        'polyfillEnable' => [
-            'exclude' => true,
-            'inputType' => 'checkbox',
-            'eval' => ['tl_class' => 'clr'],
-            'sql' => ['type' => 'boolean', 'default' => false],
-        ],
-        'onClickClose' => [
-            'exclude' => true,
-            'inputType' => 'checkbox',
-            'eval' => ['tl_class' => 'clr w50'],
-            'sql' => ['type' => 'boolean', 'default' => false],
-        ],
         'pageSelector' => [
             'exclude' => true,
             'default' => '#wrapper',
@@ -227,25 +155,6 @@ $GLOBALS['TL_DCA']['tl_dk_mmenu_config'] = [
             'sql' => ['type' => 'string', 'length' => 255, 'default' => ''],
         ],
         'iconPanels' => [
-            'exclude' => true,
-            'inputType' => 'checkbox',
-            'eval' => ['tl_class' => 'w50'],
-            'sql' => ['type' => 'boolean', 'default' => false],
-        ],
-        'shadows' => [
-            'exclude' => true,
-            'inputType' => 'checkbox',
-            'options' => ['menu', 'page', 'panels'],
-            'eval' => ['tl_class' => 'clr', 'multiple' => true],
-            'sql' => ['type' => 'blob', 'length' => '65535', 'notnull' => false],
-        ],
-        'keyboardNavigation' => [
-            'exclude' => true,
-            'inputType' => 'checkbox',
-            'eval' => ['submitOnChange' => true, 'tl_class' => 'w50'],
-            'sql' => ['type' => 'boolean', 'default' => false],
-        ],
-        'keyboardNavigationEnhance' => [
             'exclude' => true,
             'inputType' => 'checkbox',
             'eval' => ['tl_class' => 'w50'],
