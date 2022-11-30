@@ -45,4 +45,5 @@ Lizenz-Details siehe: https://mmenujs.com/download.html
 Danksagungen
 ---------------
 
-Die Entwicklung der Version `3.0.0` wurde von der [Agentur dreibein](https://www.agentur-dreibein.de/) finanziert.
+Die Entwicklung der Version `3.0.0` wurde von der [Agentur dreibein](https://www.agentur-dreibein.de/) finanziert.  
+Die Entwicklung der Version `4.0.0` wurde von der [Agentur Eikona Media](https://www.eikona-media.de/) unterstützt.
