@@ -67,7 +67,7 @@ $GLOBALS['TL_DCA']['tl_dk_mmenu_config'] = [
     ],
 
     'palettes' => [
-        'default' => '{title_legend},title;
+        'default' => '{title_legend},title,navbarTitle;
             {appearance_legend},position,zposition,slidingSubmenus,theme,themeHighContrast,countersAdd,searchfieldAdd,iconPanels;
             {behaviour_legend},pageSelector',
     ],
@@ -84,6 +84,13 @@ $GLOBALS['TL_DCA']['tl_dk_mmenu_config'] = [
             'search' => true,
             'inputType' => 'text',
             'eval' => ['mandatory' => true, 'maxlength' => 255, 'tl_class' => 'w50'],
+            'sql' => ['type' => 'string', 'length' => 255, 'default' => ''],
+        ],
+        'navbarTitle' => [
+            'exclude' => true,
+            'search' => true,
+            'inputType' => 'text',
+            'eval' => ['mandatory' => false, 'maxlength' => 255, 'tl_class' => 'w50'],
             'sql' => ['type' => 'string', 'length' => 255, 'default' => ''],
         ],
         'position' => [

@@ -20,6 +20,7 @@ use Contao\Model\Collection;
  * @property int id
  * @property int tstamp
  * @property string title
+ * @property string navbarTitle
  * @property string position
  * @property string zposition
  * @property string slidingSubmenus

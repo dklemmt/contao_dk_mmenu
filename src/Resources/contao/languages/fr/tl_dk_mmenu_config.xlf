@@ -27,6 +27,14 @@
         <source>The title of the config is only required for internal use.</source>
         <target>Le titre de la configuration n'est requis qu'à des fins internes.</target>
       </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.navbarTitle.0">
+        <source>Navbar title</source>
+        <target>Titre de la barre de navigation</target>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.navbarTitle.1">
+        <source>The navbar title optional - the fallback will be "Menu".</source>
+        <target>Le titre de la barre de navigation est facultatif - la solution de repli sera "Menu".</target>
+      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.position.0">
         <source>Position of menu</source>
         <target>Position du menu</target>

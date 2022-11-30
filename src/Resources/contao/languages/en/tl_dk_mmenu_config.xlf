@@ -20,6 +20,12 @@
       <trans-unit id="tl_dk_mmenu_config.title.1">
         <source>The title of the config is only required for internal use.</source>
       </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.navbarTitle.0">
+        <source>Navbar title</source>
+      </trans-unit>
+      <trans-unit id="tl_dk_mmenu_config.navbarTitle.1">
+        <source>The navbar title optional - the fallback will be "Menu".</source>
+      </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.position.0">
         <source>Position of menu</source>
       </trans-unit>

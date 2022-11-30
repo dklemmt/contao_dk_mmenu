@@ -50,7 +50,9 @@ class MmenuHelper
             ],
         ];
 
-        if ('en' !== $GLOBALS['TL_LANGUAGE']) {
+        if (!empty($config->navbarTitle)) {
+            $options['navbar']['title'] = $config->navbarTitle;
+        } elseif ('en' !== $GLOBALS['TL_LANGUAGE']) {
             $options['navbar']['title'] = $GLOBALS['TL_LANG']['DK_MMENU']['title'];
         }
 
