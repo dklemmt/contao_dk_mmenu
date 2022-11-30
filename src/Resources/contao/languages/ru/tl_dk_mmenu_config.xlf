@@ -47,16 +47,16 @@
         <target>Z-позиция меню</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.zposition.1">
-        <source>Choose the z-position of the menu.</source>
-        <target>Выберите Z-позицию из меню.</target>
+        <source>Choose the z-position of the menu (only left/right).</source>
+        <target>Выберите Z-позицию из меню (только левый/правый).</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.slidingSubmenus.0">
         <source>Kind of menu</source>
         <target>Вид меню</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.slidingSubmenus.1">
-        <source>Determines whether submenus should come sliding in from the right or to expand below.</source>
-        <target>Определяет, должно ли подменю скользить справа или расширяться снизу.</target>
+        <source>Determines whether submenus should come sliding in from the right (horizontal) or to expand below (vertical).</source>
+        <target>Определяет, должны ли подменю скользить справа (по горизонтали) или раскрываться ниже (по вертикали).</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.theme.0">
         <source>Theme of menu</source>
@@ -131,8 +131,8 @@
         <target>Пользовательский CSS-селектор оболочки страницы (например, «#wrapper»).</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.iconPanels.0">
-        <source>Show small part of parent panel</source>
-        <target>Показать небольшую часть родительской панели</target>
+        <source>Show small part of parent panel (only horizontal)</source>
+        <target>Показать небольшую часть родительской панели (только горизонтально)</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.iconPanels.1">
         <source>When enabled, this will show a small part of the parent panel, when opening a sub-panel.</source>

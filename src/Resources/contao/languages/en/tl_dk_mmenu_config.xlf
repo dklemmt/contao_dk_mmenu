@@ -36,13 +36,13 @@
         <source>Z-position of menu</source>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.zposition.1">
-        <source>Choose the z-position of the menu.</source>
+        <source>Choose the z-position of the menu (only left/right).</source>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.slidingSubmenus.0">
         <source>Kind of menu</source>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.slidingSubmenus.1">
-        <source>Determines whether submenus should come sliding in from the right or to expand below.</source>
+        <source>Determines whether submenus should come sliding in from the right (horizontal) or to expand below (vertical).</source>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.theme.0">
         <source>Theme of menu</source>
@@ -98,7 +98,7 @@
         <source>Custom defined page wrapper CSS selector (e.g. "#wrapper").</source>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.iconPanels.0">
-        <source>Show small part of parent panel</source>
+        <source>Show small part of parent panel (only horizontal)</source>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.iconPanels.1">
         <source>When enabled, this will show a small part of the parent panel, when opening a sub-panel.</source>

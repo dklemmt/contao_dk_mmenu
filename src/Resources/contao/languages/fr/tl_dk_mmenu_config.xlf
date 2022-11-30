@@ -48,16 +48,16 @@
         <target>Z-position du menu</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.zposition.1">
-        <source>Choose the z-position of the menu.</source>
-        <target>Choisir la z-position du menu.</target>
+        <source>Choose the z-position of the menu (only left/right).</source>
+        <target>Choisir la z-position du menu (seulement gauche/droite).</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.slidingSubmenus.0">
         <source>Kind of menu</source>
         <target>Type de menu</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.slidingSubmenus.1">
-        <source>Determines whether submenus should come sliding in from the right or to expand below.</source>
-        <target>Détermine si oui ou non les sous-menus doivent apparaître sur le côté droit ou vers le bas.</target>
+        <source>Determines whether submenus should come sliding in from the right (horizontal) or to expand below (vertical).</source>
+        <target>Détermine si oui ou non les sous-menus doivent apparaître sur le côté droit (horizontale) ou vers le bas (verticale).</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.theme.0">
         <source>Theme of menu</source>
@@ -132,8 +132,8 @@
         <target>Sélecteur CSS de wrapper de page personnalisé (par exemple "#wrapper").</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.iconPanels.0">
-        <source>Show small part of parent panel</source>
-        <target>Afficher une petite partie du panneau parent</target>
+        <source>Show small part of parent panel (only horizontal)</source>
+        <target>Afficher une petite partie du panneau parent (seulement horizontale)</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.iconPanels.1">
         <source>When enabled, this will show a small part of the parent panel, when opening a sub-panel.</source>
