@@ -1,19 +1,18 @@
 <?xml version="1.0" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file datatype="php" date="2014-01-03T20:50:50+01:00" original="tl_dk_mmenu_config" source-language="en"
-        target-language="fr">
+  <file datatype="php" date="2014-01-03T20:50:50+01:00" original="tl_dk_mmenu_config" source-language="en" target-language="fr">
     <body>
       <trans-unit id="tl_dk_mmenu_config.title_legend">
         <source>Title</source>
         <target>Titre</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.appearance_legend">
-        <source>mmenu appearance</source>
-        <target>Apparence de mmenu</target>
+        <source>Appearance</source>
+        <target>Apparence</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.behaviour_legend">
-        <source>mmenu behaviour</source>
-        <target>Comportement de mmenu</target>
+        <source>Behaviour</source>
+        <target>Comportement</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.template_legend">
         <source>Template settings</source>

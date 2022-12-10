@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace DirkKlemmt\ContaoMmenuBundle\Helper;
 
+use Contao\Controller;
 use Contao\FrontendTemplate;
 use Contao\Module;
 use Contao\StringUtil;
@@ -117,7 +118,7 @@ class MmenuHelper
         $jsTemplate->options = $options;
         $jsTemplate->configuration = $configuration;
 
-        // Add module JavaScript
-        $GLOBALS['TL_BODY'][] = $jsTemplate->parse();
+        // Add module JavaScript (and replace insert tags, see #66)
+        $GLOBALS['TL_BODY'][] = Controller::replaceInsertTags($jsTemplate->parse());
     }
 }

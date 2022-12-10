@@ -8,12 +8,12 @@
         <target>Titel</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.appearance_legend">
-        <source>mmenu appearance</source>
-        <target>mmenu-Aussehen</target>
+        <source>Appearance</source>
+        <target>Aussehen</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.behaviour_legend">
-        <source>mmenu behaviour</source>
-        <target>mmenu-Verhalten</target>
+        <source>Behaviour</source>
+        <target>Verhalten</target>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.template_legend">
         <source>Template settings</source>

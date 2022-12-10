@@ -37,11 +37,9 @@ $GLOBALS['TL_DCA']['tl_module']['palettes']['mmenuCustom'] = $GLOBALS['TL_DCA'][
 $GLOBALS['TL_DCA']['tl_module']['palettes']['mmenuHtml'] = '{title_legend},name,headline,type;{html_legend},html;{template_legend:hide},customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID';
 
 PaletteManipulator::create()
-    ->addLegend('mmenu_legend', 'template_legend', PaletteManipulator::POSITION_BEFORE)
-    ->addField('dk_mmenuConfig', 'mmenu_legend', PaletteManipulator::POSITION_APPEND)
-
+    ->addLegend('config_legend', 'nav_legend', PaletteManipulator::POSITION_AFTER)
+    ->addField('dk_mmenuConfig', 'config_legend', PaletteManipulator::POSITION_APPEND)
     ->addField('dk_mmenuJsTpl', 'template_legend', PaletteManipulator::POSITION_APPEND)
-
     ->applyToPalette('mmenu', 'tl_module')
     ->applyToPalette('mmenuCustom', 'tl_module')
     ->applyToPalette('mmenuHtml', 'tl_module')

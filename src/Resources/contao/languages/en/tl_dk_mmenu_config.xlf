@@ -6,10 +6,10 @@
         <source>Title</source>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.appearance_legend">
-        <source>mmenu appearance</source>
+        <source>Appearance</source>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.behaviour_legend">
-        <source>mmenu behaviour</source>
+        <source>Behaviour</source>
       </trans-unit>
       <trans-unit id="tl_dk_mmenu_config.template_legend">
         <source>Template settings</source>
