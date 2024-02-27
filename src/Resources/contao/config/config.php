@@ -15,8 +15,9 @@ use DirkKlemmt\ContaoMmenuBundle\FrontendModule\MmenuCustomModule;
 use DirkKlemmt\ContaoMmenuBundle\FrontendModule\MmenuHtmlModule;
 use DirkKlemmt\ContaoMmenuBundle\FrontendModule\MmenuModule;
 use DirkKlemmt\ContaoMmenuBundle\Model\MmenuConfigModel;
+use Contao\ArrayUtil;
 
-array_insert(
+ArrayUtil::arrayInsert(
     $GLOBALS['BE_MOD']['system'],
     0,
     [
@@ -26,7 +27,7 @@ array_insert(
     ]
 );
 
-array_insert($GLOBALS['FE_MOD'], 3, [
+ArrayUtil::arrayInsert($GLOBALS['FE_MOD'], 3, [
     'navigationMenu' => [
         'mmenu' => MmenuModule::class,
         'mmenuCustom' => MmenuCustomModule::class,
