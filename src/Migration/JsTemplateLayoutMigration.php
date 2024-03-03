@@ -59,7 +59,7 @@ final class JsTemplateLayoutMigration extends AbstractMigration
         if ($schemaManager->tablesExist(['tl_layout'])) {
             $result = $this->connection->executeQuery("SELECT `id`, `scripts` FROM `tl_layout` WHERE `scripts` LIKE '%\"js_mmenu%'")->fetchAllAssociative();
 
-            if (false !== $result) {
+            if (count($result) > 0) {
                 foreach ($result as $layout) {
                     $scripts = [];
 

@@ -15,7 +15,9 @@ namespace DirkKlemmt\ContaoMmenuBundle\FrontendModule;
 
 use Contao\BackendTemplate;
 use Contao\ModuleNavigation;
+use Contao\System;
 use DirkKlemmt\ContaoMmenuBundle\Helper\MmenuHelper;
+use Symfony\Component\HttpFoundation\Request;
 
 class MmenuModule extends ModuleNavigation
 {
@@ -36,14 +38,14 @@ class MmenuModule extends ModuleNavigation
      */
     public function generate(): string
     {
-        if (TL_MODE === 'BE') {
+        if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create(''))) {
             // --- create BE template for mmenu module
             $template = new BackendTemplate('be_wildcard');
-            $template->wildcard = '### '.mb_strtoupper($GLOBALS['TL_LANG']['FMD']['mmenu'][0]).' ###';
+            $template->wildcard = '### ' . mb_strtoupper($GLOBALS['TL_LANG']['FMD']['mmenu'][0]) . ' ###';
             $template->title = $this->headline;
             $template->id = $this->id;
             $template->link = $this->name;
-            $template->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id='.$this->id;
+            $template->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id=' . $this->id;
 
             return $template->parse();
         }

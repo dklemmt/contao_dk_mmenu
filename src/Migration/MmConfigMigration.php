@@ -96,7 +96,7 @@ final class MmConfigMigration extends AbstractMigration
         if ($schemaManager->tablesExist(['tl_dk_mmenu_config', 'tl_module'])) {
             $result = $this->connection->executeQuery("SELECT * FROM `tl_module` WHERE `type` LIKE 'mmenu%'")->fetchAllAssociative();
 
-            if (false !== $result) {
+            if (count($result) > 0) {
                 foreach ($result as $module) {
                     $config = [];
                     $config['title'] = $module['name'];
