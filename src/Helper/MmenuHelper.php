@@ -17,6 +17,7 @@ use Contao\Controller;
 use Contao\FrontendTemplate;
 use Contao\Module;
 use Contao\StringUtil;
+use Contao\CoreBundle\InsertTag\InsertTagParser;
 use DirkKlemmt\ContaoMmenuBundle\Model\MmenuConfigModel;
 
 class MmenuHelper
@@ -119,6 +120,7 @@ class MmenuHelper
         $jsTemplate->configuration = $configuration;
 
         // Add module JavaScript (and replace insert tags, see #66)
-        $GLOBALS['TL_BODY'][] = Controller::replaceInsertTags($jsTemplate->parse());
+        //Revert to the original without inserttags
+        $GLOBALS['TL_BODY'][] = $jsTemplate->parse();
     }
 }
