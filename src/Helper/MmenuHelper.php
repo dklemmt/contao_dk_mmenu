@@ -17,7 +17,6 @@ use Contao\Controller;
 use Contao\FrontendTemplate;
 use Contao\Module;
 use Contao\StringUtil;
-use Contao\CoreBundle\InsertTag\InsertTagParser;
 use DirkKlemmt\ContaoMmenuBundle\Model\MmenuConfigModel;
 
 class MmenuHelper
