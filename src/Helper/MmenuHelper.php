@@ -6,17 +6,18 @@ declare(strict_types=1);
  * This file is part of the ContaoMmenuBundle.
  *
  * (c) Dirk Klemmt
- * (c) inspiredminds
+ * (c) INSPIRED MINDS
  *
  * @license MIT
  */
 
 namespace DirkKlemmt\ContaoMmenuBundle\Helper;
 
-use Contao\Controller;
+use Contao\CoreBundle\InsertTag\InsertTagParser;
 use Contao\FrontendTemplate;
 use Contao\Module;
 use Contao\StringUtil;
+use Contao\System;
 use DirkKlemmt\ContaoMmenuBundle\Model\MmenuConfigModel;
 
 class MmenuHelper
@@ -27,7 +28,7 @@ class MmenuHelper
     public static function processModuleSettings(Module $module, string $jsTemplateName): void
     {
         // Load the config
-        if (empty($module->dk_mmenuConfig) || !($config = MmenuConfigModel::findByPk($module->dk_mmenuConfig)) instanceof MmenuConfigModel) {
+        if (empty($module->dk_mmenuConfig) || !($config = MmenuConfigModel::findById($module->dk_mmenuConfig)) instanceof MmenuConfigModel) {
             return;
         }
 
@@ -119,6 +120,8 @@ class MmenuHelper
         $jsTemplate->configuration = $configuration;
 
         // Add module JavaScript (and replace insert tags, see #66)
-        $GLOBALS['TL_BODY'][] = Controller::replaceInsertTags($jsTemplate->parse());
+        /** @var InsertTagParser $insertTagParser */
+        $insertTagParser = System::getContainer()->get('contao.insert_tag.parser');
+        $GLOBALS['TL_BODY'][] = $insertTagParser->replace($jsTemplate->parse());
     }
 }

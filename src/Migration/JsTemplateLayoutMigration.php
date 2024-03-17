@@ -6,7 +6,7 @@ declare(strict_types=1);
  * This file is part of the ContaoMmenuBundle.
  *
  * (c) Dirk Klemmt
- * (c) inspiredminds
+ * (c) INSPIRED MINDS
  *
  * @license MIT
  */
@@ -31,8 +31,7 @@ final class JsTemplateLayoutMigration extends AbstractMigration
     {
         $schemaManager = method_exists($this->connection, 'createSchemaManager') ?
             $this->connection->createSchemaManager() :
-            $this->connection->getSchemaManager()
-        ;
+            $this->connection->getSchemaManager();
 
         if (!$schemaManager->tablesExist(['tl_layout'])) {
             return false;
@@ -53,27 +52,24 @@ final class JsTemplateLayoutMigration extends AbstractMigration
     {
         $schemaManager = method_exists($this->connection, 'createSchemaManager') ?
             $this->connection->createSchemaManager() :
-            $this->connection->getSchemaManager()
-        ;
+            $this->connection->getSchemaManager();
 
         if ($schemaManager->tablesExist(['tl_layout'])) {
             $result = $this->connection->executeQuery("SELECT `id`, `scripts` FROM `tl_layout` WHERE `scripts` LIKE '%\"js_mmenu%'")->fetchAllAssociative();
 
-            if (false !== $result) {
-                foreach ($result as $layout) {
-                    $scripts = [];
+            foreach ($result as $layout) {
+                $scripts = [];
 
-                    foreach (StringUtil::deserialize($layout['scripts'], true) as $script) {
-                        if (!str_starts_with($script, 'js_mmenu')) {
-                            $scripts[] = $script;
-                        }
+                foreach (StringUtil::deserialize($layout['scripts'], true) as $script) {
+                    if (!str_starts_with($script, 'js_mmenu')) {
+                        $scripts[] = $script;
                     }
-
-                    $this->connection->executeStatement(
-                        'UPDATE `tl_layout` SET `scripts` = ? WHERE id = ?',
-                        [serialize($scripts), $layout['id']]
-                    );
                 }
+
+                $this->connection->executeStatement(
+                    'UPDATE `tl_layout` SET `scripts` = ? WHERE id = ?',
+                    [serialize($scripts), $layout['id']],
+                );
             }
         }
 

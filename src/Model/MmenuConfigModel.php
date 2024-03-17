@@ -6,7 +6,7 @@ declare(strict_types=1);
  * This file is part of the ContaoMmenuBundle.
  *
  * (c) Dirk Klemmt
- * (c) inspiredminds
+ * (c) INSPIRED MINDS
  *
  * @license MIT
  */
@@ -31,8 +31,8 @@ use Contao\Model\Collection;
  * @property string pageSelector
  * @property bool iconPanels
  *
- * @method static MmenuConfigModel|null findById($id, array $opt=[])
- * @method static MmenuConfigModel|null findByPk($id, array $opt=[])
+ * @method static MmenuConfigModel|null                                    findById($id, array $opt=[])
+ * @method static MmenuConfigModel|null                                    findByPk($id, array $opt=[])
  * @method static Collection|array<MmenuConfigModel>|MmenuConfigModel|null findAll(array $opt = [])
  */
 class MmenuConfigModel extends Model

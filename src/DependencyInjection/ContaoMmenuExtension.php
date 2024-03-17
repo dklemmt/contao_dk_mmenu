@@ -6,7 +6,7 @@ declare(strict_types=1);
  * This file is part of the ContaoMmenuBundle.
  *
  * (c) Dirk Klemmt
- * (c) inspiredminds
+ * (c) INSPIRED MINDS
  *
  * @license MIT
  */

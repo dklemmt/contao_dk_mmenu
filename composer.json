@@ -32,12 +32,13 @@
     },
     "require": {
         "php": "^7.4 || ^8.0",
-        "contao/core-bundle": "^4.9 || ^5.0",
+        "contao/core-bundle": "^4.13 || ^5.0",
         "doctrine/dbal": "^2.11 || ^3.0",
         "symfony/dependency-injection": "^4.4 || ^5.4 || ^6.0",
         "symfony/filesystem": "^4.4 || ^5.4 || ^6.0",
         "symfony/finder": "^4.4 || ^5.4 || ^6.0",
-        "symfony/http-kernel": "^4.4 || ^5.4 || ^6.0"
+        "symfony/http-kernel": "^4.4 || ^5.4 || ^6.0",
+        "symfony/polyfill-php80": "^1.29"
     },
     "require-dev": {
         "contao/manager-plugin": "^2.0"
@@ -50,13 +51,14 @@
     "config": {
         "allow-plugins": {
             "contao-components/installer": true,
-            "contao/manager-plugin": true
+            "contao/manager-plugin": true,
+            "php-http/discovery": false
         }
     },
     "extra": {
         "contao-manager-plugin": "DirkKlemmt\\ContaoMmenuBundle\\ContaoManager\\Plugin"
     },
     "scripts": {
-        "ecs": "@php tools/ecs/vendor/bin/ecs check src/ --config tools/ecs/config/default.php --fix --ansi"
+        "ecs": "@php tools/ecs/vendor/bin/ecs --config tools/ecs/config/default.php --fix --ansi"
     }
 }

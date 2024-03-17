@@ -6,7 +6,7 @@ declare(strict_types=1);
  * This file is part of the ContaoMmenuBundle.
  *
  * (c) Dirk Klemmt
- * (c) inspiredminds
+ * (c) INSPIRED MINDS
  *
  * @license MIT
  */
@@ -30,8 +30,7 @@ final class JsTemplateModuleMigration extends AbstractMigration
     {
         $schemaManager = method_exists($this->connection, 'createSchemaManager') ?
             $this->connection->createSchemaManager() :
-            $this->connection->getSchemaManager()
-        ;
+            $this->connection->getSchemaManager();
 
         if (!$schemaManager->tablesExist(['tl_module'])) {
             return false;
@@ -52,15 +51,14 @@ final class JsTemplateModuleMigration extends AbstractMigration
     {
         $schemaManager = method_exists($this->connection, 'createSchemaManager') ?
             $this->connection->createSchemaManager() :
-            $this->connection->getSchemaManager()
-        ;
+            $this->connection->getSchemaManager();
 
         if ($schemaManager->tablesExist(['tl_module'])) {
             $this->connection->executeStatement(
-                "UPDATE `tl_module` SET `dk_mmenuJsTpl` = REPLACE(`dk_mmenuJsTpl`, 'js_mmenu_', 'mmenu_')"
+                "UPDATE `tl_module` SET `dk_mmenuJsTpl` = REPLACE(`dk_mmenuJsTpl`, 'js_mmenu_', 'mmenu_')",
             );
             $this->connection->executeStatement(
-                "UPDATE `tl_module` SET `dk_mmenuJsTpl` = REPLACE(`dk_mmenuJsTpl`, 'js_mmenu', 'mmenu_default')"
+                "UPDATE `tl_module` SET `dk_mmenuJsTpl` = REPLACE(`dk_mmenuJsTpl`, 'js_mmenu', 'mmenu_default')",
             );
         }
 

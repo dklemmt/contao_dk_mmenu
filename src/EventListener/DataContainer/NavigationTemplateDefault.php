@@ -6,7 +6,7 @@ declare(strict_types=1);
  * This file is part of the ContaoMmenuBundle.
  *
  * (c) Dirk Klemmt
- * (c) inspiredminds
+ * (c) INSPIRED MINDS
  *
  * @license MIT
  */
@@ -21,7 +21,7 @@ use Contao\DataContainer;
  */
 class NavigationTemplateDefault
 {
-    public function __invoke(?string $value, DataContainer $dc): ?string
+    public function __invoke(?string $value, DataContainer $dc): string|null
     {
         switch ($dc->activeRecord->type) {
             case 'mmenu':

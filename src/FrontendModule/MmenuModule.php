@@ -6,7 +6,7 @@ declare(strict_types=1);
  * This file is part of the ContaoMmenuBundle.
  *
  * (c) Dirk Klemmt
- * (c) inspiredminds
+ * (c) INSPIRED MINDS
  *
  * @license MIT
  */
@@ -19,6 +19,8 @@ use DirkKlemmt\ContaoMmenuBundle\Helper\MmenuHelper;
 
 class MmenuModule extends ModuleNavigation
 {
+    use MmenuFrontendModuleTrait;
+
     /**
      * Template.
      *
@@ -36,14 +38,14 @@ class MmenuModule extends ModuleNavigation
      */
     public function generate(): string
     {
-        if (TL_MODE === 'BE') {
+        if ($this->isBackend()) {
             // --- create BE template for mmenu module
             $template = new BackendTemplate('be_wildcard');
             $template->wildcard = '### '.mb_strtoupper($GLOBALS['TL_LANG']['FMD']['mmenu'][0]).' ###';
             $template->title = $this->headline;
             $template->id = $this->id;
             $template->link = $this->name;
-            $template->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id='.$this->id;
+            $template->href = $this->getBackendUrl();
 
             return $template->parse();
         }
