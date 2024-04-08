@@ -21,7 +21,7 @@ use Contao\DataContainer;
  */
 class NavigationTemplateDefault
 {
-    public function __invoke(?string $value, DataContainer $dc): string|null
+    public function __invoke(?string $value, DataContainer $dc): ?string
     {
         switch ($dc->activeRecord->type) {
             case 'mmenu':
