@@ -39,7 +39,7 @@ trait MmenuFrontendModuleTrait
     private function getBackendUrl(): string
     {
         /** @var UrlGeneratorInterface $urlGenerator */
-        $urlGenerator = System::getContainer()->get(UrlGeneratorInterface::class);
+        $urlGenerator = System::getContainer()->get('router');
 
         return $urlGenerator->generate('contao_backend', [
             'do' => 'themes',
