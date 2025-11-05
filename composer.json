@@ -34,10 +34,10 @@
         "php": ">=7.4",
         "contao/core-bundle": "^4.13 || ^5.0",
         "doctrine/dbal": "^2.11 || ^3.0",
-        "symfony/dependency-injection": "^5.4 || ^6.0",
-        "symfony/filesystem": "^5.4 || ^6.0",
-        "symfony/finder": "^5.4 || ^6.0",
-        "symfony/http-kernel": "^5.4 || ^6.0",
+        "symfony/dependency-injection": "^5.4 || ^6.0 || ^7.0",
+        "symfony/filesystem": "^5.4 || ^6.0 || ^7.0",
+        "symfony/finder": "^5.4 || ^6.0 || ^7.0",
+        "symfony/http-kernel": "^5.4 || ^6.0 || ^7.0",
         "symfony/polyfill-php80": "^1.29"
     },
     "require-dev": {
